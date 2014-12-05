@@ -36,7 +36,7 @@ Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](/m
 
 Pour le championnat interuniversitaire de football, les étudiants d’une école d’ingénieurs décident de fabriquer un panneau pour indiquer les changements de joueurs. Les étudiants en génie mécanique ont réalisé une maquette qui se présente de la manière suivante :
 
-![](https://d396qusza40orc.cloudfront.net/microcontroleurs/images/foot-change.jpg)
+![](images/foot-change.jpg)
 
 Des LEDs rouges et vertes de 5 mm de diamètre sont utilisées. Deux paires de boutons-poussoirs permettent de choisir les numéros des joueurs qui entrent et qui sortent.
 
@@ -112,16 +112,16 @@ Voici un extrait tiré de [Wikipedia](http://en.wikipedia.org/wiki/Morse_code)
 > 5. medium gap (between words) — seven time units long[1]
 >     If W is the word/min (10-20), dot period T is 1200 / W
 
-![](https://d396qusza40orc.cloudfront.net/microcontroleurs/images/morse1.png)
+![](images/morse1.png)
 
 La période _T_, durée d’un _dot_, sert à définir les autres durées. Pour le test, limitons-nous au début du code ASCII. En morse, la lettre _A_ sera naturellement en _0_ dans la table. En ASCII, si on tape _ABC_ avec le programme terminal, on obtient les codes _0x41 42 43_ qu’il faut faire correspondre aux entrées _0 1 2_ de la table :
 
 	//              A    B    C    D    E    F    G    H
 	TaMorse [] = {0x42,0x81,0x85,0x61,0x20,0x84,0x63,0x80};
 
-![](https://d396qusza40orc.cloudfront.net/microcontroleurs/images/morse2.png)
+![](images/morse2.png)
 
-![](https://d396qusza40orc.cloudfront.net/microcontroleurs/images/morse3.png)
+![](images/morse3.png)
 
 Le programme attend une lettre du terminal (lettre-CR, voir doc) et joue les flashs ou sons. Les espaces entre lettres et mots peuvent être ignorés.
 
@@ -133,7 +133,7 @@ Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](/m
 
 On peut lire plusieurs poussoirs en n’utilisant qu’une entrée analogique. Plusieurs câblages sont possibles. La solution proposée pour 4 poussoirs est spécialement simple à comprendre, son inconvénient éventuel est de consommer 1 mA en permanence ( la pull-down ne consomme rien).
 
-![](https://d396qusza40orc.cloudfront.net/microcontroleurs/images/pouss4.png)
+![](images/pouss4.png)
 
 Évidemment, pour lire les poussoirs, faut tester les tensions...
 
@@ -173,7 +173,7 @@ Voici également des exercices de la session 2013, qui pourront aussi vous aider
 
 Une enseigne publicitaire est entourée d’un cadre réalisé avec des segments lumineux, selon le croquis suivant :
 
-![](https://d396qusza40orc.cloudfront.net/microcontroleurs/images/CadreEnseigne.png)
+![](images/CadreEnseigne.png)
 
 On cherche à donner une impression de rotation, en allumant successivement les groupes de segments suivants :
 
@@ -207,11 +207,11 @@ On a construit une machine avec un moteur et un contact qui se ferme à chaque t
 
 Pour tester le programme, on utilise Pous1 pour démarrer, LED 1 pour dire que le moteur tourne et Pous2 comme fin de course.
 
-![](https://d396qusza40orc.cloudfront.net/microcontroleurs/images/Miaou1.png)
+![](images/Miaou1.png)
 
 Le diagramme des temps montre les états possibles. Il faut tenir compte du fait que le signal Start peut durer plus longtemps que l’action, et le fin de course peut encore être activé après l’arrêt du moteur. Le programme est plus simple si on enlève ces conditions, mais ce n’est que de 2 instructions!
 
-![](https://d396qusza40orc.cloudfront.net/microcontroleurs/images/Miaou2.png)
+![](images/Miaou2.png)
 
 Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](/microcontroleurs-004/wiki/view?page=corr-ex4-3-1) !
 
@@ -251,7 +251,7 @@ Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](/m
 
 Les 7 LEDs d’un dé sont câblées comme ci-contre pour utiliser un nombre minimum de sorties du microcontrôleur. Ces sorties sont les pins _0_ à _4_ du `PORTC` *Arduino* _(pins 14,15,16,17,18)_ ou pour *MSP* les pins _0_ à _4_ de `P2`. Créer la table correspondant aux 6 états du dé et écrire le programme qui “lance le dé” toutes les secondes. Évidemment, on ne va pas définir les pins indépendamment. Dans le `setup` on dit que les bits _0_ à _3_ sont en sorties, et on copie les configurations de bits correspondant aux faces du dé directement sur le _port C_.
 
-![](https://d396qusza40orc.cloudfront.net/microcontroleurs/images/DeJdn.png)
+![](images/DeJdn.png)
 
 Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](/microcontroleurs-004/wiki/view?page=corr-ex4-4-1) !
 
@@ -352,13 +352,13 @@ Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](/m
 
 ## *Ex 3.2-2* _Charlieplexing_
 
-Comment faire lorsqu’on a 6 LED, qu’on doit pouvoir en allumer une parmi les 6 et qu’on ne dispose que de 3 pattes sur un microcontrôleur ?
+Comment faire lorsqu’on a 6 LED, qu’on doit pouvoir en allumer une parmi les 6 et qu’on ne dispose que de 3 pattes sur un microcontrôleur ?
 
 Il existe une solution astucieuse, connue sous le nom de _Charlieplexing_ !
 
 Voici le schéma :
 
-![](https://d396qusza40orc.cloudfront.net/microcontroleurs/images/charlieplexing-3.png)
+![](images/charlieplexing-3.png)
 
 Écrivez les deux instructions qui allument la LED 5 sans en allumer d’autres.
 
@@ -374,7 +374,7 @@ Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](/m
 
 
 
-## *Ex 3.4-1* Combien de 1 ?
+## *Ex 3.4-1* Combien de 1 ?
 
 On doit compter le nombre de _1_ dans un mot de 16 bits. L’algorithme consiste à tester si le bit en extrémité vaut _1_ ou _0_, puis à décaler.
 
@@ -433,7 +433,7 @@ Assurez-vous d’avoir compris le premier document ! Vous êtes encouragés cet
 
 ## *Ex 2.2-1* Microprocesseur et microcontrôleur
 
-**Question :** Quelle est la différence entre un microcontrôleur et un microprocesseur ?
+**Question :** Quelle est la différence entre un microcontrôleur et un microprocesseur ?
 
 Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](/microcontroleurs-004/wiki/view?page=corr-ex2-2-1) !
 
@@ -443,7 +443,7 @@ Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](/m
 
 Dans une application qui nécessite une bonne précision de calcul, on doit effectuer plusieurs fois par seconde quelques calculs arithmétiques avec des nombres de 32 bits.
 
-**Question :** Est-ce qu’on est obligé alors de choisir un microcontrôleur 32 bits ?
+**Question :** Est-ce qu’on est obligé alors de choisir un microcontrôleur 32 bits ?
 
 Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](/microcontroleurs-004/wiki/view?page=corr-ex2-3-1) !
 
@@ -451,7 +451,7 @@ Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](/m
 
 ## *Ex 2.3-2* Fréquence et puissance de calcul
 
-**Question :** Si la fréquence d’un microcontrôleur est supérieure à celle d’un autre microcontrôleur, peut-on dire alors que sa puissance de calcul est supérieure ?
+**Question :** Si la fréquence d’un microcontrôleur est supérieure à celle d’un autre microcontrôleur, peut-on dire alors que sa puissance de calcul est supérieure ?
 
 Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](/microcontroleurs-004/wiki/view?page=corr-ex2-3-2) !
 
@@ -506,7 +506,7 @@ Cherchez par vous-même à écrire le programme. Ensuite, vous pourrez voir le [
 
 ## *Ex 2.5-2* Estimation de la durée de la fonction *Arduino* `Map ()`
 
-La fonction *Arduino* `map()` doit faire des multiplications et division. Quel est son temps de calcul ?
+La fonction *Arduino* `map()` doit faire des multiplications et division. Quel est son temps de calcul ?
 
 On met cette fonction dans une boucle exécutée 10’000 fois (max 30000 en 16 bits signés). On mesure la période entre deux basculements de la LED. Si la fonction dure 100 microsecondes, la période est de 1 secondes. Écrire le programme et dire quelle
     est la durée de la fonction map().
@@ -532,15 +532,15 @@ Voici donc quelques exercices sur l’électronique. Nous sommes conscients qu�
 
 Le montage suivant, alimenté en 5 V, permet de réaliser un détecteur de gel :
 
-![](https://d396qusza40orc.cloudfront.net/microcontroleurs/images/transistor-ctn.png)
+![](images/transistor-ctn.png)
 
 Il utilise une thermistance. Ce composant a une résistance variable en fonction de la température. Un transistor est utilisé pour amplifier le signal de la thermistance. Il est utilisé en “tout ou rien” : tant que la résistance est trop élevée pour que le transitor conduise, la LED est éteinte. Mais dès que la thermistance atteint une résistance suffisamment faible pour que la tension de seuil du transistor soit atteinte, le transistor va conduire et la LED s’allumer.
 
 On considère que le transistor a un gain important et qu’on peut donc négliger le courant de base dans les calculs. Le composant noté CTN est une thermistance dont le coefficient de température est négatif. Sa résistance (donnée en kOhm) varie avec le température selon la courbe suivante :
 
-![](https://d396qusza40orc.cloudfront.net/microcontroleurs/images/thermistance.gif)
+![](images/thermistance.gif)
 
-**Question :** Quel valeur doit-on donner à la résistance R pour que le détecteur avertisse du risque de gel vers 1 ºC ?
+**Question :** Quel valeur doit-on donner à la résistance R pour que le détecteur avertisse du risque de gel vers 1°C ?
 
 Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](/microcontroleurs-004/wiki/view?page=corr-ex1-2-1) !
 
@@ -548,9 +548,9 @@ Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](/m
 
 ## *Ex 1.3-1* Logique à transistors
 
-**Question :** Quelle est la fonction logique réalisée par ce montage ?
+**Question :** Quelle est la fonction logique réalisée par ce montage ?
 
-![](https://d396qusza40orc.cloudfront.net/microcontroleurs/images/D3q1.gif)
+![](images/D3q1.gif)
 
 Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](/microcontroleurs-004/wiki/view?page=corr-ex1-3-1) !
 
@@ -578,7 +578,7 @@ Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](/m
 
 **Question :** Donnez la table de vérité du système combinatoire décrit par ce diagramme temporel.
 
-![](https://d396qusza40orc.cloudfront.net/microcontroleurs/images/diagramme-temp-ex.png)
+![](images/diagramme-temp-ex.png)
 
 Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](/microcontroleurs-004/wiki/view?page=corr-ex1-4-2) !
 
