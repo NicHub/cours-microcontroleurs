@@ -1,0 +1,194 @@
+@charset "utf-8";
+
+body
+{
+	font-family: "Ubuntu Condensed";
+	font-family: "Ubuntu";
+	font-weight: 100;
+	font-family: "Avenir";
+	font-weight: 400;
+	hyphens: auto;
+	hyphenate-lines: 1;
+	prince-hyphenate-before: 3;
+	prince-hyphenate-after: 3;
+	margin: 0;
+	padding: 0;
+	text-align: justify;
+	word-spacing: 0;
+	letter-spacing: 0;
+	font-size: 10.5pt;
+	line-height: 0.45cm;
+
+	-webkit-column-count       : 2;
+    -moz-column-count          : 2;
+    column-count               : 2;
+	-webkit-column-width       : 49%;
+	-moz-column-width          : 49%;
+	column-width               : 49%;
+
+
+	string-set: strDidel   "didel.com",
+				strMOOC    "EPFL — MOOC µCONTRÔLEURS"
+	            strPage_nb "– " counter( page ) " –";
+
+}
+
+@page
+{
+	font-family: "Avenir";
+	font-size: 10.5pt;
+	size: A4;
+	margin: 2cm 1.5cm 2cm;
+	@bottom-center
+	{
+		/*content: counter( page );*/
+		content: string( strPage_nb );
+		font-size: 0.925em;
+		word-spacing: 0;
+		letter-spacing: 0;
+		margin: 0 0 0.5cm;
+		padding: 0;
+	}
+	@top-center
+	{
+		content: string( strMOOC );
+	}
+
+}
+
+p
+{
+	text-align: justify;
+	line-height: inherit;
+	margin: inherit;
+}
+b, strong
+{
+	font-weight: 600;
+}
+h1, h2, h3
+{
+	font-family: "Ubuntu Condensed";
+	font-weight: 600;
+	font-family: "Avenir Next Condensed";
+	font-size: inherit;
+	text-transform: uppercase;
+	text-align: center;
+	line-height: inherit;
+	margin: 0.92cm 0 0.46cm;
+}
+
+h1
+{
+	word-spacing: 0.1em;
+	letter-spacing: 0.1em;
+	background-color: black;
+	color: white;
+}
+h2
+{
+	border-top: 1px solid;
+	padding: 10px 0 0;
+}
+code, pre
+{
+	font-family: "Ubuntu Mono";
+	line-height: inherit;
+	margin: inherit;
+}
+pre
+{
+	padding: 0px 10px;
+	margin: 10px 0;
+}
+code
+{
+	background-color: #F2F2F2;
+}
+pre
+{
+	background-color: #F2F2F2;
+}
+
+
+blockquote
+{
+	font-style: italic;
+}
+
+table tr th
+{
+	border-bottom: 1px solid;
+	padding: 0 1em;
+	text-align: center;
+}
+table tr td
+{
+	padding: 0 1em;
+	text-align: center;
+}
+td:first-child
+{
+	margin-left: 0;
+	/*border-right: 0.15mm solid #000;*/
+}
+td:last-child
+{
+	margin-right: 0;
+}
+table
+{
+	border-collapse: collapse;
+	margin: 0.5cm auto;
+	page-break-inside: avoid;
+}
+figure
+{
+	display: block;
+	margin: 0.2cm;
+	text-align: center;
+}
+figcaption
+{
+	display: none;
+}
+img
+{
+	max-width: 8.5cm;
+	max-height: 3.2cm;
+}
+
+ol, ul
+{
+	margin: 0;
+}
+li
+{
+	list-style-position:  inside;
+}
+blockquote
+{
+	margin: 1em;
+	padding: 0;
+}
+
+
+
+
+
+figure img[ alt="transistor-ctn"    ]{ max-height: 5cm; }
+figure img[ alt="thermistance"      ]{ max-height: 6cm; }
+figure img[ alt="D3q1"              ]{ max-height: 4cm; }
+figure img[ alt="diagramme-temp-ex" ]{ max-height: 6cm; }
+figure img[ alt="charlieplexing-3"  ]{ max-height: 6cm; }
+figure img[ alt="CadreEnseigne"     ]{ max-height: 3cm; }
+figure img[ alt="Miaou1"            ]{ max-height: 5cm; }
+figure img[ alt="Miaou2"            ]{ max-height: 6cm; }
+figure img[ alt="DeJdn"             ]{ max-height: 7cm; }
+figure img[ alt="morse1"            ]{ max-height: 8cm; }
+figure img[ alt="morse2"            ]{ min-width: 4cm; max-height: 5cm;}
+figure img[ alt="morse3"            ]{ max-height: 4cm; }
+figure img[ alt="pouss4"            ]{ max-height: 6cm; }
+figure img[ alt="foot-change"       ]{ max-height: 6cm; }
+
+
