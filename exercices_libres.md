@@ -6,14 +6,14 @@ Voici les fichiers **LearnCbot** de la semaine :
 - pour *Arduino* :  [LC6.pdf](http://www.didel.com/coursera/LC6.pdf)
 - pour *Energia/MSP430* : [LC6-msp.pdf](http://pyr.ch/coursera/LC6-msp.pdf)
 
-Les programmes correspondant sont disponibles sous forme de fichier zip :
+Les programmes correspondants sont disponibles sous forme de fichier zip :
 
 - pour *Arduino* :  [LC6ino.zip](http://www.didel.com/coursera/LC6ino.zip)
 - pour *Energia/MSP430* : [LC6msp.zip](http://pyr.ch/coursera/LC6msp.zip)
 
 ## Ex 6.2-1 Dessin sur un afficheur matriciel
 
-Un afficheur matriciel de 16 × 16 LEDs est commandé par un microcontrôleur. Des procédures d’écriture de point on été écrites :
+Un afficheur matriciel de 16×16 LEDs est commandé par un microcontrôleur. Des procédures d’écriture de points ont été écrites :
 
 	void SetPoint (int x; int y)
 	void ClearPoint (int x; int y)
@@ -85,7 +85,7 @@ Voici les fichiers **LearnCbot** de la semaine :
 - pour *Arduino* :  [LC5.pdf](http://www.didel.com/coursera/LC5.pdf)
 - pour *Energia/MSP430* : [LC5-msp.pdf](http://pyr.ch/coursera/LC5-msp.pdf)
 
-Les programmes correspondant sont disponibles sous forme de fichier zip :
+Les programmes correspondants sont disponibles sous forme de fichier zip :
 
 - pour *Arduino* :  [LC5ino.zip](http://www.didel.com/coursera/LC5ino.zip)
 - pour *Energia/MSP430* : [LC5msp.zip](http://pyr.ch/coursera/LC5msp.zip)
@@ -103,14 +103,14 @@ Chaque lettre est codée dans 8 bits, 3 bits pour le nombres de ti-ta, 5 bits po
 
 Voici un extrait tiré de [Wikipedia](http://en.wikipedia.org/wiki/Morse_code)
 
-International Morse code is composed of five elements:
-
-1. short mark, dot or “dit” (·) — “dot duration” is one time unit long
-2. longer mark, dash or “dah” (–) — three time units long
-3. inter-element gap between the dots and dashes within a character — one dot duration or one unit long
-4. short gap (between letters) — three time units long
-5. medium gap (between words) — seven time units long[1]
-    If W is the word/min (10-20), dot period T is 1200 / W
+> International Morse code is composed of five elements:
+>
+> 1. short mark, dot or “dit” (·) — “dot duration” is one time unit long
+> 2. longer mark, dash or “dah” (–) — three time units long
+> 3. inter-element gap between the dots and dashes within a character — one dot duration or one unit long
+> 4. short gap (between letters) — three time units long
+> 5. medium gap (between words) — seven time units long[1]
+>     If W is the word/min (10-20), dot period T is 1200 / W
 
 ![](https://d396qusza40orc.cloudfront.net/microcontroleurs/images/morse1.png)
 
@@ -163,7 +163,7 @@ Voici les fichiers **LearnCbot** de la semaine :
 - pour *Arduino* :  [LC4.pdf](http://www.didel.com/coursera/LC4.pdf)
 - pour *Energia/MSP430* : [LC4-msp.pdf](http://pyr.ch/coursera/LC4-msp.pdf)
 
-Les programmes correspondant sont disponibles sous forme de fichier zip :
+Les programmes correspondants sont disponibles sous forme de fichier zip :
 
 - pour *Arduino* :  [LC4ino.zip](http://www.didel.com/coursera/LC4ino.zip)
 - pour *Energia/MSP430* : [LC4msp.zip](http://pyr.ch/coursera/LC4msp.zip)
@@ -303,11 +303,11 @@ Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](/m
 
 ## Ex 3.1-2 Autre manière d’écrire la boucle `for`
 
-Quand on écrit une boucle : for (i=0; i&lt;10; i++) {instructions} on passe trois paramètres au compilateur :
+Quand on écrit une boucle : `for (i=0; i<10; i++) {instructions}` on passe trois paramètres au compilateur :
 
-- l’instruction d’initialisation (ici `i=0;`) : cette instruction qui va s’exécuter une et une seule fois au début
-- la condition d’exécution de la boucle (ici i&lt;10;) : un test, répété à chaque début de boucle, qui permet de savoir si elle doit s’exécuter (ou s’arrêter)
-- l’instruction “d’incrémentation” (ici `i++`) : ce terme est inexact. Il s’agit souvent d’une incrémentation, mais c’est simplement une instruction qui s’exécute à la fin de chaque itération de la boucle.
+1. l’instruction d’initialisation (ici `i=0;`) : cette instruction qui va s’exécuter une et une seule fois au début
+2. la condition d’exécution de la boucle (ici `i<10;`) : un test, répété à chaque début de boucle, qui permet de savoir si elle doit s’exécuter (ou s’arrêter)
+3. l’instruction “d’incrémentation” (ici `i++`) : ce terme est inexact. Il s’agit souvent d’une incrémentation, mais c’est simplement une instruction qui s’exécute à la fin de chaque itération de la boucle.
 
 Ecrivez cette même action sans le mot `for` !
 
@@ -369,7 +369,7 @@ Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](/m
 
 ## Ex 3.3-1 Champs de bits
 
-Ecrivez d’une manière plus lisible l’instruction suivante : DDRC = 0b01000001;
+Ecrivez d’une manière plus lisible l’instruction suivante : `DDRC = 0b01000001;`
 
 Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](/microcontroleurs-004/wiki/view?page=corr-ex3-3-1) !
 
