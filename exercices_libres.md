@@ -5,7 +5,7 @@
 
 # Semaine 1
 
-Nous vous proposons cette semaine quelques exercices sur l’électronique. L’introduction au langage C se fera la semaine prochaine. Vous pouvez déjà faire quelques pas en programmation en suivant le premier volet de nos exercices :
+Nous vous proposons cette semaine quelques exercices sur l’électronique. L’introduction au langage *C* se fera la semaine prochaine. Vous pouvez déjà faire quelques pas en programmation en suivant le premier volet de nos exercices :
 
 - Pour *Arduino* :  [LC1.pdf](http://www.didel.com/coursera/LC1.pdf)
 - Pour *Energia/MSP430* : [LC1-msp.pdf](http://pyr.ch/coursera/LC1-msp.pdf)
@@ -24,7 +24,7 @@ Le montage suivant, alimenté en 5 V, permet de réaliser un détecteur de gel 
 
 Il utilise une thermistance. Ce composant a une résistance variable en fonction de la température. Un transistor est utilisé pour amplifier le signal de la thermistance. Il est utilisé en “tout ou rien” : tant que la résistance est trop élevée pour que le transitor conduise, la LED est éteinte. Mais dès que la thermistance atteint une résistance suffisamment faible pour que la tension de seuil du transistor soit atteinte, le transistor va conduire et la LED s’allumer.
 
-On considère que le transistor a un gain important et qu’on peut donc négliger le courant de base dans les calculs. Le composant noté CTN est une thermistance dont le coefficient de température est négatif. Sa résistance (donnée en kOhm) varie avec le température selon la courbe suivante :
+On considère que le transistor a un gain important et qu’on peut donc négliger le courant de base dans les calculs. Le composant noté *CTN* est une thermistance dont le coefficient de température est négatif. Sa résistance (donnée en kΩ) varie avec la température selon la courbe suivante :
 
 ![](images/thermistance.gif)
 
@@ -219,7 +219,7 @@ Vous trouvez ci-dessous des exercices libres qui ont été proposés pour notre 
 - pour *Arduino* :  [LC3.pdf](http://www.didel.com/coursera/LC3.pdf)
 - pour *Energia/MSP430* : [LC3-msp.pdf](http://pyr.ch/coursera/LC3-msp.pdf)
 
-Ces documents doivent être lus attentivement pour se familiariser avec la richesse du C.
+Ces documents doivent être lus attentivement pour se familiariser avec la richesse du *C*.
 
 Les programmes sont disponibles sous forme de fichier zip :
 
