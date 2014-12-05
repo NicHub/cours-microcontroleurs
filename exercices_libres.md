@@ -26,7 +26,7 @@ On dispose aussi d’une procédure `void Affiche (int duree)` qui rafraîchit l
 
 Une vidéo montre l’effet désiré : [exemple-aff.mp4](http://pyr.ch/coursera/exemple-aff.mp4)
 
-Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](/microcontroleurs-004/wiki/view?page=corr-ex6-2-1) !
+Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](https://class.coursera.org/microcontroleurs-004/wiki/view?page=corr-ex6-2-1) !
 
 **Vous pouvez même tester votre programme :** Un afficheur programmable à distance vous est proposé dans la page des devoirs de programmation.
 
@@ -40,13 +40,13 @@ Pour le championnat interuniversitaire de football, les étudiants d’une écol
 
 Des LEDs rouges et vertes de 5 mm de diamètre sont utilisées. Deux paires de boutons-poussoirs permettent de choisir les numéros des joueurs qui entrent et qui sortent.
 
-Les étudiants en génie électrique sont chargés de réaliser la commande électronique. Les LEDs Rouges choisies ont une tension de _2 V_, les vertes _3V_. Les deux modèles ont un courant nominal de _10 mA_.
+Les étudiants en génie électrique sont chargés de réaliser la commande électronique. Les LEDs Rouges choisies ont une tension de _2 V_, les vertes _3 V_. Les deux modèles ont un courant nominal de _10 mA_.
 
 Proposez un schéma pour réaliser la commande de ce panneau.
 
 Choisissez un microcontrôleur et l’électronique nécessaire pour commander les 4 fois 7 segments de 28 LEDs chacun.
 
-Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](/microcontroleurs-004/wiki/view?page=corr-ex6-2-2) !
+Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](https://class.coursera.org/microcontroleurs-004/wiki/view?page=corr-ex6-2-2) !
 
 
 
@@ -63,17 +63,17 @@ Pour la 2e solution, utilisez la librairie SPI qui passe par le registre SPI int
 
 Pour la 3e solution, utilisez les instructions *C* `(bitSet, bit Clear);` le choix de pins n’a pas d’importance, vous pouvez utiliser les mêmes que dans l’exemple *Arduino*. Notez aussi la taille mémoire et le temps d’exécution.
 
-Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](/microcontroleurs-004/wiki/view?page=corr-ex6-3-1) !
+Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](https://class.coursera.org/microcontroleurs-004/wiki/view?page=corr-ex6-3-1) !
 
 
 
 ## *Ex 6.5-1* Système sur batteries
 
-Pour essayer d’effrayer les taupes qui faisaient des ravages dans son jardin potager, un jardinier a installé un dispositif qui émet des bruits de manière pseudo-aléatoire, par courtes séquences. En moyenne, le dispositif est actif au total 90 secondes chaque heure. La consommation en mode actif est de 40mA. Le microcontrôleur consomme lui-même 1 mA en permanence, en fonctionnant à 1 MHz. Les deux piles 1.5 V AA utilisées ont une capacité de 1300 mAh.
+Pour essayer d’effrayer les taupes qui faisaient des ravages dans son jardin potager, un jardinier a installé un dispositif qui émet des bruits de manière pseudo-aléatoire, par courtes séquences. En moyenne, le dispositif est actif au total 90 s chaque heure. La consommation en mode actif est de 40 mA. Le microcontrôleur consomme lui-même 1 mA en permanence, en fonctionnant à 1 MHz. Les deux piles 1.5 V AA utilisées ont une capacité de 1300 mAh.
 
 Calculez la durée de vie d’un jeu de piles. Proposez des solutions pour que le système consomme globalement moins de courant, en vue de lui donner une meilleure autonomie.
 
-Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](/microcontroleurs-004/wiki/view?page=corr-ex6-5-1) !
+Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](https://class.coursera.org/microcontroleurs-004/wiki/view?page=corr-ex6-5-1) !
 
 
 
@@ -125,7 +125,7 @@ La période _T_, durée d’un _dot_, sert à définir les autres durées. Pour 
 
 Le programme attend une lettre du terminal (lettre-CR, voir doc) et joue les flashs ou sons. Les espaces entre lettres et mots peuvent être ignorés.
 
-Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](/microcontroleurs-004/wiki/view?page=corr-ex5-1-1) !
+Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](https://class.coursera.org/microcontroleurs-004/wiki/view?page=corr-ex5-1-1) !
 
 
 
@@ -137,7 +137,7 @@ On peut lire plusieurs poussoirs en n’utilisant qu’une entrée analogique. P
 
 Évidemment, pour lire les poussoirs, faut tester les tensions...
 
-Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](/microcontroleurs-004/wiki/view?page=corr-ex5-4-1) !
+Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](https://class.coursera.org/microcontroleurs-004/wiki/view?page=corr-ex5-4-1) !
 
 
 
@@ -149,7 +149,7 @@ Si on exécute `Serial.print (3,BIN)` : le résultat est 11. On aimerait bien v
 
 Programmez et testez aussi la fonction `PrintHex ()`, qui vous fera réfléchir comment convertir les chiffres 4 bits: `0000 ⇒ '0' 1010 ⇒ 'A'`
 
-Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](/microcontroleurs-004/wiki/view?page=corr-ex5-5-1) !
+Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](https://class.coursera.org/microcontroleurs-004/wiki/view?page=corr-ex5-5-1) !
 
 Les corrigés compatibles *Arduino* se trouvent dans [Sem5SolutionsArduino.zip](http://www.didel.com/coursera/Sem5SolutionsArduino.zip)
 
@@ -185,7 +185,7 @@ On dispose d’une procédure `AfficheCadre (unsigned int segments)` qui affiche
 
 Écrivez la boucle principale du programme qui fait “tourner” le cadre dix fois dans un sens, puis dix fois dans l’autre sens.
 
-Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](/microcontroleurs-004/wiki/view?page=corr-ex4-1-1) !
+Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](https://class.coursera.org/microcontroleurs-004/wiki/view?page=corr-ex4-1-1) !
 
 
 
@@ -195,9 +195,9 @@ Afin de lutter contre le vol à l’étalage, la direction d’un supermarché s
 
 Deux barrières lumineuses vont être installées au niveau de l’entrée, à la même hauteur, distantes l’une de l’autre de 5 cm. Lorsqu’un client entre, la première barrière est coupée, puis la seconde. Si un client passe dans l’autre sens, ce sera le contraire. Un microcontrôleur reçoit les signaux de ces deux capteurs.
 
-Écrivez le programme pour commander le contact d’un avertisseur sonore durant 5 secondes lorsqu’un client sort du magasin par l’entrée.
+Écrivez le programme pour commander le contact d’un avertisseur sonore durant 5 s lorsqu’un client sort du magasin par l’entrée.
 
-Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](/microcontroleurs-004/wiki/view?page=corr-ex4-2-2) !
+Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](https://class.coursera.org/microcontroleurs-004/wiki/view?page=corr-ex4-2-2) !
 
 
 
@@ -213,7 +213,7 @@ Le diagramme des temps montre les états possibles. Il faut tenir compte du fait
 
 ![](images/Miaou2.png)
 
-Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](/microcontroleurs-004/wiki/view?page=corr-ex4-3-1) !
+Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](https://class.coursera.org/microcontroleurs-004/wiki/view?page=corr-ex4-3-1) !
 
 
 
@@ -243,7 +243,7 @@ Une fois le graphe d’état établi, écrivez le programme par étapes successi
 
 Il reste à s’occuper de l’implémentation matérielle des entrées et des sorties.
 
-Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](/microcontroleurs-004/wiki/view?page=corr-ex4-3-2) !
+Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](https://class.coursera.org/microcontroleurs-004/wiki/view?page=corr-ex4-3-2) !
 
 
 
@@ -253,7 +253,7 @@ Les 7 LEDs d’un dé sont câblées comme ci-contre pour utiliser un nombre min
 
 ![](images/DeJdn.png)
 
-Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](/microcontroleurs-004/wiki/view?page=corr-ex4-4-1) !
+Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](https://class.coursera.org/microcontroleurs-004/wiki/view?page=corr-ex4-4-1) !
 
 
 
@@ -296,7 +296,7 @@ Rappels:
 7. `z / y`
 8. `z % y`
 
-Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](/microcontroleurs-004/wiki/view?page=corr-ex3-1-1) !
+Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](https://class.coursera.org/microcontroleurs-004/wiki/view?page=corr-ex3-1-1) !
 
 
 
@@ -310,7 +310,7 @@ Quand on écrit une boucle : `for (i=0; i<10; i++) {instructions}` on passe tro
 
 Ecrivez cette même action sans le mot `for` !
 
-Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](/microcontroleurs-004/wiki/view?page=corr-ex3-1-2) !
+Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](https://class.coursera.org/microcontroleurs-004/wiki/view?page=corr-ex3-1-2) !
 
 
 
@@ -328,10 +328,10 @@ L’instruction `break;` permet de sortir d’un `{ bloc d’instructions }` ava
 	}
 	delay (1000); // on continue avec d’autres instructions ou on recommence dans la boucle principale.
 
-**Question :** Écrire un programme qui attend une pression sur Pous1 et sort de l’attente en clignotant si on ne presse pas dans les 5 secondes. On doit donc presser régulièrement pour réinitialiser un compteur qui augmente avec une période de
-    50ms.
+**Question :** Écrire un programme qui attend une pression sur Pous1 et sort de l’attente en clignotant si on ne presse pas dans les 5 s. On doit donc presser régulièrement pour réinitialiser un compteur qui augmente avec une période de
+    50 ms.
 
-Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](/microcontroleurs-004/wiki/view?page=corr-ex3-1-3) !
+Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](https://class.coursera.org/microcontroleurs-004/wiki/view?page=corr-ex3-1-3) !
 
 
 
@@ -346,7 +346,7 @@ Rappels :
 - Le microcontrôleur *ATmega328* de l’*Arduino* dispose des port `B`, `C` et `D`. Les bits pairs sont `PB0`, `PB2`, `PB4`, ..., `PC0`, `PC2`,... et les bits impairs `PB1`, `PB3`,..., `PC1`, `PC3`... Les registres de direction s’appellent `DDR` (`DDRB`, `DDRC`, etc.) et les registres de sortie s’appellent `PORT` (`PORTB`, `PORTC`, etc.)
 - Le microcontrôleur *MSP430G2553* du *LaunchPad* dispose des ports `P1` et `P2`. Les registres de direction s’appellent `P1DIR` (et `P2DIR`) et les registres de sortie s’appellent `P1OUT` (et `P2OUT`).
 
-Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](/microcontroleurs-004/wiki/view?page=corr-ex3-2-1) !
+Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](https://class.coursera.org/microcontroleurs-004/wiki/view?page=corr-ex3-2-1) !
 
 
 
@@ -362,7 +362,7 @@ Voici le schéma :
 
 Écrivez les deux instructions qui allument la LED 5 sans en allumer d’autres.
 
-Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](/microcontroleurs-004/wiki/view?page=corr-ex3-2-2) !
+Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](https://class.coursera.org/microcontroleurs-004/wiki/view?page=corr-ex3-2-2) !
 
 
 
@@ -370,7 +370,7 @@ Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](/m
 
 Écrivez d’une manière plus lisible l’instruction suivante : `DDRC = 0b01000001;`
 
-Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](/microcontroleurs-004/wiki/view?page=corr-ex3-3-1) !
+Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](https://class.coursera.org/microcontroleurs-004/wiki/view?page=corr-ex3-3-1) !
 
 
 
@@ -384,7 +384,7 @@ Indiquez le résultat par des clignotements. Tester des données en :
 - hexadécimal : `mot = 0x 3C41;` résultat `6`
 - décimal : `mot = 1025;` résultat `2 // le compilateur converti en binaire, pas en BCD.`
 
-Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](/microcontroleurs-004/wiki/view?page=corr-ex3-4-1) !
+Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](https://class.coursera.org/microcontroleurs-004/wiki/view?page=corr-ex3-4-1) !
 
 
 
@@ -396,7 +396,7 @@ On vient de voir une boucle `for` pour clignoter un certain nombre de fois. Écr
 
 Utiliser cette fonction dans un programme qui clignote une fois, deux fois, etc .et s’arrête à _5_ fois.
 
-Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](/microcontroleurs-004/wiki/view?page=corr-ex3-5-1) !
+Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](https://class.coursera.org/microcontroleurs-004/wiki/view?page=corr-ex3-5-1) !
 
 
 
@@ -404,7 +404,7 @@ Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](/m
 
 Cette fonction a un 2e paramètre qui est la vitesse. Testez avec un programme qui à la fois augmente le nombre de clignotements et la fréquence, avec une durée de salve constante. On voit donc le produit de la période par le nombre d’impulsions est constant.
 
-Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](/microcontroleurs-004/wiki/view?page=corr-ex3-5-2) !
+Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](https://class.coursera.org/microcontroleurs-004/wiki/view?page=corr-ex3-5-2) !
 
 
 
@@ -412,7 +412,7 @@ Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](/m
 
 On veut une fonction qui mesure la durée pendant laquelle on presse sur un poussoir. La durée sera en unités de 50 ms, mais on essayera des valeurs plus faibles jusqu’à être perturbé par les rebonds de contact. Pour tester, écrire le programme qui allume la LED 1 si on est très rapide, et la LED 2 si on est lent.
 
-Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](/microcontroleurs-004/wiki/view?page=corr-ex3-5-3) !
+Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](https://class.coursera.org/microcontroleurs-004/wiki/view?page=corr-ex3-5-3) !
 
 
 
@@ -435,7 +435,7 @@ Assurez-vous d’avoir compris le premier document ! Vous êtes encouragés cet
 
 **Question :** Quelle est la différence entre un microcontrôleur et un microprocesseur ?
 
-Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](/microcontroleurs-004/wiki/view?page=corr-ex2-2-1) !
+Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](https://class.coursera.org/microcontroleurs-004/wiki/view?page=corr-ex2-2-1) !
 
 
 
@@ -445,7 +445,7 @@ Dans une application qui nécessite une bonne précision de calcul, on doit effe
 
 **Question :** Est-ce qu’on est obligé alors de choisir un microcontrôleur 32 bits ?
 
-Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](/microcontroleurs-004/wiki/view?page=corr-ex2-3-1) !
+Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](https://class.coursera.org/microcontroleurs-004/wiki/view?page=corr-ex2-3-1) !
 
 
 
@@ -453,7 +453,7 @@ Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](/m
 
 **Question :** Si la fréquence d’un microcontrôleur est supérieure à celle d’un autre microcontrôleur, peut-on dire alors que sa puissance de calcul est supérieure ?
 
-Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](/microcontroleurs-004/wiki/view?page=corr-ex2-3-2) !
+Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](https://class.coursera.org/microcontroleurs-004/wiki/view?page=corr-ex2-3-2) !
 
 
 
@@ -461,15 +461,15 @@ Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](/m
 
 Un poussoir actif a zéro est câblé sur la pin 4. Une LED sur la pin 5. Si on presse (statique), la LED doit clignoter à 2 Hz (période 500 ms).
 
-Cherchez par vous-même à écrire le programme. Ensuite, vous pourrez voir le [Corrigé](/microcontroleurs-004/wiki/view?page=corr-ex2-4-1) !
+Cherchez par vous-même à écrire le programme. Ensuite, vous pourrez voir le [Corrigé](https://class.coursera.org/microcontroleurs-004/wiki/view?page=corr-ex2-4-1) !
 
 
 
-## *Ex 2.4-2* Programmation en *C/Arduino* : allumer 2 secondes quand on presse
+## *Ex 2.4-2* Programmation en *C/Arduino* : allumer 2 s quand on presse
 
-Si on presse (dynamique), le programme doit allumer la LED pendant 2 secondes. Tester en pressant plus ou moins vite.
+Si on presse (dynamique), le programme doit allumer la LED pendant 2 s. Tester en pressant plus ou moins vite.
 
-Cherchez par vous-même à écrire le programme. Ensuite, vous pourrez voir le [Corrigé](/microcontroleurs-004/wiki/view?page=corr-ex2-4-2) !
+Cherchez par vous-même à écrire le programme. Ensuite, vous pourrez voir le [Corrigé](https://class.coursera.org/microcontroleurs-004/wiki/view?page=corr-ex2-4-2) !
 
 
 
@@ -479,7 +479,7 @@ On a un poussoir et deux LEDs. Le poussoir a une action quand on presse. Si on p
 
 Écrire le programme et dire ce que l’on a programmé.
 
-Cherchez par vous-même à écrire le programme. Ensuite, vous pourrez voir le [Corrigé](/microcontroleurs-004/wiki/view?page=corr-ex2-4-3) !
+Cherchez par vous-même à écrire le programme. Ensuite, vous pourrez voir le [Corrigé](https://class.coursera.org/microcontroleurs-004/wiki/view?page=corr-ex2-4-3) !
 
 
 
@@ -487,7 +487,7 @@ Cherchez par vous-même à écrire le programme. Ensuite, vous pourrez voir le [
 
 Le poussoir Pous1 doit allumer la LED. Le poussoir Pous2 doit l’éteindre. On va reconnaître la bascule RS.
 
-Cherchez par vous-même à écrire le programme. Ensuite, vous pourrez voir le [Corrigé](/microcontroleurs-004/wiki/view?page=corr-ex2-4-4) !
+Cherchez par vous-même à écrire le programme. Ensuite, vous pourrez voir le [Corrigé](https://class.coursera.org/microcontroleurs-004/wiki/view?page=corr-ex2-4-4) !
 
 
 
@@ -496,11 +496,11 @@ Cherchez par vous-même à écrire le programme. Ensuite, vous pourrez voir le [
 On a une variable `byte compteur;` dont on va modifier la valeur avec deux poussoirs qui agissent statiquement. On ne sait pas encore comment afficher cette valeur, mais pour avoir une idée, on allume la LED pour les
     valeurs impaires. Un clignotement de la LED indique que le compteur augmente ou diminue (rajouter des LEDs si vous voulez).
 
-Quand on pèse sur Pous1 et on maintien pressé (action statique), le compteur augmente chaque 0.2 seconde, mais se bloque à 7, LED allumée puisque c’est impair.
+Quand on pèse sur Pous1 et on maintien pressé (action statique), le compteur augmente chaque 0.2 s, mais se bloque à 7, LED allumée puisque c’est impair.
 
 Quand on pèse sur Pous1 et maintien pressé, le compteur décompte et se bloque à zéro, LED éteinte.
 
-Cherchez par vous-même à écrire le programme. Ensuite, vous pourrez voir le [Corrigé](/microcontroleurs-004/wiki/view?page=corr-ex2-5-1) !
+Cherchez par vous-même à écrire le programme. Ensuite, vous pourrez voir le [Corrigé](https://class.coursera.org/microcontroleurs-004/wiki/view?page=corr-ex2-5-1) !
 
 
 
@@ -508,10 +508,10 @@ Cherchez par vous-même à écrire le programme. Ensuite, vous pourrez voir le [
 
 La fonction *Arduino* `map()` doit faire des multiplications et division. Quel est son temps de calcul ?
 
-On met cette fonction dans une boucle exécutée 10’000 fois (max 30000 en 16 bits signés). On mesure la période entre deux basculements de la LED. Si la fonction dure 100 microsecondes, la période est de 1 secondes. Écrire le programme et dire quelle
+On met cette fonction dans une boucle exécutée 10’000 fois (max 30000 en 16 bits signés). On mesure la période entre deux basculements de la LED. Si la fonction dure 100 µs, la période est de 1 s. Écrire le programme et dire quelle
     est la durée de la fonction map().
 
-Cherchez par vous-même à écrire le programme. Ensuite, vous pourrez voir le [Corrigé](/microcontroleurs-004/wiki/view?page=corr-ex2-5-2) !
+Cherchez par vous-même à écrire le programme. Ensuite, vous pourrez voir le [Corrigé](https://class.coursera.org/microcontroleurs-004/wiki/view?page=corr-ex2-5-2) !
 
 
 
@@ -542,7 +542,7 @@ On considère que le transistor a un gain important et qu’on peut donc néglig
 
 **Question :** Quel valeur doit-on donner à la résistance R pour que le détecteur avertisse du risque de gel vers 1°C ?
 
-Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](/microcontroleurs-004/wiki/view?page=corr-ex1-2-1) !
+Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](https://class.coursera.org/microcontroleurs-004/wiki/view?page=corr-ex1-2-1) !
 
 
 
@@ -552,7 +552,7 @@ Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](/m
 
 ![](images/D3q1.gif)
 
-Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](/microcontroleurs-004/wiki/view?page=corr-ex1-3-1) !
+Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](https://class.coursera.org/microcontroleurs-004/wiki/view?page=corr-ex1-3-1) !
 
 
 
@@ -570,7 +570,7 @@ Voici la table de vérité de la fonction OU-exclusif :
 
 **Question :** Dessinez le schéma logique correspondant.
 
-Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](/microcontroleurs-004/wiki/view?page=corr-ex1-4-1) !
+Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](https://class.coursera.org/microcontroleurs-004/wiki/view?page=corr-ex1-4-1) !
 
 
 
@@ -580,7 +580,7 @@ Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](/m
 
 ![](images/diagramme-temp-ex.png)
 
-Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](/microcontroleurs-004/wiki/view?page=corr-ex1-4-2) !
+Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](https://class.coursera.org/microcontroleurs-004/wiki/view?page=corr-ex1-4-2) !
 
 
 
@@ -594,7 +594,7 @@ Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](/m
 - dessiner et remplir la table de vérité du système combinatoire
 - écrire les équation du système combinatoire.
 
-Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](/microcontroleurs-004/wiki/view?page=corr-ex1-5-1) !
+Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](https://class.coursera.org/microcontroleurs-004/wiki/view?page=corr-ex1-5-1) !
 
 
 
@@ -602,7 +602,7 @@ Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](/m
 
 **Question :** Convertissez en binaire les nombres décimaux suivant : `5`, `12`, `63`, `257`, `1280`
 
-Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](/microcontroleurs-004/wiki/view?page=corr-ex1-6-1) !
+Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](https://class.coursera.org/microcontroleurs-004/wiki/view?page=corr-ex1-6-1) !
 
 
 
@@ -610,7 +610,7 @@ Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](/m
 
 **Question :** Convertissez en hexadécimal les nombres binaires suivant : `0b00110111`, `0b01011111`, `0b1110010011011001`, `0b101111001`
 
-Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](/microcontroleurs-004/wiki/view?page=corr-ex1-6-2) !
+Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](https://class.coursera.org/microcontroleurs-004/wiki/view?page=corr-ex1-6-2) !
 
 
 
@@ -618,7 +618,7 @@ Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](/m
 
 **Question :** Convertissez en décimal les nombres BCD suivant : `0010001101011001` et `1110010011011001`
 
-Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](/microcontroleurs-004/wiki/view?page=corr-ex1-6-3) !
+Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](https://class.coursera.org/microcontroleurs-004/wiki/view?page=corr-ex1-6-3) !
 
 
 
