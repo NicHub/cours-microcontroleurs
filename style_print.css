@@ -1,12 +1,12 @@
 @charset "utf-8";
 
+
+@import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic,700italic|Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic|Ubuntu+Condensed&subset=latin,latin-ext);
+
 body
 {
-	font-family: "Ubuntu Condensed";
 	font-family: "Ubuntu";
 	font-weight: 100;
-	font-family: "Avenir";
-	font-weight: 400;
 	hyphens: auto;
 	hyphenate-lines: 1;
 	prince-hyphenate-before: 3;
@@ -35,10 +35,14 @@ body
 
 @page
 {
-	font-family: "Avenir";
+	font-family: "Ubuntu";
 	font-size: 10.5pt;
 	size: A4;
 	margin: 2cm 1.5cm 2cm;
+	@top-center
+	{
+		content: string( strMOOC );
+	}
 	@bottom-center
 	{
 		/*content: counter( page );*/
@@ -49,13 +53,30 @@ body
 		margin: 0 0 0.5cm;
 		padding: 0;
 	}
+	/* Watermark */
+	@bottom-left
+	{
+		float: left;
+		margin-bottom: 20cm;
+		content: "DRAFT";
+		color: rgba( 0, 0, 0, 0.1 );
+		font-size: 60pt;
+		font-weight: 900;
+	}
+/*
+*/
+}
+@page:blank
+{
 	@top-center
 	{
-		content: string( strMOOC );
+		content: none;
 	}
-
+	@bottom-center
+	{
+		content: none;
+	}
 }
-
 p
 {
 	text-align: justify;
@@ -64,13 +85,12 @@ p
 }
 b, strong
 {
-	font-weight: 600;
+	font-weight: 500;
 }
 h1, h2, h3
 {
 	font-family: "Ubuntu Condensed";
 	font-weight: 600;
-	font-family: "Avenir Next Condensed";
 	font-size: inherit;
 	text-transform: uppercase;
 	text-align: center;
@@ -90,6 +110,12 @@ h2
 	border-top: 1px solid;
 	padding: 10px 0 0;
 }
+h1+h2
+{
+	border-top: none;
+	padding: 0;
+}
+
 code, pre
 {
 	font-family: "Ubuntu Mono";
@@ -98,6 +124,7 @@ code, pre
 }
 pre
 {
+	overflow:  hidden;
 	padding: 0px 10px;
 	margin: 10px 0;
 }
@@ -176,19 +203,26 @@ blockquote
 
 
 
-figure img[ alt="transistor-ctn"    ]{ max-height: 5cm; }
-figure img[ alt="thermistance"      ]{ max-height: 6cm; }
-figure img[ alt="D3q1"              ]{ max-height: 4cm; }
-figure img[ alt="diagramme-temp-ex" ]{ max-height: 6cm; }
-figure img[ alt="charlieplexing-3"  ]{ max-height: 6cm; }
-figure img[ alt="CadreEnseigne"     ]{ max-height: 3cm; }
-figure img[ alt="Miaou1"            ]{ max-height: 5cm; }
-figure img[ alt="Miaou2"            ]{ max-height: 6cm; }
-figure img[ alt="DeJdn"             ]{ max-height: 7cm; }
-figure img[ alt="morse1"            ]{ max-height: 8cm; }
-figure img[ alt="morse2"            ]{ min-width: 4cm; max-height: 5cm;}
-figure img[ alt="morse3"            ]{ max-height: 4cm; }
-figure img[ alt="pouss4"            ]{ max-height: 6cm; }
-figure img[ alt="foot-change"       ]{ max-height: 6cm; }
+figure img[ alt="transistor-ctn"       ]{ max-height: 5cm; }
+figure img[ alt="thermistance"         ]{ max-height: 8cm; }
+figure img[ alt="D3q1"                 ]{ max-height: 3.7cm; }
+figure img[ alt="diagramme-temp-ex"    ]{ max-height: 6cm; }
+figure img[ alt="charlieplexing-3"     ]{ max-height: 6cm; }
+figure img[ alt="CadreEnseigne"        ]{ max-height: 3cm; }
+figure img[ alt="Miaou1"               ]{ max-height: 5cm; }
+figure img[ alt="Miaou2"               ]{ max-height: 6cm; }
+figure img[ alt="DeJdn"                ]{ max-height: 7cm; }
+figure img[ alt="morse1"               ]{ max-height: 8cm; }
+figure img[ alt="morse2"               ]{ min-width: 4cm; max-height: 5cm;}
+figure img[ alt="morse3"               ]{ max-height: 4cm; }
+figure img[ alt="pouss4"               ]{ max-height: 6cm; }
+figure img[ alt="foot-change"          ]{ max-height: 6cm; }
 
+figure img[ alt="log-xor-detail"       ]{ max-height: 5cm; }
+figure img[ alt="diagramme-temp-corr"  ]{ max-height: 5cm; }
+figure img[ alt="compteur-5"           ]{ max-height: 5cm; }
+figure img[ alt="compteur-5-schema"    ]{ max-height: 5cm; }
+figure img[ alt="compteur-5-table"     ]{ max-height: 5cm; }
+figure img[ alt="GrapheMonteCharge"    ]{ max-height: 5cm; }
+figure img[ alt="change-foot-schema"   ]{ max-height: 9cm; }
 

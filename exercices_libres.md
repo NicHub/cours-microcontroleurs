@@ -74,7 +74,7 @@ Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](ht
 
 ## *Ex 1.5-1* Machine d’état
 
-**Question :** Etudiez la réalisation d’un compteur-décompteur par 5. Vous pouvez successivement :
+**Question :** Étudiez la réalisation d’un compteur-décompteur par 5. Vous pouvez successivement :
 
 - dessiner le schéma-bloc du système, avec ses entrées et ses sorties
 - dessiner le graphe d’état
@@ -263,7 +263,7 @@ Quand on écrit une boucle : `for (i=0; i<10; i++) {instructions}` on passe tro
 2. la condition d’exécution de la boucle (ici `i<10;`) : un test, répété à chaque début de boucle, qui permet de savoir si elle doit s’exécuter (ou s’arrêter)
 3. l’instruction “d’incrémentation” (ici `i++`) : ce terme est inexact. Il s’agit souvent d’une incrémentation, mais c’est simplement une instruction qui s’exécute à la fin de chaque itération de la boucle.
 
-Ecrivez cette même action sans le mot `for` !
+Écrivez cette même action sans le mot `for` !
 
 Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](https://class.coursera.org/microcontroleurs-004/wiki/view?page=corr-ex3-1-2) !
 
@@ -281,7 +281,10 @@ L’instruction `break;` permet de sortir d’un `{ bloc d’instructions }` ava
 	  if (i >= 3) { break; }
 	  i++;
 	}
-	delay (1000); // on continue avec d’autres instructions ou on recommence dans la boucle principale.
+	delay (1000); // on continue avec d’autres
+	              // instructions ou on
+	              // recommence dans
+	              // la boucle principale.
 
 **Question :** Écrire un programme qui attend une pression sur Pous1 et sort de l’attente en clignotant si on ne presse pas dans les 5 s. On doit donc presser régulièrement pour réinitialiser un compteur qui augmente avec une période de
     50 ms.
@@ -632,5 +635,1099 @@ Calculez la durée de vie d’un jeu de piles. Proposez des solutions pour que l
 
 Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](https://class.coursera.org/microcontroleurs-004/wiki/view?page=corr-ex6-5-1) !
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="page-break-before:right;"></div>
+
+# Semaine 1
+
+## *Corr 1.2-1* Détecteur de gel
+
+La thermistance prend une valeur de 3.1 kΩ à 1°C. Pour que la tension de base soit égale à 0.7 V, la tension au borne de la thermistance est de 5 V - 0.7 V = 4.3 V. Le courant dans la thermistance est donc de I = U / R = 4.3 V / 3.1 kΩ = 1.39 mA.
+
+Le courant dans la thermistance est le même que dans le résistance R (si le courant de base est négligeable).
+
+Aux bornes de la résistance R, on a une tension de 0.7 V (c’est la tension de base). Pour que le courant soit de 1.39 mA, elle doit être de R = U / I = 0.7 V / 1.39 mA = 503 Ω, donc environ 500 Ω. Il faudra ajuster cette valeur pour avoir une détection précise : on utilisera une résistance variable (par exemple de 100 Ω) en série avec une résistance fixe (par exemple de 470 Ω).
+
+
+## *Corr 1.3-1* Logique à transistors
+
+Chaque transistor va conduire quand l’entrée correspondante est à _1_. Tant qu’aucun des transistors ne conduit, aucun courant ne peut circuler. La sortie est alors à _1_, à cause de la résistance et de la LED sur les collecteurs, reliés au plus.
+
+Quand un des deux transistors conduit (ou les deux), la sortie passe à _0_. On a donc une porte NOR.
+
+Équation logique : A + B
+
+Mais attention : la LED s’allume quand la sortie est à _0_. Elle montre donc l’inverse de la sortie (fonction OU).
+
+
+## *Corr 1.4-1* Schéma du OU-exclusif
+
+Il est pratique de commencer par écrire l’équation logique à partir de la table de vérité :
+
+S = A ⋅ B + A ⋅ B
+
+Voici le schéma correspondant :
+
+![log-xor-detail](images/log-xor-detail.png)
+
+La porte de droite est bien une porte NAND (par le théorème de De Morgan)
+
+A ⋅ B = A + B
+
+
+## *Corr 1.4-2* Diagramme temporel
+
+Il est facile de remplir les cases de la table de vérité en suivant le diagramme temporel
+
+![diagramme-temp-corr](images/diagramme-temp-corr.png)
+
+Mais on finit par voir qu’il manque un cas !
+
+Le diagramme des temps n’est généralement pas un bon moyen de représenter un système combinatoire. Mais il est très utile pour étudier les systèmes séquentiels.
+
+
+
+## *Corr 1.5-1* Machine d’état
+
+Il faut commencer par déterminer les entrées et les sorties du système, puis dessiner un graphe d’état :
+
+![compteur-5](images/compteur-5.png)
+
+Le système va changer d’état à chaque coup d’horloge. L’état suivant dépend de l’entrée de comptage-décomptage, qu’on a appelée _Plus_. Il a 5 états. Il faut donc au moins 3 bascules pour mémoriser les états. Le système combinatoire qui va donner les nouvelles valeur aux entrées des bascules aura donc 4 entrées : l’entrée _Plus_ et les 3 sorties des bascules, qui représentent l’état courant.
+
+![compteur-5-schema](images/compteur-5-schema.png)
+
+Remplissons la table de vérité, en donnant pour chaque ligne l’état futur (valeur de comptage) en fonction de la valeur courante et du mode de comptage. Écrivons ensuite les équations.
+
+![compteur-5-table](images/compteur-5-table.png)
+
+C’est bien compliqué ! Il faudrait encore simplifier, en appliquant les propriétés de l’algèbre de Boole aux équations ou en utilisant les tables de Karnaugh.
+
+Ce sera peut-être plus simple de programmer un microcontrôleur...
+
+
+
+
+## *Corr 1.6-1* Conversion décimal-binaire
+
+On se souvient des puissance de _2 : 1 2 4 8 16 32 64 128 256 512 1024 2048 4096..._
+
+On peut par exemple soustraire successivement les puissances de _2_ qu’il est possible de soustraire au nombre.
+
+_5 = 4*1 + 2*0 + 1*1 = 4 + 1 = 0b101_
+
+_12 = 8 + 4 = 0b1100_
+
+_63 = 32 + 16 + 8 + 4 + 2 + 1 => 0b111111_
+
+Autre moyen de calculer :
+
+_63 = 64 - 1 = 0b1000000 - 1 = 0b111111_
+
+_257 = 256 + 1 = 0b100000001_
+
+_1280 = 1024 + 256 = 0b10100000000_
+
+
+
+## *Corr 1.6-2* Conversion binaire-Hexadécimal
+
+Il faut commencer par couper le nombre binaire en tranches de 4 bits, depuis la droite, puis utiliser la table de conversion :
+
+_0000 = 0, 0001 = 1, 0010 = 2, 0011 = 3, 0100 = 4, 0101 = 5, 0110 = 6, 0111 = 7_
+
+_1000 = 8, 1001 = 9, 1010 = A, 1011 = B, 1100 = C, 1101 = D, 1110 = E, 1111 = F_
+
+_0b01011111 = 0b0101'1111 = 0x5F_
+
+_0b00110111 = 0b0011'0111 = 0x37_
+
+_0b1110010011011001 = 0b1110'0100'1101'1001 = 0xE4D9_
+
+_0b101111001 = 0b1'0111'1001 = 0x179_
+
+
+## *Corr 1.6-3* Conversion BCD-décimal
+
+Il faut couper le nombre binaire en tranches de 4 bits, depuis la droite, puis utiliser ta table de conversion :
+
+_0000 = 0, 0001 = 1, 0010 = 2, 0011 = 3, 0100 = 4, 0101 = 5, 0110 = 6, 0111 = 7, 1000 = 8, 1001 = 9_
+
+_0010001101011001 = 0010'0011'0101'1001 = 2359_ (par exemple 23h59 pour réprésenter une heure)
+
+Par contre _1110010011011001_ n’est pas un nombre BCD ! (la valeur _1110_ n’a pas de correspondant dans la table).
+
+
+
+
+
+# Semaine 2
+
+## *Corr 2.2-1* Microprocesseur et microcontrôleur
+
+Mes étudiants me posent souvent la question...
+
+Un microcontrôleur contient un microprocesseur ! Mais il contient aussi de la mémoire (ROM, RAM) et des circuits d’entrée-sortie, pour être un à lui seul un système informatique autonome.
+
+
+## *Corr 2.3-1* Microcontrôleurs 8-16-32 bits
+
+Même un processeur 8 bits est capable d’effectuer des calcul sur des nombres de 32 bits. Il faut alors décomposer les opérations en opérations sur des nombres de 8 bits, un peu comme nous avons appris à l’école à effectuer des additions, des soustractions, des multiplications et des divisons ! Mais rassurez-vous : c’est le compilateur qui va faire ce travail, pas vous...
+
+Il faudra peut-être des dizaines ou même des centaines d’opérations élémentaires sur 8 bits pour effectuer un calcul. Mais ce n’est pas grave : rappelez-vous que même le petit processeur contenu dans un microcontrôleur "entrée de gamme" est généralement capable d’exécuter des millions d’instructions par seconde !
+
+
+## *Corr 2.3-2* Fréquence et puissance de calcul
+
+Il faut être très prudent en comparant des microcontrôleurs (et les processeurs qu’ils contiennent). La fréquence est certainement une indication des performances, mais d’autres facteurs sont aussi très importants :
+
+- la largeur du bus de données (processeur 8 bits-16bits-32bits)
+- le nombre de coups d’horloge nécessaire pour l’exécution de chaque instruction
+- la richesse du jeux d’instructions
+- l’organisation des mécanismes d’interruption
+- les performances de l’unité arithmétique
+- etc.
+
+
+
+## *Corr 2.4-1* Programmation en *C/Arduino* : clignoter pendant que l’on presse
+
+Voici une solution :
+
+	//Solution241.ino
+	#define Pous 2 // pin2 Arduino
+	#define PousOn digitalRead (Pous) == 0
+	#define PousOff digitalRead (Pous) == 1
+	#define Led 5
+	#define LedOn digitalWrite (Led,LOW) ;
+	#define LedOff digitalWrite (Led,HIGH) ;
+	void setup () {
+	  pinMode (Pous, INPUT) ;
+	  pinMode (Led,OUTPUT) ;
+	}
+	void loop () {
+	  if (PousOn) {
+	    LedOn ; delay (250);
+	    LedOff ; delay (250);
+	  }
+	}
+
+Variante en ajoutant dans la définition de LedToggle (réagit plus rapidement quand on relâche, pressez rapidement pour voir la différence) :
+
+	void loop () {
+	  if (PousOn) {
+	    LedToggle ; delay (250);
+	  }
+	}
+
+
+
+## *Corr 2.4-2* Programmation en *C/Arduino* : allumer 2 s quand on presse
+
+Voici une solution :
+
+	//Solution242.ino
+	#define Pous 2
+	#define PousOn digitalRead (Pous) == 0
+	#define PousOff digitalRead (Pous) == 1
+	#define Led 5
+	#define LedOn digitalWrite (Led,LOW) ;
+	#define LedOff digitalWrite (Led,HIGH) ;
+	void setup () {
+	  pinMode (Pous, INPUT) ;
+	  pinMode (Led,OUTPUT) ;
+	}
+	void loop () {
+	  if (PousOn) {
+	    LedOn ; delay (2000);
+	    LedOff ; // tester un délai
+	             // ici delay (1000);
+	  }
+	  while (PousOn) {}
+	}
+
+
+
+## *Corr 2.4-3* Programmation en *C/Arduino* : Un poussoir pour 2 LEDs
+
+Voici une solution :
+
+	//Solution243.ino
+	#define Led1 5 //Actif à 0 MSP Energia pin xx
+	#define Led2 6
+	#define Led1Toggle digitalWrite \
+	  (Led1, !digitalRead (Led1))
+	#define Led2Toggle digitalWrite \
+	  (Led2, !digitalRead (Led2))
+	#define Pous 2 // actif à 0
+	#define PousOn !digitalRead(Pous)
+	void setup() {
+	  pinMode (Pous,INPUT);
+	  pinMode (Led1,OUTPUT);
+	  pinMode (Led2,OUTPUT);
+	}
+	void loop () {
+	  while (PousOn) {delay (20);}
+	  while (!PousOn){delay (20);}
+	  Led1Toggle;
+	  if (digitalRead (Led1)) {
+	    Led2Toggle;
+	  }
+	}
+
+On remarque que l’on a programmé un compteur par 4. Les LEDs s’allument dans la séquence `00 01 10 11`
+
+À noter aussi que `if (digitalRead (Led1) == 1)` peut s’écrire `if (digitalRead (Led1))`
+
+
+
+## *Corr 2.4-4* Programmation en *C/Arduino* : Deux poussoir pour une LEDs
+
+Voici une solution :
+
+	//Solution244.ino
+	#define Pous1 2
+	#define Pous2 3
+	#define Pous1On !digitalRead (Pous1)
+	#define Pous2On !digitalRead (Pous2)
+	#define Led 5
+	#define LedOn digitalWrite (Led,LOW) ;
+	#define LedOff digitalWrite (Led,HIGH) ;
+	void setup () {
+	  pinMode (Pous1, INPUT) ;
+	  pinMode (Pous2, INPUT) ;
+	  pinMode (Led,OUTPUT) ;
+	}
+	void loop () {
+	  if (Pous1On) { LedOn ; delay (20); }
+	  if (Pous2On) { LedOff ; delay (20); }
+	}
+
+Que se passe-t’il si on presse les deux poussoirs ? et quand on relâche ?
+
+
+
+## *Corr 2.5-1* Programmation d’un compteur up/down
+
+Voici une solution :
+
+	// UpDown.ino
+	#define Led1 5 // actif à 0
+	#define Pous1 2 // actif à 0
+	#define Pous2 3 // actif à 0
+	#define Pous1On !digitalRead (Pous1) // actif
+	                                     // à 0
+	#define Pous2On !digitalRead (Pous2) // actif
+	                                     // à 0
+	#define Led1On digitalWrite (Led1, LOW)
+	#define Led1Off digitalWrite (Led1, HIGH)
+	void setup() {
+	  pinMode (Led1, OUTPUT);
+	  pinMode (Pous1, INPUT);
+	  pinMode (Pous2, INPUT);
+	}
+	byte compteur = 6;
+	void loop() {
+	  if (Pous1On) {
+	    if (compteur < 7) {
+	      compteur ++;
+	      if (compteur & 0x01) Led1On ;
+	      else Led1Off ;
+	      delay (200);
+	    }
+	  }
+	  if (Pous2On) {
+	    if (compteur >0) {
+	      compteur --;
+	      if (compteur & 0x01) Led1On ;
+	      else Led1Off ;
+	      delay (200);
+	    }
+	  }
+	}
+
+
+## *Corr 2.5-2* Estimation de la durée de la fonction *Arduino* `Map ()`
+
+Voici une solution :
+
+	// DureeMap
+	#define Led1 5 // Actif à 0
+	#define Led1Toggle \
+	  digitalWrite (Led1, !digitalRead (Led1))
+	void setup() {
+	  pinMode (Led1,OUTPUT);
+	}
+	int cnt, y;
+	void loop () {
+	  cnt = 0;
+	  while (cnt++ < 10000) {
+	    y = map (500,240,680,32,35) ;
+	  }
+	  Led1Toggle;
+	}
+
+
+
+# Semaine 3
+
+## *Corr 3.1-1* Variables et arithmétiques
+
+Il faut se souvenir du cercle des nombres Modulos !
+
+1. x + y = 8 + 3 = 11
+2. y + z = 3 + 250 = 253
+3. x + z = 8 + 250 = 258. Mais 258 ne peut pas être représenté par 8 bits. La réponse est 258 % 256 = 2 (opération Modulo)
+4. y - x = 3 - 8 = -5. Mais un byte ne représente que des nombres positifs ! Le réponse est -5 + 256 = 251.
+5. x / y = 8 / 3 = 2. Le reste de la division entière est "perdu" !
+6. y / x = 3 / 8 = 0.
+7. z / y = 250 / 3 = 83.
+8. z % y = 250 % 3 = 1. En effet, 83*3 = 249, le reste de la division est donc 1.
+
+
+
+
+## *Corr 3.1-2* Autre manière d’écrire la boucle `for`
+
+	byte i=0;
+	while (i<10) {
+	  instructions;
+	  i++;
+	}
+
+
+## *Corr 3.1-3* Utilisation de l’instruction `break`
+
+programme Solution313.ino
+Notre solution est de remettre le compteur à zéro quand on presse et tester une limite de comptage pour sortir du while(1).
+
+	byte cnt=0;
+	while (1) {
+	  if (Pous1On) {cnt=0;}
+	  delay (50);
+	  if (cnt >= 100) { break; }
+	  cnt++;
+	}
+	Led1On; delay (500);
+	Led1Off; delay (500);
+
+Pourquoi la valeur 100? Voici le calcul : 5 secondes = 5000 ms, la boucle while se fait toutes les 50ms, donc 5000/50 = 100. Vous voulez tester une autre durée? Il faut recalculer. Ce n’est pas la bonne façon de faire. La donnée du problème doit être décrite au début du programme et la boucle du programme ne doit pas dépendre de valeurs numériques, mais de valeurs fonctionnelles.
+Le programme bien écrit est donc (dans Solution311b.ino)
+
+	#define AttenteMax 5000 // 5 secondes
+	#define PeriodeEchant 50
+	byte cnt=0;
+	while (1) {
+	  if (Pous1On) { cnt=0; }
+	  delay (PeriodeEchant) ;
+	  if (cnt >= AttenteMax/PeriodeEchant)
+	  { break; }
+	  cnt++;
+	}
+	Led1On; delay (500);
+	Led1Off; delay (500);
+
+Si vous voulez changer l’attente, c’est un changement de données initiales et non pas un changement de programme qui sera nécessaire ! Si vous relisez ces deux programmes dans un mois, le premier vous demandera du temps pour comprendre votre idée, alors que le second s’explique de lui-même.
+
+Notez que ces exemples ne sont pas les meilleurs pour illustrer l’instruction break. En effet, il aurait été facile de modifier un peu le programme pour que le break soit placé comme dernière instruction du bloc. Dans ce cas, la manière la plus naturelle serait d’utiliser la structure do...while !
+
+
+
+## *Corr 3.2-1* Test de tous les ports d’un microcontrôleur
+
+Pour un AVR :
+
+	// Solution321.ino
+	void setup() {
+	  DDRD |= 0xFC; // ne pas modifier les pins
+	                // 0 et 1
+	                // (ligne série de l’Arduino)
+	  DDRC = 0x3F; // tout en sortie
+	  DDRB = 0xFF;
+	}
+	void loop() {
+	  PORTD = 0x55 ; // ou 0b01010101, bits pairs
+	  PORTB = 0x55 ;
+	  PORTC = 0x55 ;
+	  delay(300);
+	  PORTD = 0xAA ; // ou 10101010, bits impairs
+	  PORTB = 0xAA ;
+	  PORTC = 0xAA ;
+	  delay(300);
+	}
+
+Pour un MSP430G :
+
+	// Solution321.ino
+	void setup() {
+	  P1DIR = 0xFF; // tout en sortie
+	  P2DIR = 0xFF; // tout en sortie
+	  P2SEL = 0; // si on veut que P2.6 et P2.7
+	             // soient aussi des
+	             // entrées-sorties
+	}
+	void loop() {
+	  P1OUT = 0x55 ; // ou 0b01010101, bits pairs
+	  P2OUT = 0x55 ;
+	  delay(300);
+	  P1OUT = 0xAA ; // ou 10101010, bits impairs
+	  P2OUT = 0xAA ;
+	  delay(300);
+	}
+
+
+
+
+## *Corr 3.2-2* _Charlieplexing_
+
+	DDRB =  0b00000101;
+	PORTB = 0b00000001;
+
+Explication : `P0` et `P2` sont en sortie, `PB1` est en entrée (pour être à haute impédance, sans agir sur le montage) `PB0` à _1_ (le + sur l’anode de la LED 5) et `PB2` est à _0_ (le - sur la cathode de la LED 5)
+
+
+
+## *Corr 3.3-1* Champs de bits
+
+Une solution est de mettre successivement les deux bits à _1_ avec le “set bit” :
+
+	DDRC |= (1<<0);
+	DDRC |= (1<<6);
+
+Il faut regarder s’il est nécessaire que les autres bits soient à _0_. Ajouter dans ce cas :
+
+	DDRC = 0;
+
+Cette instruction n’est pas nécessaire au début d’un programme sur un *AVR* : tous les registres sont mis à zéro au moment du Reset (qu’il soit d’origine interne ou externe au microcontrôleurs).
+Une solution qui semble plus compacte serait :
+
+	DDRC |= (1<<0)|(1<<6);
+
+Elle a l’avantage que les deux bits sont mis à _1_ au même moment dans le registre.
+
+Mais en observant ce que le compilateur produit, dans le cas particulier de l’*AVR*, la première solution est la moins gourmande en mémoire : les set bits sont détectés par le compilateur et n’utilisent d’une instruction machine !
+
+
+
+
+## *Corr 3.4-1* Combien de 1 ?
+
+	// Solution342.ino
+	int nombre = 1025;
+	// 1025 décimal = 1024 + 1 = 10000000001
+	// donc 2 "1"
+	// int nombre = 0b0000100001001100 ; // 4 "1"
+	// int nombre = 0x3C41 ;
+	// en binaire 0011 1100 0100 0001
+	// Le programme compte les 1 dans le mot
+	// binaire qui a été converti à partir du
+	// décimal ou de l’hexa pour le mettre
+	// en mémoire.
+	byte cnt = 0;
+	void loop () {
+	  for (int i=0; i<16; i++) {
+	    if (nombre &1) {
+	      // test bit 0, identique
+	      // à if (mot &1<<0)
+	      cnt++;
+	    }
+	  nombre >>= 1; // on décale
+	  }
+	  if (cnt > 0) { // on clignote n fois
+	    for (int i=0; i<cnt; i++){
+	      Led1On; delay (300);
+	      Led1Off; delay (300);
+	    }
+	  }else { Led2On; }
+	}
+
+
+
+## *Corr 3.5-1* Clignoter toujours plus
+
+La fonction a un paramètre en entrée. Les variables locales n’ont pas besoin d’avoir un nom explicite. C’est mieux de bien les distinguer des variables globales par des noms courts.
+Le programme utilise une boucle `for`. On pourrait aussi utiliser un `while`.
+En *C*, les fonctions doivent précéder le programme principal (la procédure `main`).
+L’environnement *Arduino* est tolérant et semble permettre de déclarer une fonction après l’avoir utilisée.
+
+	Solution351.ino :
+	// Fonctions ClignoterNfois (nombre de fois);
+	void ClignoterNfois (byte nn) {
+	  for (int i=0; i<nn; i++) {
+	    Led1On; delay (300);
+	    Led1Off; delay (300);
+	  }
+	}
+	void loop () {
+	  for (int i=0; i<5; i++) {
+	    ClignoterNfois (i) ;
+	    delay (500);
+	  }
+	  delay (2000);
+	}
+
+
+
+
+## *Corr 3.5-2* Clignoter davantage en accélérant
+
+Solution352.ino
+
+	// Fonctions ClignoterNfoisPer (nombre de fois, periode);
+	void ClignoterNfoisPer (byte nn, int pp) {
+	  for (int i=0; i<nn; i++) {
+	    Led1On; delay (pp/2);
+	    Led1Off; delay (pp/2);
+	  }
+	}
+	// Le programme clignote toujours plus vite pendant la même durée
+	byte count ;
+	int periode;
+	void loop () {
+	  count++ ;
+	  periode = 1000/count;
+	  ClignoterNfoisPer (count,periode) ;
+	  delay (200); // supprimer pour voir
+	}
+
+
+
+## *Corr 3.5-3* Mesurer une durée
+
+Solution353.ino
+
+	// fonction MesureDureePous1On ()
+	byte MesureDureePous1On () {
+	  byte cnt; // pour le paramètre à rendre
+	  while (!Pous1On) { delay (50); }
+	  cnt=0;
+	  while (Pous1On) {
+	    delay (50); cnt++;
+	  }
+	  return cnt;
+	}
+	// on estime le min à 0.2s et le max à 1s
+	byte MinDuree = 200/50;
+	byte MaxDuree = 1000/50;
+	byte duree;
+	void loop () {
+	  duree = MesureDureePous1On ();
+	  // on est bloqué dans cette ligne tant que l’on n’a pas pressé!
+	  if (duree < MinDuree) Led1On;
+	  if (duree > MaxDuree) Led2On;
+	  delay (2000);
+	  Led1Off; Led2Off; // et on recommence
+	}
+
+
+
+# Semaine 4
+
+## *Corr 4.1-1* Cadre lumineux d’une enseigne
+
+Les motifs successible à envoyer ont été placés dans un tableau. Un index parcourt le tableau dans un sens ou dans l’autre, selon la variable "sens". Les changements de directions se font donc en repartant de la position courante, pour un effet visuel optimal.
+
+	#define MaxCycle 10 // nombre de mouvements dans le cycle
+	#define Periode 200 // attente ente chaque changement
+
+	#define LgTable 3 // nombre de motifs dans la table
+	unsigned int tableMotifs[] = {0b011011011011, 0b110110110110, 0b101101101101};
+	unsigned char idx=0; // index dans la table
+	unsigned char sens=1; // sens de balayage de la table
+	unsigned char cycle; // compteur des répétitions
+
+	void loop() {
+	  for (cycle=0; cycle<(MaxCycle*LgTable); cycle++) {
+	    if (sens) {
+	      if (idx == (LgTable-1)) { idx=0;} else { idx++;}
+	    } else {
+	      if (idx == 0) { idx=LgTable-1; } else { idx--;}
+	    }
+	    AfficheCadre (tableMotifs[idx]);
+	    AttenteMs (Periode);
+	  }
+	  sens = !sens;
+	}
+
+
+
+## *Corr 4.2-2* Détection de sortie par l’entrée d’un supermarché
+
+On peut utiliser la technique pour détecter un flanc montant (barrière lumineuse coupée) sur la seconde barrière. Si elle se produit quand la première barrière n’est pas coupée, c’est qu’une personne cherche à sortir du super-marché par l’entrée.
+
+	unsigned char etatBarriere1;
+	unsigned char etatBarriere2;
+	unsigned char ancienetatBarriere1 = Barriere1;
+	unsigned char ancienEtatBarriere2 = Barriere2;
+
+	void loop() {
+	  etatBarriere1 = Barriere1;
+	  etatBarriere2 = Barriere2;
+	  if (etatBarriere2 && !ancienEtatBarriere2) { // flanc montant sur la seconde barrière
+	    if (!etatBarriere1) { // détection d’une sortie
+	      AlarmeOn; delay (5000); AlarmeOff;
+	    }
+	  }
+	  ancienetatBarriere1 = etatBarriere1;
+	  ancienEtatBarriere2 = etatBarriere2; }
+	}
+
+
+
+
+## *Corr 4.3-1* Automate simple
+
+//Solution431.ino Automate simple
+
+	#include "LcDef.h"
+	#define StartOn Pous1On
+	#define FinCourseOn Pous2On
+	#define MoteurOn Led1On
+	#define MoteurOff Led1Off
+
+	void setup() {
+	  LcSetup () ;
+	}
+
+	void loop () {
+	  while (!StartOn) {} // on attend le start
+	  MoteurOn;
+	  while (FinCourseOn) {} // si le fin de course touche encore
+	  while (!FinCourseOn) {} // ca tourne
+	  MoteurOff;
+	  while (StartOn) {} // si le start est toujours actif
+	}
+
+
+
+
+## *Corr 4.3-2* Commande d’un monte-charge
+
+Le système a 4 entrées : AppelHaut et AppelBas pour les poussoirs de commande, Haut et Bas pour les fin s de courses.
+Il a 2 sorties : Monte et Descend, pour la commande du moteur.
+
+Voici un graphe d’état possible :
+
+![GrapheMonteCharge](images/GrapheMonteCharge.png)
+
+Les deux valeur notée dans chaque état corrspondent aux sorties Monte et Descend.
+Il ne faut pas faire monter la cabine si elle est déjà en haut : c’est ce qui justifie la condition (AppelHaut . /Haut) pour la transition entre Repos et Montee.
+Note : le point indique le ET logique (notation mathématique en algèbre de Boole).
+La notation /Haut signifie que Haut est inversé. On la trouve souvent dans la documentation.
+Dans le programme, les états sont identifiés par un enum et mémorisés dans une variable d’état :
+
+	enum {Repos, Montee, Descente};
+	unsigned char Etat;
+
+La boucle principale comporte une structure switch avec un case pour chaque état. Les sorties sont assignées selon chaque état. Les transitions modifient l’état courant selon la condition associée :
+
+	void loop () {
+	  switch (Etat) {
+	  case Repos :
+	    Stop;
+	    if (!Haut && AppelHaut) Etat = Montee;
+	    if (!Bas && AppelBas) Etat = Descente;
+	     break;
+	  case Montee :
+	    Monte;
+	    if (Haut) Etat = Repos;
+	    break;
+	  case Descente :
+	    Descend;
+	    if (Bas) Etat = Repos;
+	    break;
+	  }
+	}
+
+Voici comment définir les entrées-sorties, en utilisant le fichier DefP2L2.def :
+
+	// Définitions propres au monte charge :
+	// - action sur les sorties :
+	#define Stop {Led1Off; Led2Off;}
+	#define Monte {Led1On; Led2Off;}
+	#define Descend {Led1Off; Led2On;}
+	// - lecture des entrées :
+	#define AppelHaut Pous1On
+	#define AppelBas Pous2On
+
+Il faut encore ajouter deux entrées supplémentaires. Voici la version MSP430 :
+
+	#define FinHaut !(P1IN & (1<<5))
+	#define FinBas !(P1IN & (1<<7))
+
+... et la version AVR (Arduino) :
+
+	#define FinHaut !(PINB & (1<<0))
+	#define FinBas !(PINB & (1<<1))
+
+Les solutions complète avec les procédure setup() se trouvent dans Solution431.ino.
+Dans Solution431C.ino, vous trouverez les versions écrites intégralement en C, sans utiliser les setup() et loop().
+
+
+
+
+## *Corr 4.4-1* Dé électronique
+
+	//Solution441.ino
+	// PortC 0-3 pour allumer le dé selon schéma
+	// 2   3
+	// 1 0 1
+	// 3   2
+
+	void setup() {
+	  DDRC = 0b0001111; // sorties
+	}
+
+	byte motifsDe [6] = {
+	  0b0001,0b0100,0b1001,0b1100,0b1101,0b1110};
+
+	void loop () {
+	  int i=random (0,6); // min à max-1
+	  PORTC = ~motifsDe [i] ;
+	  delay (1000);
+	  PORTC = ~0b0000;
+	  delay (200);
+	}
+
+Deux instructions du programme principal devraient vous choquer. Que fait ce PORTC dans un programme principal, qui devient dépendant du matériel? L’opération est de copier un motif sur un port. Quel port, dire qu’il faut inverser les infomations logique pour créer le bon signal électrique n’a rien à faire ici! On doit fabriquer une fonction qui exprime ces contraintes technologique.
+
+	void CopyMotif (mm) {
+	  PORTC = ~mm ;
+	}
+
+Dans le programme, on voit alors des instructions explicites
+
+	CopyMotif (motifsDe [i]) et CopyMotif (0);
+
+
+
+
+# Semaine 5
+
+## *Corr 5.1-1* Message Morse
+
+On peut écrire ce programme de plusieurs façon différentes. L’important est de bien le structurer, bien séparer les définitions de l’interface lumineux/sonore et de l’application.
+
+	//Solution512.ino Messages Morses - Test A..H
+	#include "DefC2p2l.h"
+	// Format Bits 7 6 5 Letter length 4 3 2 1 0 dot/dash msb first
+	// Table Ascii a b c ..h codes ascii 61 62 .. 67
+	byte TaMorse [] = {0x42,0x81,0x85,0x61,0x20,0x84,0x63,0x80 } ;
+	#define DurDot 200 //200 ms 6mots/min
+	int dot= DurDot;
+
+	void Dot () { // point - ti
+	  Led1On; delay (dot);
+	  Led1Off; delay (dot);
+	}
+	void Dash () { // trait - ta
+	  Led1On; delay (dot*3);
+	  Led1Off; delay (dot);
+	}
+	void JoueMorse (byte cc) {
+	  byte dd = cc>>5;
+	  for (byte i ; i<dd; i++) {
+	    if (cc&1) { Dash(); }
+	    else { Dot(); }
+	    cc>>=1 ;
+	  }
+	}
+
+	void setup() {
+	  Setup2p2l();
+	  Serial.begin(9600);
+	  Dash(); Dot(); Dash(); // debug
+	}
+
+	char codeRecu;
+	byte indexTaMorse;
+	byte codeTaMorse;
+	void loop () {
+	  if (Serial.available() > 0) {
+	    codeRecu = Serial.read();
+	  Serial.print (codeRecu,HEX); Serial.print (" ");
+	    indexTaMorse = codeRecu - 'a' ;
+	  Serial.print (indexTaMorse); Serial.print (" ");
+	    codeTaMorse = TaMorse [indexTaMorse] ;
+	  Serial.println (codeTaMorse,HEX);
+	    JoueMorse (codeTaMorse);
+	}
+
+Vous remarquez que les instructions d’aide au dépannage sont toujours dans le programmes. Il faut mettre le teminal en mode "pas de fin de ligne" pour éviter le décodage du caractère fin de ligne.
+On peut améliorer ce programme pour taper des mots au terminal. Tant que Serial.available est positif, on lit la lettre suivante en ajoutant l’espace entre lettres. Si on a tapé une phrase, il faut repérer les espaces pour ajouter l’espace entre mots.
+Si vous avez un haut-parleur, il suffit de ré-écrire les fonctions Dot() et Dash().
+
+
+## *Corr 5.4-1* Lire 4 poussoirs sur une entrée analogique
+
+Voilà une solution, vous en avez probablemnt inventée une autre qui fonctionne.
+
+	//Solution541.ino
+	// Valeurs estimées -- a vérifier
+	#define Nopous 0 ;
+	#define Vpous1 205 // 1V
+	#define Vpous2 410 // 2V
+	#define Vpous3 614 // 3V
+	#define Vpous4 819 // 4V
+
+	void setup() {
+	  Serial.begin(9600);
+	  // pas nécessaire de déclare A0 en entrée
+	}
+
+	int valPous ;
+	void loop () {
+	  valPous = analogRead (A0) ;
+	  numeroPous=0;
+	  if (valPous > Vpous1 -50) numeroPous=1;
+	  if (valPous > Vpous2 -50) numeroPous=2;
+	  if (valPous > Vpous3 -50) numeroPous=3;
+	  if (valPous > Vpous4 -50) numeroPous=4;
+	  if (valPous > Vpous1 -50) {
+	    Serial.print (numeroPous);
+	    while (valPous < Vpous1 -50) {}
+	  }
+	}
+
+
+
+**Une solution élégante**
+
+La fonction `map` d’*Arduino* est très efficace pour cette application. On définit 4 zones entre 0.5 et 4.5 V et en une seule instruction on obtient les valeurs `1,2,3,4` que l’on peut utiliser dans un `switch..case`.
+
+	byte numereoPous = map (AnalogRead(14),102,921,1,4)
+
+C’est intéressant de comparer la taille des codes et les temps d’exécution.
+
+Solution avec if : ........
+
+SolutionMap : ........
+
+
+## *Corr 5.5-1* Affichage de nombres
+
+	//Solution551.ino
+	void setup() {
+	Serial.begin(9600);
+	}
+	void PrintBin (byte bb) {
+	  for (byte i=0;i<8;i++) {
+	  if (bb&0x80) Serial.print ("1");
+	  else Serial.print ("0");
+	  bb <<= 1;
+	  }
+	}
+
+	void loop () {
+	  PrintBin (17);
+	  while (1) {}
+	}
+
+Pour le `PrintHex`, 2 fonctions sont préférables.
+
+	char ConvNibble (byte nn) { // converti 4 bit hexa en Ascii
+	  char cc;
+	  if (nn<10) cc = nn + '0';
+	  else cc = nn-10 + 'A';
+	  return cc;
+	}
+	void PrintHex (byte hh) {
+	  char cc;
+	  cc = ConvNibble (hh >> 4) ; // ne modifie pas hh
+	  Serial.print (cc);
+	  cc = ConvNibble (hh & 0x0F) ;
+	  Serial.print (cc);
+	  Serial.print (" "); // cela éviter un séparateur
+	}
+
+On peut avoir besoin d’un `PrintHexInt`, `PrintHexLong` et on comprend pourquoi supprimer les _0_ non significatifs permet d’avoir une fonction d’impression qui accepte tous les types.
+
+Une solution est de définir un `PrintHex` avec 2 paramètres, le nombre, dans un type quelconque, et le nombre de chiffre à afficher. Il suffit d’ajouter une boucle `for` dans `PrintHex` !
+
+
+
+
+# Semaine 6
+
+## *Corr 6.2-1* Dessin sur un afficheur matriciel
+
+La routine comporte 3 boucles itératives `for`. Deux variables `x` et `y` sont utilisées pour les deux coordonnées.
+
+	//Solution 6.2-1
+	#define MaxX 16
+	#define MaxY 16
+
+	void Zoro () {
+	  int x; int y;
+	  for (x=0; x<MaxX; x++) { // gauche-droite en haut
+	    SetPoint (x, 0);
+	    Affiche (5);
+	  }
+	  Affiche (20); // petite attente
+	  y=0;
+	  for (x=MaxX-1; x>=0; x--) { // diagonale droite-gauche
+	    SetPoint (x, y);
+	    y++;
+	    Affiche (5);
+	  }
+	  Affiche (20);
+	  for (x=0; x<MaxX; x++) { // gauche-droite en bas
+	    SetPoint (x, MaxY-1);
+	    Affiche (5);
+	  }
+	  Affiche (1000); // attente une seconde
+	  }
+	}
+
+Il serait possible d’écrire des procédures plus générales, permettant de tracer des segments de différents types, ou même des droites quelconques.
+
+Notez que si l’afficheur est balayé, il est impossible d’utiliser un délai habituel pour programmer une attente : l’affichage serait vide durant ce temps ! Il faut appeler la procédure de raffraîchissement de la matrice.
+
+
+
+## *Corr 6.2-2* Affichage des changements de joueur
+
+Le système a 4 entrées (les poussoirs pour choisir les numéros) et 28 sorties (6 fois 7 segments). Attention, ne confondez pas de nombre de 28 avec les 28 LEDs sur chaque segment: on voit sur le dessin qu’un segment est composé de trois rangées de 9, 10 et 9 LEDs.
+
+On trouve des microcontrôleurs avec un nombre suffisant de pattes pour ce projet. En boîtiers DIL 40 pattes, *Atmel* en propose (par exemple l’*ATmega32* ou ses successeurs). *Microchip* propose aussi des *PIC* avec ce type de boîtiers (comme le *16F877*). Mais ces processeurs sont “relativement” coûteux. Ils disposent aussi de “trop” de mémoire pour un si petit projet. Vous me direz que “qui peut le plus peut le moins”, c’est vrai...
+
+La solution utilisant des registres série-parallèle est intéressante pour ce projet. En ajoutant 4 circuits *74HC595*, il n’y a besoin plus que de 4 entrées et 3 sorties. Avec l’astuce des 4 poussoirs sur une entrée analogique, les “fans” des microcontrôleurs à 8 pattes pourraient s’en sortir, par exemple avec un *ATtiny13*. Dans la série des *MSP430G*, le *2231* à 14 pattes conviendrait très bien.
+
+L’autre problème est la commande des 28 LEDs de chaque segment. Avant de choisir le montage, il faut choisir la tension d’alimentation ! Le choix de 12 V permet d’utiliser facilement :
+
+- des piles 1.5 V (8 piles, au format AA, ou C ou D)
+- des batteries NiMH 1.2 V (10 batteries, au format AA, ou C ou D)
+- une batterie au plomb 12 V (batterie de moto par exemple)
+
+Ensuite, il faut déterminer l’architecture : 5 LEDs rouges peuvent être mises en parallèle (2 × 2 V = 10 V), mais seulement 3 LEDs vertes (3 × 3 = 9 V). On voit qu’on aura donc 5 branches de 5 LEDs rouges, plus une branche de 3 LEDs. Pour les vertes, on aura 9 branches de 3 LEDs, plus une branche avec une seule LED. C’est donc pour les LEDs vertes que le courant sera le plus important : 10 × 10 mA. Un simple transistor NPN va donc convenir (*2N3904*, *BC337*, etc.)
+
+![change-foot-schema](images/change-foot-schema.png)
+
+
+
+Il reste le choix des résistances. D’abord des calculs pour estimer les valeurs :
+
+- La résistance pour les branches de 5 LEDs rouges : (12V - (5 * 2V)) / 10mA = 2/10 kΩ = 200 Ω
+- La résistance pour la branche de 3 LEDs rouges : (12V - (3*2V)) / 10mA = 6/10 kΩ = 600 Ω
+- La résistance pour les branches de 3 LEDs vertes : (12V - (3 * 3V)) / 10mA = 3/10 kΩ = 300 Ω
+- La résistance pour la branches d’une LEDs verte : (12V - 3V) / 10mA = 9/10 kΩ = 900 Ω
+
+Mais seule l’expérimentation avec les LEDs choisies donnera les bonnes valeurs ! D’abord, les valeurs des tensions des LED (2V et 3V) ne sont pas exactes. Mais il y a plus important : le rendement des LEDs rouges et vertes n’est pas identique. On va donc ajuster l’intensité lumineuse pour que les deux parties de l’afficheur donne une impression visuelle semblable.
+
+
+
+
+## *Corr 6.3-1* Routines SPI
+
+
+	//Solution631shiftOut 360us 1108 octets
+	#include "DefC2p2l.h"
+	#define Ld 10 // SPI SS
+	#define Ck 13
+	#define Mosi 11
+
+	void setup() {
+		Setup2p2l ();
+		pinMode (Ld,OUTPUT);
+		pinMode (Ck,OUTPUT);
+		pinMode (Mosi,OUTPUT);
+	}
+
+	int data=0x1234;
+	void loop () {
+		for (long i=0; i<10000;i++) {
+			digitalWrite(Ld, 0);
+			shiftOut (Mosi,Ck,LSBFIRST,lowByte (data));
+			shiftOut (Mosi,Ck,LSBFIRST,highByte (data));
+			digitalWrite(Ld, 1);
+		}
+		Led1Toggle;
+	}
+	---------------
+	//Solution631SPI 17us 1074 octets
+	// les 2 digitalWrite font perdre 6 us
+	#include "DefC2p2l.h"
+	#define Ld 10 // SPI SS
+	#define Ck 13
+	#define Mosi 11
+	#include "SPI.h"
+
+	void setup() {
+		Setup2p2l ();
+		pinMode (Ld,OUTPUT);
+		pinMode (Ck,OUTPUT);
+		pinMode (Mosi,OUTPUT);
+		SPI.begin();
+		SPI.setBitOrder(LSBFIRST);
+	}
+
+	int data=0x1234;
+	void loop () {
+		for (long i=0; i<100000;i++) {
+			digitalWrite(Ld, 0);
+			SPI.transfer(lowByte (data));
+			SPI.transfer(highByte (data));
+			digitalWrite(Ld, 1);
+		}
+		Led1Toggle;
+	}
+	------------
+	//Solution631Cdirect 18us 576 octets
+	#include "DefC2p2l.h"
+	#define bLd 2 // portB pin10
+	#define bCk 5 // portB pin13
+	#define bMosi 3 // portB pin11
+
+	void setup() {
+		Setup2p2l ();
+		DDRB |= 1<}
+
+	int data=0x1234;
+	void loop () {
+		data=0x1234;
+		for (long i=0; i<100000;i++) {
+			bitClear (PORTB,bLd);
+			for (int i=0;i<16;i++) {
+				if (data & 0x01) bitSet (PORTB,bMosi);
+				else bitClear (PORTB,bMosi) ;
+				bitSet (PORTB,bCk);
+				data >>= 1; // décale et détruit data
+				bitClear (PORTB,bCk); // durée 0.25 us
+				data >>= 1; // détruit data
+				bitClear (PORTB,bLd);
+			} // end shif
+		} // end repeat
+		Led1Toggle;
+	} // end loop
+
+
+
+## *Corr 6.5-1* Système sur batteries
+
+Chaque heure, le microcontrôleur va prendre à lui seul _1 mA × 1 h = 1 mAh_ dans la batterie. Le mode actif va prendre _40 mA × 1 h × (90 s / 1 h) = 1 mAh_. On a donc un courant “moyen” de _2 mA_. La durée de vie d’un jeu de piles sera donc d’envion _1300 mAh / 2 mA = 650 h_, soit moins d’un mois.
+
+Il est intéressant de diminuer la consommation du microcontrôleur, vu qu’elle participe à la moitié de la consommation moyenne. On pourrait limiter un peu le courant consommé par le processeur en diminuant sa fréquence. Diminuer la tension semble difficile dans ce cas. La solution la plus efficace est clairement de mettre le processeur en mode “sleep”, comme expliqué dans le document [FaibleConsoDoc.pdf](http://pyr.ch/coursera/FaibleConsoDoc.pdf).
+
+Le consommation dans ce mode où le processeur n’exécute aucune instruction est extrèmement faible, de l’ordre du µA. Il faudra alors utiliser un Timer et une interruption pour “réveiller” le processeur.
 
 
