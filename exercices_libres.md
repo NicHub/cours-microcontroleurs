@@ -1244,10 +1244,11 @@ Notre solution est de remettre le compteur à _0_ quand on presse et tester une 
 	Led1On; delay (500);
 	Led1Off; delay (500);
 
-Pourquoi la valeur 100? Voici le calcul : 5 secondes = 5000 ms, la boucle `while` se fait toutes les 50ms, donc 5000/50 = 100. Vous voulez tester une autre durée ? Il faut recalculer. Ce n’est pas la bonne façon de faire. La donnée du problème doit être décrite au début du programme et la boucle du programme ne doit pas dépendre de valeurs numériques, mais de valeurs fonctionnelles.
+Pourquoi la valeur 100 ? Voici le calcul : 5 s = 5000 ms, la boucle `while` se fait toutes les 50 ms, donc 5000 / 50 = 100. Vous voulez tester une autre durée ? Il faut recalculer. Ce n’est pas la bonne façon de faire. La donnée du problème doit être décrite au début du programme et la boucle du programme ne doit pas dépendre de valeurs numériques, mais de valeurs fonctionnelles.
 
-Le programme bien écrit est donc (dans Solution311b.ino)
+Le programme bien écrit est donc
 
+	// Solution313b.ino
 	#define AttenteMax 5000 // 5 secondes
 	#define PeriodeEchant 50
 	byte cnt=0;
@@ -1263,7 +1264,7 @@ Le programme bien écrit est donc (dans Solution311b.ino)
 
 Si vous voulez changer l’attente, c’est un changement de données initiales et non pas un changement de programme qui sera nécessaire ! Si vous relisez ces deux programmes dans un mois, le premier vous demandera du temps pour comprendre votre idée, alors que le second s’explique de lui-même.
 
-Notez que ces exemples ne sont pas les meilleurs pour illustrer l’instruction break. En effet, il aurait été facile de modifier un peu le programme pour que le break soit placé comme dernière instruction du bloc. Dans ce cas, la manière la plus naturelle serait d’utiliser la structure do...while` !
+Notez que ces exemples ne sont pas les meilleurs pour illustrer l’instruction `break`. En effet, il aurait été facile de modifier un peu le programme pour que le `break` soit placé comme dernière instruction du bloc. Dans ce cas, la manière la plus naturelle serait d’utiliser la structure `do...while` !
 
 
 
@@ -1926,7 +1927,8 @@ Mais seule l’expérimentation avec les LEDs choisies donnera les bonnes valeur
 		}
 		Led1Toggle;
 	}
-	---------------
+<p></p>
+
 	//Solution631SPI 17us 1074 octets
 	// les 2 digitalWrite font perdre 6 us
 	#include "DefC2p2l.h"
@@ -1954,7 +1956,8 @@ Mais seule l’expérimentation avec les LEDs choisies donnera les bonnes valeur
 		}
 		Led1Toggle;
 	}
-	------------
+<p></p>
+
 	//Solution631Cdirect 18us 576 octets
 	#include "DefC2p2l.h"
 	#define bLd 2 // portB pin10
