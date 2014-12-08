@@ -156,11 +156,11 @@ Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](ht
 
 
 
-## *Ex 2.3-1* Microcontrôleurs 8-16-32 bits
+## *Ex 2.3-1* Microcontrôleurs 8-16-32 bits
 
-Dans une application qui nécessite une bonne précision de calcul, on doit effectuer plusieurs fois par seconde quelques calculs arithmétiques avec des nombres de 32 bits.
+Dans une application qui nécessite une bonne précision de calcul, on doit effectuer plusieurs fois par seconde quelques calculs arithmétiques avec des nombres de 32 bits.
 
-**Question :** Est-ce qu’on est obligé alors de choisir un microcontrôleur 32 bits ?
+**Question :** Est-ce qu’on est obligé alors de choisir un microcontrôleur 32 bits ?
 
 Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](https://class.coursera.org/microcontroleurs-004/wiki/view?page=corr-ex2-3-1) !
 
@@ -234,11 +234,11 @@ Cherchez par vous-même à écrire le programme. Ensuite, vous pourrez voir le [
 
 
 
-## *Ex 2.5-2* Estimation de la durée de la fonction *Arduino* `Map ()`
+## *Ex 2.5-2* Estimation de la durée de la fonction *Arduino* `Map()`
 
 La fonction *Arduino* `map()` doit faire des multiplications et divisions. Quel est son temps de calcul ?
 
-On met cette fonction dans une boucle exécutée 10’000 fois (max 30000 en 16 bits signés). On mesure la période entre deux basculements de la LED. Si la fonction dure 100 µs, la période est de 1 s. Écrire le programme et dire quelle est la durée de la fonction `map()`.
+On met cette fonction dans une boucle exécutée 10’000 fois (max 30000 en 16 bits signés). On mesure la période entre deux basculements de la LED. Si la fonction dure 100 µs, la période est de 1 s. Écrire le programme et dire quelle est la durée de la fonction `map()`.
 
 Cherchez par vous-même à écrire le programme. Ensuite, vous pourrez voir le [Corrigé](https://class.coursera.org/microcontroleurs-004/wiki/view?page=corr-ex2-5-2) !
 
@@ -274,7 +274,7 @@ Nous avons les variables suivantes :
 
 Rappels:
 
-- le type `byte` (ou `unsigned char`) est un nombre entier de 8 bits, capable de prendre des valeurs de _0_ à _255_.
+- le type `byte` (ou `unsigned char`) est un nombre entier de 8 bits, capable de prendre des valeurs de _0_ à _255_.
 - l’opération `/` est la division entière
 - l’opération % est le reste de la division entière
 
@@ -313,7 +313,7 @@ Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](ht
 
 ## *Ex 3.1-3* Utilisation de l’instruction `break`
 
-L’instruction `break;` permet de sortir d’un `{ bloc d’instructions }` avant sa fin. Il est souvent utilisé comme une sortie “en catastrophe”. Par exemple, on peut lancer un clignotement dans une boucle `while ()` et en sortir avec un break; après le 3e clignotement :
+L’instruction `break;` permet de sortir d’un `{ bloc d’instructions }` avant sa fin. Il est souvent utilisé comme une sortie “en catastrophe”. Par exemple, on peut lancer un clignotement dans une boucle `while()` et en sortir avec un break; après le 3e clignotement :
 
 	// extrait du programme Solution310.ino
 	byte i=0;
@@ -383,7 +383,7 @@ Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](ht
 
 ## *Ex 3.4-1* Combien de 1 ?
 
-On doit compter le nombre de _1_ dans un mot de 16 bits. L’algorithme consiste à tester si le bit en extrémité vaut _1_ ou _0_, puis à décaler.
+On doit compter le nombre de _1_ dans un mot de 16 bits. L’algorithme consiste à tester si le bit en extrémité vaut _1_ ou _0_, puis à décaler.
 
 Indiquez le résultat par des clignotements. Tester des données en :
 
@@ -571,7 +571,7 @@ Vous connaissez déjà le sujet, à cause du devoir de la semaine 3 ! Allons un
 
 L’exercice est de lire avec le terminal un caractère et de clignoter son code en Morse.
 
-Chaque lettre est codée dans 8 bits, 3 bits pour le nombre de _ti-ta_, 5 bits pour le code, _0_ pour _ti_, _1_ pour _ta_. La figure montre quelques exemples de ce codage.
+Chaque lettre est codée dans 8 bits, 3 bits pour le nombre de _ti-ta_, 5 bits pour le code, _0_ pour _ti_, _1_ pour _ta_. La figure montre quelques exemples de ce codage.
 
 Voici un extrait tiré de [Wikipedia](http://en.wikipedia.org/wiki/Morse_code)
 
@@ -623,7 +623,7 @@ Si on exécute `Serial.print (3,BIN)` : le résultat est `11`. On aimerait bien
 
 Écrire la fonction `PrintBin ()` qui affiche le nombre binaire complet. Elle est facile à programmer: on regarde un bit après l’autre en décalant à gauche et on affiche en ASCII _0_ ou _1_. Le code de _0_ est _'0'_, mais le terminal travaille avec des chaînes de caractères ASCII: il faut écrire `Serial.print ("0")`.
 
-Programmez et testez aussi la fonction `PrintHex ()`, qui vous fera réfléchir comment convertir les chiffres 4 bits: `0000 ⇒ '0' 1010 ⇒ 'A'`
+Programmez et testez aussi la fonction `PrintHex ()`, qui vous fera réfléchir comment convertir les chiffres 4 bits: `0000 ⇒ '0' 1010 ⇒ 'A'`
 
 Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](https://class.coursera.org/microcontroleurs-004/wiki/view?page=corr-ex5-5-1) !
 
@@ -694,9 +694,9 @@ Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](ht
 
 ## *Ex 6.3-1* Routines SPI
 
-Le but ce cet exercice est de comparer trois approches pour transférer 16 bits dans un registre à décalage commandant 16 LEDs.
+Le but ce cet exercice est de comparer trois approches pour transférer 16 bits dans un registre à décalage commandant 16 LEDs.
 
-Pour la première solution, utilisez la primitive `shiftOut` d’*Arduino*, abondamment documentée sur internet. Il faudra appeler 2 fois `shiftOut` pour un transfert 16 bits.
+Pour la première solution, utilisez la primitive `shiftOut` d’*Arduino*, abondamment documentée sur internet. Il faudra appeler 2 fois `shiftOut` pour un transfert 16 bits.
 
 Exécutez le transfert 1000 fois et changez l’état de la LED 1 pour évaluer le temps d’exécution. Notez la taille du code généré.
 
@@ -723,7 +723,6 @@ Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](ht
 
 
 # Semaine 7
-
 
 Voici les fichiers *LearnCbot* de la semaine :
 
@@ -950,7 +949,7 @@ _0b101111001 = 0b1'0111'1001 = 0x179_
 
 ## *Corr 1.6-3* Conversion BCD-décimal
 
-Il faut couper le nombre binaire en tranches de 4 bits, depuis la droite, puis utiliser ta table de conversion :
+Il faut couper le nombre binaire en tranches de 4 bits, depuis la droite, puis utiliser ta table de conversion :
 
 _0000 = 0, 0001 = 1, 0010 = 2, 0011 = 3, 0100 = 4, 0101 = 5, 0110 = 6, 0111 = 7, 1000 = 8, 1001 = 9_
 
@@ -978,11 +977,11 @@ Un microcontrôleur contient un microprocesseur ! Mais il contient aussi de la m
 
 
 
-## *Corr 2.3-1* Microcontrôleurs 8-16-32 bits
+## *Corr 2.3-1* Microcontrôleurs 8-16-32 bits
 
-Même un processeur 8 bits est capable d’effectuer des calculs sur des nombres de 32 bits. Il faut alors décomposer les opérations en opérations sur des nombres de 8 bits, un peu comme nous avons appris à l’école à effectuer des additions, des soustractions, des multiplications et des divisons ! Mais rassurez-vous : c’est le compilateur qui va faire ce travail, pas vous...
+Même un processeur 8 bits est capable d’effectuer des calculs sur des nombres de 32 bits. Il faut alors décomposer les opérations en opérations sur des nombres de 8 bits, un peu comme nous avons appris à l’école à effectuer des additions, des soustractions, des multiplications et des divisons ! Mais rassurez-vous : c’est le compilateur qui va faire ce travail, pas vous...
 
-Il faudra peut-être des dizaines ou même des centaines d’opérations élémentaires sur 8 bits pour effectuer un calcul. Mais ce n’est pas grave : rappelez-vous que même le petit processeur contenu dans un microcontrôleur "entrée de gamme" est généralement capable d’exécuter des millions d’instructions par seconde !
+Il faudra peut-être des dizaines ou même des centaines d’opérations élémentaires sur 8 bits pour effectuer un calcul. Mais ce n’est pas grave : rappelez-vous que même le petit processeur contenu dans un microcontrôleur "entrée de gamme" est généralement capable d’exécuter des millions d’instructions par seconde !
 
 
 
@@ -992,7 +991,7 @@ Il faudra peut-être des dizaines ou même des centaines d’opérations éléme
 
 Il faut être très prudent en comparant des microcontrôleurs (et les processeurs qu’ils contiennent). La fréquence est certainement une indication des performances, mais d’autres facteurs sont aussi très importants :
 
-- la largeur du bus de données (processeur 8 bits-16bits-32bits)
+- la largeur du bus de données (processeur 8 bits – 16 bits – 32 bits)
 - le nombre de coups d’horloge nécessaire pour l’exécution de chaque instruction
 - la richesse du jeu d’instructions
 - l’organisation des mécanismes d’interruption
@@ -1205,14 +1204,14 @@ Voici une solution :
 
 Il faut se souvenir du cercle des nombres Modulos !
 
-1. x + y = 8 + 3 = 11
-2. y + z = 3 + 250 = 253
-3. x + z = 8 + 250 = 258. Mais 258 ne peut pas être représenté par 8 bits. La réponse est 258 % 256 = 2 (opération Modulo)
-4. y - x = 3 - 8 = -5. Mais un byte ne représente que des nombres positifs ! La réponse est -5 + 256 = 251.
-5. x / y = 8 / 3 = 2. Le reste de la division entière est “perdu !
-6. y / x = 3 / 8 = 0.
-7. z / y = 250 / 3 = 83.
-8. z % y = 250 % 3 = 1. En effet, 83*3 = 249, le reste de la division est donc 1.
+1. `x + y = 8 + 3 = 11`
+2. `y + z = 3 + 250 = 253`
+3. `x + z = 8 + 250 = 258` Mais 258 ne peut pas être représenté par 8 bits. La réponse est `258 % 256 = 2` (opération Modulo)
+4. `y - x = 3 - 8 = -5` Mais un byte ne représente que des nombres positifs ! La réponse est `-5 + 256 = 251`
+5. `x / y = 8 / 3 = 2` Le reste de la division entière est “perdu” !
+6. `y / x = 3 / 8 = 0`
+7. `z / y = 250 / 3 = 83`
+8. `z % y = 250 % 3 = 1` En effet, `83 * 3 = 249`, le reste de la division est donc `1`.
 
 
 
@@ -1801,7 +1800,7 @@ SolutionMap : ........
 
 Pour le `PrintHex`, 2 fonctions sont préférables.
 
-	char ConvNibble (byte nn) { // converti 4 bit hexa en Ascii
+	char ConvNibble (byte nn) { // converti 4 bits hexa en Ascii
 	  char cc;
 	  if (nn<10) cc = nn + '0';
 	  else cc = nn-10 + 'A';
@@ -1996,4 +1995,170 @@ Il est intéressant de diminuer la consommation du microcontrôleur, vu qu’ell
 
 La consommation dans ce mode où le processeur n’exécute aucune instruction est extrêmement faible, de l’ordre du µA. Il faudra alors utiliser un Timer et une interruption pour “réveiller” le processeur.
 
+
+
+
+
+# Semaine 7
+
+
+
+
+
+## *Corr 7.2-1* Servos
+
+En 1 s, il y a 50 mises à jour de la position du servo. L’angle 60° correspond à la moitié de la course, donc 0.5 ms.
+
+L’augmentation d’angle se donne en microsecondes.
+
+    //Solution721.ino
+    #include "DefC2p2l.h"  // pas utilisé
+    #define Femur 10 // pin
+    #define Tibia 11
+    #define PosInitiale 1000  // 1ms
+    #define Angle60 500 // us
+    #define TempsDepl 1000 //  (1s)
+    #define NbreDePas TempsDepl/20
+
+    int augmAngle = Angle60/(NbreDePas);  // 500/50
+    int angleFemur;  // 1000 à 2000 us
+    int angleTibia;
+
+    void PulseServoFemur (int aa) {
+       digitalWrite (Femur,1);
+       delayMicroseconds (aa);
+       digitalWrite (Femur,0);
+    }
+    void PulseServoTibia (int aa) {
+       digitalWrite (Tibia,1);
+       delayMicroseconds (aa);
+       digitalWrite (Tibia,0);
+    }
+    // les deux impulsions se suivent dans chaque cycle de 20ms
+    // il faut ajouter un délai de 20000-angleFemur-angleTibia
+    // une fonction FinTrame20ms serait un bonne pratique.
+
+    void setup()  {
+      Setup2p2l ();
+      pinMode (Femur,1);
+      pinMode (Tibia,1);
+    }
+
+    void loop () {
+      for (int i=0; i<NbreDePas; i++) {
+        angleFemur = PosInitiale+(i*augmAngle);
+        PulseServoFemur (angleFemur);
+        angleTibia = PosInitiale;
+        PulseServoTibia (angleTibia);
+        delay (15);   // probl en dessus de 17000
+        delayMicroseconds (5000-angleFemur-angleTibia);
+    //delayMicroseconds (20000-angleFemur-angleTibia); //--> 4 ms!!
+      }
+      for (int i=0; i<NbreDePas; i++) {
+          angleFemur = PosInitiale+Angle60-(i*augmAngle);
+          PulseServoFemur (angleFemur);
+          angleTibia = PosInitiale + (i*augmAngle);
+          PulseServoTibia (angleTibia);
+          delay (15);
+          delayMicroseconds (5000-angleFemur-angleTibia);
+      }
+    //  while (1) {} // ou retour en arrière
+    }
+
+Il y a eu un problème de mise au point ! J’avais écrit :
+
+    #define NbreDePas TempsDepl/20;
+    int augmAngle = Angle60/NbreDePas;
+
+Le préprocesseur a envoyé au compilateur après substitution du `#define` :
+
+    int augmAngle = Angle60/TempsDepl/20;
+
+Le compilateur applique la règle de précédence des parenthèses :
+
+    int augmAngle = (Angle60/TempsDepl)/20;
+
+Le résultat est toujours _0_ ici !
+Le programme a été corrigé en écrivant :
+
+    int augmAngle = Angle60/(NbreDePas);
+
+
+
+
+
+## *Ex 7.3-1* D’ou vient la lumière ?
+
+    //Solution731.ino  D'ou vient la lumière
+    #define LedDroite 5
+    #define LedGauche 6
+    #include "DefC2p2l.h"  // pas utilisé
+    // Pin 13 A0 entrée analogique
+    void setup()   {
+      Setup2p2l();
+      Serial.begin (9600);
+      PORTC=0;
+    }
+    // variables globales
+    int difference;
+    #define Centre 120   // lu par A0 au centre
+    int intensiteLedD ;
+    int intensiteLedG ;
+
+    void loop () {
+      difference = (analogRead (A0))/4 ; // Résultat 0-255
+
+        Serial.print (difference);
+        Serial.print ("  ");
+        intensiteLedD = (difference-Centre)*4 ;
+        if (intensiteLedD > 255) intensiteLedD=255;
+        if (intensiteLedD < 0) intensiteLedD=0;
+        intensiteLedG = (Centre-difference)*4 ;
+        if (intensiteLedG > 255) intensiteLedG=255;
+        if (intensiteLedG < 0) intensiteLedG=0;
+     //   if (difference < Centre - (LargeZoneCentre/2)) {
+     //   if (difference > (Centre + (LargeZoneCentre/2))) {  // plus a droite
+         Serial.print (" D ");Serial.print (intensiteLedD);
+         Serial.print (" G ");Serial.println (intensiteLedG);
+         analogWrite (LedDroite, intensiteLedD) ;
+         analogWrite (LedGauche, intensiteLedG) ; ///
+    }
+
+Pouvez-vous ajouter une zone morte au centre ?
+
+Vous voyez comment utiliser les deux poussoirs pour choisir entre un affichage analogique ou digital ?
+
+
+
+
+
+## *Ex 7.4-1* Filtrage de mesures
+
+    #define SeuilHaut 90 // limite des valeurs considérées comme "hautes"
+    #define SeuilBas 50 // limite des valeurs considérées comme "basses"
+    #define NombreMesuresSeuil 5 // nombre de mesures "hautes" ou "basses" nécessaires pour agir sur la lampe
+
+    int mesure; // variable pour la mesure de luminosité
+    int cptHaut = 0; // compteur des dépassements du seuil "haut"
+    int cptBas = 0; // compteur des dépassements du seuil "bas"
+
+    while (1) { // boucle infnie
+      mesure = MesureLum();
+      if (mesure > SeuilHaut) {
+        cptHaut++;
+        if (cptHaut > NombreMesuresSeuil) {
+          EteintLampe;
+          cptHaut = NombreMesuresSeuil; // évite que le compmteur augmente à l'infini
+        }
+      } else if (mesure < SeuilBas) {
+        cptBas++;
+        if (cptBas > NombreMesuresSeuil) {
+          AllumeLampe;
+          cptBas = NombreMesuresSeuil;
+        }
+      } else {
+        cptHaut = 0;
+        cptBas = 0;
+      }
+    }
 
