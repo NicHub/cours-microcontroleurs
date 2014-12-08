@@ -748,7 +748,7 @@ Comment ralentir le mouvement ? Rappelez-vous que l’on envoie la consigne de 
 
 ![LEGSERVO](images/LEGSERVO.GIF)
 
-Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](/microcontroleurs-004/wiki/view?page=corr-ex7-2-1) !
+Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](https://class.coursera.org/microcontroleurs-004/wiki/view?page=corr-ex7-2-1) !
 
 
 
@@ -765,7 +765,7 @@ Réfléchissez à la variation de tension en A0 avant de programmer. Utilisez le
 
 ![Ex731](images/Ex731.jpg)
 
-Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](/microcontroleurs-004/wiki/view?page=corr-ex7-3-1) !
+Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](https://class.coursera.org/microcontroleurs-004/wiki/view?page=corr-ex7-3-1) !
 
 
 
@@ -796,7 +796,7 @@ On voit que la lampe risque de ne pas s’éteindre (ou s’allumer) d’un seul
 
 Modifiez le programme en conséquence !
 
-Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](/microcontroleurs-004/wiki/view?page=corr-ex7-4-1) !
+Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](https://class.coursera.org/microcontroleurs-004/wiki/view?page=corr-ex7-4-1) !
 
 
 
