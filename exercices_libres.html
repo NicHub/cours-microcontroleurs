@@ -164,11 +164,11 @@
 
 <p>Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le <a href="https://class.coursera.org/microcontroleurs-004/wiki/view?page=corr-ex2-2-1">Corrigé</a> !</p>
 
-<h2 id="ex2.3-1microcontrôleurs8-16-32bits"><em>Ex 2.3&#8211;1</em> Microcontrôleurs 8&#8211;16&#8211;32 bits</h2>
+<h2 id="ex2.3-1microcontrôleurs8-16-32 bits"><em>Ex 2.3&#8211;1</em> Microcontrôleurs 8&#8211;16&#8211;32 bits</h2>
 
-<p>Dans une application qui nécessite une bonne précision de calcul, on doit effectuer plusieurs fois par seconde quelques calculs arithmétiques avec des nombres de 32 bits.</p>
+<p>Dans une application qui nécessite une bonne précision de calcul, on doit effectuer plusieurs fois par seconde quelques calculs arithmétiques avec des nombres de 32 bits.</p>
 
-<p><strong>Question :</strong> Est-ce qu’on est obligé alors de choisir un microcontrôleur 32 bits ?</p>
+<p><strong>Question :</strong> Est-ce qu’on est obligé alors de choisir un microcontrôleur 32 bits ?</p>
 
 <p>Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le <a href="https://class.coursera.org/microcontroleurs-004/wiki/view?page=corr-ex2-3-1">Corrigé</a> !</p>
 
@@ -214,11 +214,11 @@
 
 <p>Cherchez par vous-même à écrire le programme. Ensuite, vous pourrez voir le <a href="https://class.coursera.org/microcontroleurs-004/wiki/view?page=corr-ex2-5-1">Corrigé</a> !</p>
 
-<h2 id="ex2.5-2estimationdeladuréedelafonctionarduinomap"><em>Ex 2.5&#8211;2</em> Estimation de la durée de la fonction <em>Arduino</em> <code>Map ()</code></h2>
+<h2 id="ex2.5-2estimationdeladuréedelafonctionarduinomap"><em>Ex 2.5&#8211;2</em> Estimation de la durée de la fonction <em>Arduino</em> <code>Map()</code></h2>
 
 <p>La fonction <em>Arduino</em> <code>map()</code> doit faire des multiplications et divisions. Quel est son temps de calcul ?</p>
 
-<p>On met cette fonction dans une boucle exécutée 10’000 fois (max 30000 en 16 bits signés). On mesure la période entre deux basculements de la LED. Si la fonction dure 100 µs, la période est de 1 s. Écrire le programme et dire quelle est la durée de la fonction <code>map()</code>.</p>
+<p>On met cette fonction dans une boucle exécutée 10’000 fois (max 30000 en 16 bits signés). On mesure la période entre deux basculements de la LED. Si la fonction dure 100 µs, la période est de 1 s. Écrire le programme et dire quelle est la durée de la fonction <code>map()</code>.</p>
 
 <p>Cherchez par vous-même à écrire le programme. Ensuite, vous pourrez voir le <a href="https://class.coursera.org/microcontroleurs-004/wiki/view?page=corr-ex2-5-2">Corrigé</a> !</p>
 
@@ -252,7 +252,7 @@
 <p>Rappels:</p>
 
 <ul>
-<li>le type <code>byte</code> (ou <code>unsigned char</code>) est un nombre entier de 8 bits, capable de prendre des valeurs de <em>0</em> à <em>255</em>.</li>
+<li>le type <code>byte</code> (ou <code>unsigned char</code>) est un nombre entier de 8 bits, capable de prendre des valeurs de <em>0</em> à <em>255</em>.</li>
 <li>l’opération <code>/</code> est la division entière</li>
 <li>l’opération % est le reste de la division entière</li>
 </ul>
@@ -288,7 +288,7 @@
 
 <h2 id="ex3.1-3utilisationdel’instructionbreak"><em>Ex 3.1&#8211;3</em> Utilisation de l’instruction <code>break</code></h2>
 
-<p>L’instruction <code>break;</code> permet de sortir d’un <code>{ bloc d’instructions }</code> avant sa fin. Il est souvent utilisé comme une sortie “en catastrophe”. Par exemple, on peut lancer un clignotement dans une boucle <code>while ()</code> et en sortir avec un break; après le 3e clignotement :</p>
+<p>L’instruction <code>break;</code> permet de sortir d’un <code>{ bloc d’instructions }</code> avant sa fin. Il est souvent utilisé comme une sortie “en catastrophe”. Par exemple, on peut lancer un clignotement dans une boucle <code>while()</code> et en sortir avec un break; après le 3e clignotement :</p>
 
 <pre><code>// extrait du programme Solution310.ino
 byte i=0;
@@ -348,7 +348,7 @@ delay (1000); // on continue avec d’autres
 
 <h2 id="ex3.4-1combiende1 "><em>Ex 3.4&#8211;1</em> Combien de 1 ?</h2>
 
-<p>On doit compter le nombre de <em>1</em> dans un mot de 16 bits. L’algorithme consiste à tester si le bit en extrémité vaut <em>1</em> ou <em>0</em>, puis à décaler.</p>
+<p>On doit compter le nombre de <em>1</em> dans un mot de 16 bits. L’algorithme consiste à tester si le bit en extrémité vaut <em>1</em> ou <em>0</em>, puis à décaler.</p>
 
 <p>Indiquez le résultat par des clignotements. Tester des données en :</p>
 
@@ -520,7 +520,7 @@ delay (1000); // on continue avec d’autres
 
 <p>L’exercice est de lire avec le terminal un caractère et de clignoter son code en Morse.</p>
 
-<p>Chaque lettre est codée dans 8 bits, 3 bits pour le nombre de <em>ti-ta</em>, 5 bits pour le code, <em>0</em> pour <em>ti</em>, <em>1</em> pour <em>ta</em>. La figure montre quelques exemples de ce codage.</p>
+<p>Chaque lettre est codée dans 8 bits, 3 bits pour le nombre de <em>ti-ta</em>, 5 bits pour le code, <em>0</em> pour <em>ti</em>, <em>1</em> pour <em>ta</em>. La figure montre quelques exemples de ce codage.</p>
 
 <p>Voici un extrait tiré de <a href="http://en.wikipedia.org/wiki/Morse_code">Wikipedia</a></p>
 
@@ -581,7 +581,7 @@ TaMorse [] = {0x42,0x81,0x85,0x61,0x20,0x84,0x63,0x80};
 
 <p>Écrire la fonction <code>PrintBin ()</code> qui affiche le nombre binaire complet. Elle est facile à programmer: on regarde un bit après l’autre en décalant à gauche et on affiche en ASCII <em>0</em> ou <em>1</em>. Le code de <em>0</em> est <em>&#8216;0&#8217;</em>, mais le terminal travaille avec des chaînes de caractères ASCII: il faut écrire <code>Serial.print (&quot;0&quot;)</code>.</p>
 
-<p>Programmez et testez aussi la fonction <code>PrintHex ()</code>, qui vous fera réfléchir comment convertir les chiffres 4 bits: <code>0000 ⇒ '0' 1010 ⇒ 'A'</code></p>
+<p>Programmez et testez aussi la fonction <code>PrintHex ()</code>, qui vous fera réfléchir comment convertir les chiffres 4 bits: <code>0000 ⇒ '0' 1010 ⇒ 'A'</code></p>
 
 <p>Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le <a href="https://class.coursera.org/microcontroleurs-004/wiki/view?page=corr-ex5-5-1">Corrigé</a> !</p>
 
@@ -644,9 +644,9 @@ void ClearPoint (int x; int y)
 
 <h2 id="ex6.3-1routinesspi"><em>Ex 6.3&#8211;1</em> Routines SPI</h2>
 
-<p>Le but ce cet exercice est de comparer trois approches pour transférer 16 bits dans un registre à décalage commandant 16 LEDs.</p>
+<p>Le but ce cet exercice est de comparer trois approches pour transférer 16 bits dans un registre à décalage commandant 16 LEDs.</p>
 
-<p>Pour la première solution, utilisez la primitive <code>shiftOut</code> d’<em>Arduino</em>, abondamment documentée sur internet. Il faudra appeler 2 fois <code>shiftOut</code> pour un transfert 16 bits.</p>
+<p>Pour la première solution, utilisez la primitive <code>shiftOut</code> d’<em>Arduino</em>, abondamment documentée sur internet. Il faudra appeler 2 fois <code>shiftOut</code> pour un transfert 16 bits.</p>
 
 <p>Exécutez le transfert 1000 fois et changez l’état de la LED 1 pour évaluer le temps d’exécution. Notez la taille du code généré.</p>
 
@@ -691,7 +691,7 @@ void ClearPoint (int x; int y)
 <figcaption>LEGSERVO</figcaption>
 </figure>
 
-<p>Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le <a href="/microcontroleurs-004/wiki/view?page=corr-ex7-2-1">Corrigé</a> !</p>
+<p>Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le <a href="https://class.coursera.org/microcontroleurs-004/wiki/view?page=corr-ex7-2-1">Corrigé</a> !</p>
 
 <h2 id="ex7.3-1d’ouvientlalumière "><em>Ex 7.3&#8211;1</em> D’ou vient la lumière ?</h2>
 
@@ -709,7 +709,7 @@ void ClearPoint (int x; int y)
 <figcaption>Ex731</figcaption>
 </figure>
 
-<p>Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le <a href="/microcontroleurs-004/wiki/view?page=corr-ex7-3-1">Corrigé</a> !</p>
+<p>Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le <a href="https://class.coursera.org/microcontroleurs-004/wiki/view?page=corr-ex7-3-1">Corrigé</a> !</p>
 
 <h2 id="ex7.4-1filtragedemesures"><em>Ex 7.4&#8211;1</em> Filtrage de mesures</h2>
 
@@ -740,7 +740,7 @@ while (1) {
 
 <p>Modifiez le programme en conséquence !</p>
 
-<p>Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le <a href="/microcontroleurs-004/wiki/view?page=corr-ex7-4-1">Corrigé</a> !</p>
+<p>Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le <a href="https://class.coursera.org/microcontroleurs-004/wiki/view?page=corr-ex7-4-1">Corrigé</a> !</p>
 
 <div style="page-break-before:right;"></div>
 
@@ -859,7 +859,7 @@ while (1) {
 
 <h2 id="corr1.6-3conversionbcd-décimal"><em>Corr 1.6&#8211;3</em> Conversion BCD-décimal</h2>
 
-<p>Il faut couper le nombre binaire en tranches de 4 bits, depuis la droite, puis utiliser ta table de conversion :</p>
+<p>Il faut couper le nombre binaire en tranches de 4 bits, depuis la droite, puis utiliser ta table de conversion :</p>
 
 <p><em>0000 = 0, 0001 = 1, 0010 = 2, 0011 = 3, 0100 = 4, 0101 = 5, 0110 = 6, 0111 = 7, 1000 = 8, 1001 = 9</em></p>
 
@@ -875,18 +875,18 @@ while (1) {
 
 <p>Un microcontrôleur contient un microprocesseur ! Mais il contient aussi de la mémoire (ROM, RAM) et des circuits d’entrée-sortie, pour être un à lui seul un système informatique autonome.</p>
 
-<h2 id="corr2.3-1microcontrôleurs8-16-32bits"><em>Corr 2.3&#8211;1</em> Microcontrôleurs 8&#8211;16&#8211;32 bits</h2>
+<h2 id="corr2.3-1microcontrôleurs8-16-32 bits"><em>Corr 2.3&#8211;1</em> Microcontrôleurs 8&#8211;16&#8211;32 bits</h2>
 
-<p>Même un processeur 8 bits est capable d’effectuer des calculs sur des nombres de 32 bits. Il faut alors décomposer les opérations en opérations sur des nombres de 8 bits, un peu comme nous avons appris à l’école à effectuer des additions, des soustractions, des multiplications et des divisons ! Mais rassurez-vous : c’est le compilateur qui va faire ce travail, pas vous&#8230;</p>
+<p>Même un processeur 8 bits est capable d’effectuer des calculs sur des nombres de 32 bits. Il faut alors décomposer les opérations en opérations sur des nombres de 8 bits, un peu comme nous avons appris à l’école à effectuer des additions, des soustractions, des multiplications et des divisons ! Mais rassurez-vous : c’est le compilateur qui va faire ce travail, pas vous&#8230;</p>
 
-<p>Il faudra peut-être des dizaines ou même des centaines d’opérations élémentaires sur 8 bits pour effectuer un calcul. Mais ce n’est pas grave : rappelez-vous que même le petit processeur contenu dans un microcontrôleur &#8220;entrée de gamme&#8221; est généralement capable d’exécuter des millions d’instructions par seconde !</p>
+<p>Il faudra peut-être des dizaines ou même des centaines d’opérations élémentaires sur 8 bits pour effectuer un calcul. Mais ce n’est pas grave : rappelez-vous que même le petit processeur contenu dans un microcontrôleur &#8220;entrée de gamme&#8221; est généralement capable d’exécuter des millions d’instructions par seconde !</p>
 
 <h2 id="corr2.3-2fréquenceetpuissancedecalcul"><em>Corr 2.3&#8211;2</em> Fréquence et puissance de calcul</h2>
 
 <p>Il faut être très prudent en comparant des microcontrôleurs (et les processeurs qu’ils contiennent). La fréquence est certainement une indication des performances, mais d’autres facteurs sont aussi très importants :</p>
 
 <ul>
-<li>la largeur du bus de données (processeur 8 bits&#8211;16bits&#8211;32bits)</li>
+<li>la largeur du bus de données (processeur 8 bits – 16 bits – 32 bits)</li>
 <li>le nombre de coups d’horloge nécessaire pour l’exécution de chaque instruction</li>
 <li>la richesse du jeu d’instructions</li>
 <li>l’organisation des mécanismes d’interruption</li>
@@ -1076,14 +1076,14 @@ void loop () {
 <p>Il faut se souvenir du cercle des nombres Modulos !</p>
 
 <ol>
-<li>x + y = 8 + 3 = 11</li>
-<li>y + z = 3 + 250 = 253</li>
-<li>x + z = 8 + 250 = 258. Mais 258 ne peut pas être représenté par 8 bits. La réponse est 258 % 256 = 2 (opération Modulo)</li>
-<li>y - x = 3 - 8 = &#8211;5. Mais un byte ne représente que des nombres positifs ! La réponse est &#8211;5 + 256 = 251.</li>
-<li>x / y = 8 / 3 = 2. Le reste de la division entière est “perdu !</li>
-<li>y / x = 3 / 8 = 0.</li>
-<li>z / y = 250 / 3 = 83.</li>
-<li>z % y = 250 % 3 = 1. En effet, 83*3 = 249, le reste de la division est donc 1.</li>
+<li><code>x + y = 8 + 3 = 11</code></li>
+<li><code>y + z = 3 + 250 = 253</code></li>
+<li><code>x + z = 8 + 250 = 258</code> Mais 258 ne peut pas être représenté par 8 bits. La réponse est <code>258 % 256 = 2</code> (opération Modulo)</li>
+<li><code>y - x = 3 - 8 = -5</code> Mais un byte ne représente que des nombres positifs ! La réponse est <code>-5 + 256 = 251</code></li>
+<li><code>x / y = 8 / 3 = 2</code> Le reste de la division entière est “perdu” !</li>
+<li><code>y / x = 3 / 8 = 0</code></li>
+<li><code>z / y = 250 / 3 = 83</code></li>
+<li><code>z % y = 250 % 3 = 1</code> En effet, <code>83 * 3 = 249</code>, le reste de la division est donc <code>1</code>.</li>
 </ol>
 
 <h2 id="corr3.1-2autremanièred’écrirelabouclefor"><em>Corr 3.1&#8211;2</em> Autre manière d’écrire la boucle <code>for</code></h2>
@@ -1626,7 +1626,7 @@ void loop () {
 
 <p>Pour le <code>PrintHex</code>, 2 fonctions sont préférables.</p>
 
-<pre><code>char ConvNibble (byte nn) { // converti 4 bit hexa en Ascii
+<pre><code>char ConvNibble (byte nn) { // converti 4 bits hexa en Ascii
   char cc;
   if (nn&lt;10) cc = nn + '0';
   else cc = nn-10 + 'A';
@@ -1807,6 +1807,164 @@ void loop () {
 <p>Il est intéressant de diminuer la consommation du microcontrôleur, vu qu’elle participe à la moitié de la consommation moyenne. On pourrait limiter un peu le courant consommé par le processeur en diminuant sa fréquence. Diminuer la tension semble difficile dans ce cas. La solution la plus efficace est clairement de mettre le processeur en mode “sleep”, comme expliqué dans le document <a href="http://pyr.ch/coursera/FaibleConsoDoc.pdf">FaibleConsoDoc.pdf</a>.</p>
 
 <p>La consommation dans ce mode où le processeur n’exécute aucune instruction est extrêmement faible, de l’ordre du µA. Il faudra alors utiliser un Timer et une interruption pour “réveiller” le processeur.</p>
+
+<h1 id="semaine7">Semaine 7</h1>
+
+<h2 id="corr7.2-1servos"><em>Corr 7.2&#8211;1</em> Servos</h2>
+
+<p>En 1 s, il y a 50 mises à jour de la position du servo. L’angle 60° correspond à la moitié de la course, donc 0.5 ms.</p>
+
+<p>L’augmentation d’angle se donne en microsecondes.</p>
+
+<pre><code>//Solution721.ino
+#include &quot;DefC2p2l.h&quot;  // pas utilisé
+#define Femur 10 // pin
+#define Tibia 11
+#define PosInitiale 1000  // 1ms
+#define Angle60 500 // us
+#define TempsDepl 1000 //  (1s)
+#define NbreDePas TempsDepl/20
+
+int augmAngle = Angle60/(NbreDePas);  // 500/50
+int angleFemur;  // 1000 à 2000 us
+int angleTibia;
+
+void PulseServoFemur (int aa) {
+   digitalWrite (Femur,1);
+   delayMicroseconds (aa);
+   digitalWrite (Femur,0);
+}
+void PulseServoTibia (int aa) {
+   digitalWrite (Tibia,1);
+   delayMicroseconds (aa);
+   digitalWrite (Tibia,0);
+}
+// les deux impulsions se suivent dans chaque cycle de 20ms
+// il faut ajouter un délai de 20000-angleFemur-angleTibia
+// une fonction FinTrame20ms serait un bonne pratique.
+
+void setup()  {
+  Setup2p2l ();
+  pinMode (Femur,1);
+  pinMode (Tibia,1);
+}
+
+void loop () {
+  for (int i=0; i&lt;NbreDePas; i++) {
+    angleFemur = PosInitiale+(i*augmAngle);
+    PulseServoFemur (angleFemur);
+    angleTibia = PosInitiale;
+    PulseServoTibia (angleTibia);
+    delay (15);   // probl en dessus de 17000
+    delayMicroseconds (5000-angleFemur-angleTibia);
+//delayMicroseconds (20000-angleFemur-angleTibia); //--&gt; 4 ms!!
+  }
+  for (int i=0; i&lt;NbreDePas; i++) {
+      angleFemur = PosInitiale+Angle60-(i*augmAngle);
+      PulseServoFemur (angleFemur);
+      angleTibia = PosInitiale + (i*augmAngle);
+      PulseServoTibia (angleTibia);
+      delay (15);
+      delayMicroseconds (5000-angleFemur-angleTibia);
+  }
+//  while (1) {} // ou retour en arrière
+}
+</code></pre>
+
+<p>Il y a eu un problème de mise au point ! J’avais écrit :</p>
+
+<pre><code>#define NbreDePas TempsDepl/20;
+int augmAngle = Angle60/NbreDePas;
+</code></pre>
+
+<p>Le préprocesseur a envoyé au compilateur après substitution du <code>#define</code> :</p>
+
+<pre><code>int augmAngle = Angle60/TempsDepl/20;
+</code></pre>
+
+<p>Le compilateur applique la règle de précédence des parenthèses :</p>
+
+<pre><code>int augmAngle = (Angle60/TempsDepl)/20;
+</code></pre>
+
+<p>Le résultat est toujours <em>0</em> ici !
+Le programme a été corrigé en écrivant :</p>
+
+<pre><code>int augmAngle = Angle60/(NbreDePas);
+</code></pre>
+
+<h2 id="ex7.3-1d’ouvientlalumière "><em>Ex 7.3&#8211;1</em> D’ou vient la lumière ?</h2>
+
+<pre><code>//Solution731.ino  D'ou vient la lumière
+#define LedDroite 5
+#define LedGauche 6
+#include &quot;DefC2p2l.h&quot;  // pas utilisé
+// Pin 13 A0 entrée analogique
+void setup()   {
+  Setup2p2l();
+  Serial.begin (9600);
+  PORTC=0;
+}
+// variables globales
+int difference;
+#define Centre 120   // lu par A0 au centre
+int intensiteLedD ;
+int intensiteLedG ;
+
+void loop () {
+  difference = (analogRead (A0))/4 ; // Résultat 0-255
+
+    Serial.print (difference);
+    Serial.print (&quot;  &quot;);
+    intensiteLedD = (difference-Centre)*4 ;
+    if (intensiteLedD &gt; 255) intensiteLedD=255;
+    if (intensiteLedD &lt; 0) intensiteLedD=0;
+    intensiteLedG = (Centre-difference)*4 ;
+    if (intensiteLedG &gt; 255) intensiteLedG=255;
+    if (intensiteLedG &lt; 0) intensiteLedG=0;
+ //   if (difference &lt; Centre - (LargeZoneCentre/2)) {
+ //   if (difference &gt; (Centre + (LargeZoneCentre/2))) {  // plus a droite
+     Serial.print (&quot; D &quot;);Serial.print (intensiteLedD);
+     Serial.print (&quot; G &quot;);Serial.println (intensiteLedG);
+     analogWrite (LedDroite, intensiteLedD) ;
+     analogWrite (LedGauche, intensiteLedG) ; ///
+}
+</code></pre>
+
+<p>Pouvez-vous ajouter une zone morte au centre ?</p>
+
+<p>Vous voyez comment utiliser les deux poussoirs pour choisir entre un affichage analogique ou digital ?</p>
+
+<h2 id="ex7.4-1filtragedemesures"><em>Ex 7.4&#8211;1</em> Filtrage de mesures</h2>
+
+<pre><code>#define SeuilHaut 90 // limite des valeurs considérées comme &quot;hautes&quot;
+#define SeuilBas 50 // limite des valeurs considérées comme &quot;basses&quot;
+#define NombreMesuresSeuil 5 // nombre de mesures &quot;hautes&quot; ou &quot;basses&quot; nécessaires pour agir sur la lampe
+
+int mesure; // variable pour la mesure de luminosité
+int cptHaut = 0; // compteur des dépassements du seuil &quot;haut&quot;
+int cptBas = 0; // compteur des dépassements du seuil &quot;bas&quot;
+
+while (1) { // boucle infnie
+  mesure = MesureLum();
+  if (mesure &gt; SeuilHaut) {
+    cptHaut++;
+    if (cptHaut &gt; NombreMesuresSeuil) {
+      EteintLampe;
+      cptHaut = NombreMesuresSeuil; // évite que le compmteur augmente à l'infini
+    }
+  } else if (mesure &lt; SeuilBas) {
+    cptBas++;
+    if (cptBas &gt; NombreMesuresSeuil) {
+      AllumeLampe;
+      cptBas = NombreMesuresSeuil;
+    }
+  } else {
+    cptHaut = 0;
+    cptBas = 0;
+  }
+}
+</code></pre>
 
 </body>
 </html>
