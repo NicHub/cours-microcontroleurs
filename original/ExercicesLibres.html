@@ -1,0 +1,895 @@
+<!DOCTYPE html><html xmlns:fb="http://ogp.me/ns/fb#" itemtype="http://schema.org"><head><meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=IE7"><meta name="fragment" content="!"><meta name="robots" content="NOODP"><meta charset="utf-8"><meta property="og:title" content="Coursera"><meta property="og:type" content="website"><meta property="og:image" content="http://s3.amazonaws.com/coursera/media/Coursera_Computer_Narrow.png"><meta property="og:url" content="https://www.coursera.org/"><meta property="og:site_name" content="Coursera"><meta property="og:locale" content="en_US"><meta property="og:description" content="Take free online classes from 80+ top universities and organizations. Coursera is a social entrepreneurship company partnering with Stanford University, Yale University, Princeton University and others around the world to offer courses online for anyone to take, for free. We believe in connecting people to a great education so that anyone around the world can learn without limits."><meta property="fb:admins" content="727836538,4807654"><meta property="fb:app_id" content="274998519252278"><meta name="twitter:site" content="Coursera"><meta name="twitter:app:name:iphone" content="Coursera"><meta name="twitter:app:name:ipad" content="Coursera"><meta name="twitter:app:name:googleplay" content="Coursera"><meta name="twitter:app:id:iphone" content="id736535961"><meta name="twitter:app:id:ipad" content="id736535961"><meta name="twitter:app:id:googleplay" content="org.coursera.android"><meta name="description" content="Take free online classes from 80+ top universities and organizations. Coursera is a social entrepreneurship company partnering with Stanford University, Yale University, Princeton University and others around the world to offer courses online for anyone to take, for free. We believe in connecting people to a great education so that anyone around the world can learn without limits."><meta name="image" content="http://s3.amazonaws.com/coursera/media/Coursera_Computer_Narrow.png"><meta name="apple-itunes-app" content="app-id=736535961"><title>Wiki - Exercices libres | Coursera</title>    <link href='https://dw0ugk4msqulk.cloudfront.net/d965f10784288c9d7835dc85de17d9a13509877e/css/spark.main.css' rel='stylesheet' type='text/css' >
+      <link href='https://www.coursera.org/maestro/api/course/973188/course.css' rel='stylesheet' type='text/css' >
+    <link href='https://spark-public.s3.amazonaws.com/microcontroleurs/static/images/favicon.ico' rel='icon' >
+</head><body><div id="fb-root"></div><div id="spark-help" class="hide"><div data-helpwidget data-helpwidget-link-help="http://support.coursera.org" data-helpwidget-link-discuss="http://class.coursera.org/mooc/" data-helpwidget-link-filter="coursera-admin-helpwidget-link" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false" class="helpwidget-tab">Admin Help</div></div><a href="https://courserahelp.zendesk.com/hc/requests/new" target="_blank"><div style="z-index: 1" data-networkprioritysupportwidget role="button" class="helpwidget-tab hide">Premium Support</div></a><div id="spark" class="hide">
+<h2 class="course-page-header">
+    Exercices libres    <a class="coursera-reporter-link" title="Click here if you're experiencing technical problems or found errors in the course materials." target="_blank" href="https://class.coursera.org/microcontroleurs-004/help/pages?url=https%3A%2F%2Fclass.coursera.org%2Fmicrocontroleurs-004%2Fwiki%2FExercicesLibres">
+      Help
+    </a>
+    <a data-coursera-admin-helpwidget-link rel="help" href="https://class.coursera.org/mooc/help/pages/setup" title="Course Page Setup" style="display:none;">Learn more.</a>
+</h2>
+
+
+<h3 id="sem7">Semaine 7</h3>
+<p><i>Les exercices libres de la semaine 6 sont <a href="#sem6">plus bas</a>.</i>
+    <br><i>Ceux de la semaine 5 sont <a href="#sem5">plus bas</a>.</i>
+    <br><i>Ceux de la semaine 4 sont <a href="#sem4">plus bas</a>.</i>
+    <br><i>Ceux de la semaine 3 sont <a href="#sem3">plus bas</a>.</i>
+    <br><i>Ceux de la semaine 2 sont <a href="#sem1">beaucoup plus bas</a> !</i>
+    <br><i>Ceux de la semaine 1 sont <a href="#sem1">tout en bas</a> !</i>
+</p>
+<p>Voici les fichiers <b>LearnCbot </b>de la semaine :<br>
+pour Arduino :  <a href="http://www.didel.com/coursera/LC7.pdf" target="_blank">LC7.pdf</a><br>
+pour Energia/MSP430 : <a href="http://pyr.ch/coursera/LC7-msp.pdf" target="_blank">LC7-msp.pdf</a><br></p>
+<p>Les programmes correspondant sont disponibles sous forme de fichier zip :<br>
+pour Arduino :  <a href="http://www.didel.com/coursera/LC7ino.zip" target="_blank">LC7ino.zip</a><br>
+pour Energia/MSP430 : <a href="http://pyr.ch/coursera/LC7msp.zip" target="_blank">LC7msp.zip</a><br></p>
+<br><p></p>
+
+<hr style="width:800px; color:black; background-color:black; height:4px;">
+<h4>Ex 7.2-1 Servos</h4>
+<table><tbody><tr>
+<td>
+Pour un robot à patte, on teste le mouvement 
+<br>des deux servos. La jambe doit d'abord faire un angle
+<br>de 60 degré en 1 seconde.
+<br>Puis la cuisse et la jambe se déplacent de 60 degrés
+<br>en 1 seconde pour être alignés.
+<br>Les servos couvrent un angle de 120 degrés pour
+<br>des impulsions entre 1 et 2ms distantes de 20ms.
+<br>Les servos sont documentés 120 degrés
+<br>(pour 1 à 2ms), et 60 degrés en 0.1s.
+</td>
+<td>
+<img src="https://d396qusza40orc.cloudfront.net/microcontroleurs/images/LEGSERVO.GIF" width="400">
+</td>
+</tr></tbody></table>
+<p>Comment ralentir le mouvement ? Rappelez-vous que l'on envoie la consigne de position toutes les 20ms. Les servos tournent dans le sens horaire si l'impulsion est plus longue. La position initiale correspond à 1ms.</p>
+<br><br><p>Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le <a href="/microcontroleurs-004/wiki/view?page=corr-ex7-2-1">Corrigé</a> !</p>
+<hr style="width:800px; color:black; background-color:black; height:4px;">
+<h4>Ex 7.3-1 D'ou vient la lumière ?</h4>
+<table><tbody><tr>
+<td>
+<p>Deux photorésistances (LDR) sont 
+<br>câblées en diviseur de tension. La
+<br>tension du point milieu envoyé sur A0 
+<br>dépend de la différence d'éclairage 
+<br>sur les deux LDR, quelque soit 
+<br>l'intensité lumineuse.
+<br>On éclaire avec une lampe de poche, 
+<br>et on veut que les leds Led1 et Led2 
+<br>indiquent d'ou vient la lumière.
+</p>
+</td>
+<td>
+<img src="https://d396qusza40orc.cloudfront.net/microcontroleurs/images/SUIVMOO.GIF" width="150">
+</td>
+<td>
+<img src="https://d396qusza40orc.cloudfront.net/microcontroleurs/images/Ex731.jpg" width="300">
+</td>
+</tr></tbody></table>
+<p>Réfléchissez à la variation de tension en A0 avant de programmer. 
+<br>Utilisez le terminal pour observer les valeurs lues.</p>
+
+<br><br><p>Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le <a href="/microcontroleurs-004/wiki/view?page=corr-ex7-3-1">Corrigé</a> !</p>
+<hr style="width:800px; color:black; background-color:black; height:4px;">
+<h4>Ex 7.4-1 Filtrage de mesures</h4>
+<p>Les microcontrôleurs sont beaucoup utilisés dans des systèmes de mesure et d'acquisition de données. Très souvent, un traitement des mesures doit être effectué. Le "traitement numérique du signal" (Digital Signal Processing) est un sujet très vaste, qui fait appel à des techniques mathématiques adaptées. Un excellent MOOC est proposé par l'EPFL à ce sujet.</p>
+<p>Beaucoup plus simplement, nous allons ici réaliser un filtre de type "hysteresis". Une LDR (photo-résistance) mesure la luminosité ambiante. La technique de mesure de la résistance par mesure du temps de décharge d'un condensateur peut être utilisée. On souhaite réaliser un "interrupteur crépusculaire" : une lampe doit être allumée la nuit et éteinte le jour. Voici un exemple de mesure obtenue à l'aube :</p>
+<img src="https://d396qusza40orc.cloudfront.net/microcontroleurs/images/courbe-ldr.png" width="358"><p>Avec le programme suivant, on applique simplement un seuil (indiqué en pointillé) :</p>
+<pre>#define Seuil 70
+int mesure;
+while (1) {
+  mesure = MesureLum();
+  if (mesure &lt; Seuil) {
+    AllumeLampe;
+  } else {
+    EteintLampe;
+  }
+}
+</pre>
+<p>On voit que la lampe risque de ne pas s'éteindre (ou s'allumer) d'un seul coup (courbe bleue). On cherche  à obtenir plutôt la courbe verte : 5 valeurs successives doivent dépasser le "seuil haut" pour que la mesure soir vue comme "haute". Le même mécanisme sera appliqué avec un "seuil bas".
+</p>
+<p>Modifiez le programme en conséquence !</p>
+<br><br><p>Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le <a href="/microcontroleurs-004/wiki/view?page=corr-ex7-4-1">Corrigé</a> !</p>
+<hr style="width:800px; color:black; background-color:black; height:4px;">
+<br><p><i>Les exercices libres de la semaine 5 sont <a href="#sem5">plus bas</a>.</i>
+    <br><i>Ceux de la semaine 4 sont <a href="#sem4">plus bas</a>.</i>
+    <br><i>Ceux de la semaine 3 sont <a href="#sem3">plus bas</a>.</i>
+    <br><i>Ceux de la semaine 2 sont <a href="#sem2">plus bas</a>.</i>
+    <br><i>Ceux de la semaine 1 sont <a href="#sem1">beaucoup plus bas</a> !</i>
+</p>
+
+<h3 id="sem6">Semaine 6</h3>
+<p>Voici les fichiers <b>LearnCbot </b>de la semaine :<br>
+pour Arduino :  <a href="http://www.didel.com/coursera/LC6.pdf" target="_blank">LC6.pdf</a><br>
+pour Energia/MSP430 : <a href="http://pyr.ch/coursera/LC6-msp.pdf" target="_blank">LC6-msp.pdf</a><br></p>
+<p>Les programmes correspondant sont disponibles sous forme de fichier zip :<br>
+pour Arduino :  <a href="http://www.didel.com/coursera/LC6ino.zip" target="_blank">LC6ino.zip</a><br>
+pour Energia/MSP430 : <a href="http://pyr.ch/coursera/LC6msp.zip" target="_blank">LC6msp.zip</a><br></p>
+<br><h4>Ex 6.2-1 Dessin sur un afficheur matriciel</h4>
+<p>Un afficheur matriciel de 16 x 16 LEDs est commandé par un microcontrôleur. Des procédures d'écriture de point on été écrites :
+<br>void SetPoint (int x; int y)
+<br>void ClearPoint (int x; int y)
+<br>Les coordonnées x et y varient de 0 à 15. Le point (0, 0) est en haut à gauche de l'afficheur.
+<br>On dispose aussi d'une procédure void Affiche (int duree) qui raffaîchit l'affichage, dont la durée est multiple de 10ms.</p>
+<p>Ecrivez un programme qui affiche de manière "dynamique" la lettre Z, un peu comme Zorro le fait avec son épée !</p>
+<p>Une vidéo montre l'effet désiré : <a href="http://pyr.ch/coursera/exemple-aff.mp4" target="_blank">exemple-aff.mp4</a></p>
+<br><p>Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le <a href="/microcontroleurs-004/wiki/view?page=corr-ex6-2-1">Corrigé</a> !</p>
+<p><b>Vous pouvez même tester votre programme : </b>Un afficheur programmable à distance vous est proposé dans la page des devoirs de programmation.</p>
+<hr style="width:800px; color:black; background-color:black; height:4px;">
+<h4>Ex 6.2-2 Affichage des changement de joueur</h4>
+<p>Pour le championnat inter-universitaire de football, les étudiants d'une école d'ingénieurs décident de fabriquer une panneau pour indiquer les changements de joueurs. Les étudiants en génie mécanique ont réalisé une maquette qui se présente de la manière suivante :</p>
+<img src="https://d396qusza40orc.cloudfront.net/microcontroleurs/images/foot-change.jpg" width="600"><br><br><p>Des LEDs rouges et vertes de 5mm de diamètre sont utilisées. Deux paires de boutons-poussoirs permettent de choisir les numéros des joueurs qui entrent et qui sortent.
+<br>Les étudiants en génie électrique sont chargés de réaliser la commande électronique. Les LEDs Rouges choisies ont une tension de 2V, les vertes 3V. Les deux modèles ont un courant nominal de 10mA.</p>
+<p>Proposez un schéma pour réaliser la commande de ce panneau.
+<br>Choisissez un microcontrôleur et l'électronique nécessaire pour commander les 4 fois 7 segments de 28 LEDs chacun.
+</p>
+<p>Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le <a href="/microcontroleurs-004/wiki/view?page=corr-ex6-2-2">Corrigé</a> !</p>
+<hr style="width:800px; color:black; background-color:black; height:4px;">
+<h4>Ex 6.3-1 Routines SPI</h4>
+<p>Le but ce cet exercice est de comparer trois approches pour transférer 16 bits dans un registre à décalage commandant 16 LEDs.
+<br>Pour la première solution, utilisez la primitive shiftOut d'Arduino, abondamment documentée sur internet. Il faudra appeler 2 fois shiftOut pour un transfert 16 bits. 
+<br>Exécutez le transfert 1000 fois et changez l'état de la Led1 pour évaluer le temps d'exécution.  Notez la taille du code généré.</p>
+<p>Pour la 2e solution, utilisez la librairie SPI qui passe par le registre SPI interne du microcontrôleur. Il faut utiliser les pins SPI.
+<a href="http://arduino.cc/en/Reference/SPI" target="_blank">ReferenceSPI</a></p>
+<p>Pour la 3e solution, utilisez les instructions C (bitSet, bit Clear); le choix de pins n'a pas d'importance, vous pouvez utiliser les même que dans l'exemple Arduino. Notez aussi la taille mémoire et le temps d'exécution.</p>
+<p></p>
+<p></p>
+<p>Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le <a href="/microcontroleurs-004/wiki/view?page=corr-ex6-3-1">Corrigé</a> !</p>
+<hr style="width:800px; color:black; background-color:black; height:4px;">
+<h4>Ex 6.5-1 Système sur batteries</h4>
+<p>Pour essayer d'effrayer les taupes qui faisaient des ravages dans son jardin potager, un jardinier a installé un dispositif qui émet des bruits de manière pseudo-aléatoires, par courtes séquences. En moyenne, le dispositif est actif au total 90 secondes chaque heure. La consommation en mode actif est de 40mA. Le microcontrôleur consomme lui-même 1mA en permanence, en fonctionnant à 1 MHz. Les deux piles 1.5V AA utilisées ont une capacité de 1300mAh.</p>
+<p>Calculez la durée de vie d'un jeu de piles. Proposez des solutions pour que le système consomme globalement moins de courant, en vue de lui donner une meilleure autonomie.
+</p>
+<p></p>
+<p>Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le <a href="/microcontroleurs-004/wiki/view?page=corr-ex6-5-1">Corrigé</a> !</p>
+<p></p>
+<p></p>
+<hr style="width:800px; color:black; background-color:black; height:4px;">
+<br><p><i>Les exercices libres de la semaine 4 sont <a href="#sem4">plus bas</a>.</i>
+    <br><i>Ceux de la semaine 3 sont <a href="#sem3">plus bas</a>.</i>
+    <br><i>Ceux de la semaine 2 sont <a href="#sem2">plus bas</a>.</i>
+    <br><i>Ceux de la semaine 1 sont <a href="#sem1">beaucoup plus bas</a> !</i>
+</p>
+<h3 id="sem5">Semaine 5</h3>
+<br><p>Voici les fichiers <b>LearnCbot </b>de la semaine :<br>
+pour Arduino :  <a href="http://www.didel.com/coursera/LC5.pdf" target="_blank">LC5.pdf</a><br>
+pour Energia/MSP430 : <a href="http://pyr.ch/coursera/LC5-msp.pdf" target="_blank">LC5-msp.pdf</a><br></p>
+<p>Les programmes correspondant sont disponibles sous forme de fichier zip :<br>
+pour Arduino :  <a href="http://www.didel.com/coursera/LC5ino.zip" target="_blank">LC5ino.zip</a><br>
+pour Energia/MSP430 : <a href="http://pyr.ch/coursera/LC5msp.zip" target="_blank">LC5msp.zip</a><br></p>
+<br><p>Voici également quelques exercices de la session 2013, qui pourrons aussi vous aider :<br></p>
+
+<h4>Ex 5.1-1 Message Morse</h4>
+<p>Vous connaissez déjà le sujet, à cause du devoir de la semaine 3 ! Allons un peu plus dans le détail.<br>
+L'exercice est de lire avec le terminal un caractère et de clignoter son code en Morse.</p>
+<table border="0"><tbody><tr>
+<td>
+                Chaque lettre est codée dans 8 bits, 3 bits pour le nombres de ti-ta, 5 bits pour le code, 0 pour ti, 1 pour ta. La figure montre quelques exemples de ce codage.
+                <br>Voici un extrait tiré de <a href="http://en.wikipedia.org/wiki/Morse_code" target="_blank">Wikipedia</a>
+                <br>International Morse code is composed of five elements:
+                <br>1. short mark, dot or "dit" (·) — "dot duration" is one time unit long
+                <br>2. longer mark, dash or "dah" (–) — three time units long
+                <br>3. inter-element gap between the dots and dashes within a character — one dot duration or one unit long
+                <br>4. short gap (between letters) — three time units long
+                <br>5. medium gap (between words) — seven time units long[1]
+                <br>    If W is the word/min (10-20), dot period T is 1200 / W
+                <p></p>
+            </td>
+            <td>
+                <img src="https://d396qusza40orc.cloudfront.net/microcontroleurs/images/morse1.png" width="350">
+</td>
+        </tr></tbody></table>
+<table border="0"><tbody><tr>
+<td>
+                <p>La période T, durée d'un dot, sert à définir les autres durées. Pour le test, limitons-nous au début du code Ascii. En morse, la lettre A sera naturellement en 0 dans la table. En Ascii, si on tape ABC avec le programme terminal, on obtient
+                    les code 0x41 42 43 qu'il faut faire correspondre aux entrées 0 1 2 de la table :
+                    <br><font face="Courier New, Courier">//              A    B    C    D    E    F    G    H
+<br>TaMorse [] = {0x42,0x81,0x85,0x61,0x20,0x84,0x63,0x80};</font>
+                </p>
+            </td>
+            <td>
+                <img src="https://d396qusza40orc.cloudfront.net/microcontroleurs/images/morse2.png" width="150">
+</td>
+            <td>
+                <img src="https://d396qusza40orc.cloudfront.net/microcontroleurs/images/morse3.png" width="90">
+</td>
+        </tr></tbody></table>
+<p>Le programme attend une lettre du terminal (lettre-CR, voir doc) et joue les flash ou sons. Les espaces entre lettres et mots peuvent être ignorés.</p>
+<p></p>
+<p></p>
+<p>Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le <a href="/microcontroleurs-004/wiki/view?page=corr-ex5-1-1">Corrigé</a> !</p>
+<hr style="width:800px; color:black; background-color:black; height:4px;">
+<h4>Ex 5.4-1 Lire 4 poussoirs sur une entrée analogique</h4>
+<p>On peut lire plusieurs poussoirs en n'utilisant qu'une entrée analogique. Plusieurs câblages sont possibles. La solution proposée pour 4 poussoirs est spécialement simple à comprendre, son inconvénient éventuel est de consommer 1 mA en permanence ( la
+    pull-down ne consomme rien).</p>
+<img src="https://d396qusza40orc.cloudfront.net/microcontroleurs/images/pouss4.png" width="450"><br><br>Evidemment, pour lire les poussoirs, faut tester les tensions...
+<p></p>
+<p></p>
+<p></p>
+<p>Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le <a href="/microcontroleurs-004/wiki/view?page=corr-ex5-4-1">Corrigé</a> !</p>
+<hr style="width:800px; color:black; background-color:black; height:4px;">
+<h4>Ex 5.5-1 Affichage de nombres</h4>
+<p>Si on exécute Serial.print (3,BIN): le résultat est 11. On aimerait bien voir 00000011. C'est logique de supprimer les 0 non significatifs dans les nombres décimaux, mais pas pour le binaire et l'hexa.
+    <br>Ecrire la fonction PrintBin () qui affiche le nombre binaire complet. Elle est facile à programmer: on regarde un bit après l'autre en décalant à gauche et on affiche en Ascii 0 ou 1. Le code de 0 est '0', mais le terminal travaille avec des chaînes
+    de caractères Ascii: il faut écrire Serial.print ("0").</p>
+<p>
+    Programmez et testez aussi la fonction PrintHex (), qui vous fera réfléchir comment convertir les chiffre 4 bits: 0000 -&gt; '0' 1010 -&gt; 'A'</p>
+<p></p>
+<p></p>
+<p></p>
+<p>Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le <a href="/microcontroleurs-004/wiki/view?page=corr-ex5-5-1">Corrigé</a> !</p>
+<hr style="width:800px; color:black; background-color:black; height:4px;">
+<p>Les corrigés compatibles Arduino se trouvent dans <a href="http://www.didel.com/coursera/Sem5SolutionsArduino.zip" target="_blank">Sem5SolutionsArduino.zip</a>
+    <br><br></p>
+<hr style="width:800px; color:black; background-color:black; height:4px;">
+<br><br><h3 id="sem4">Semaine 4</h3>
+<p><i>Les exercices libres de la semaine 3 sont <a href="#sem3">plus bas</a>.</i><br><i>Ceux de la semaine 2 sont <a href="#sem2">plus bas</a>.</i><br><i>Ceux de la semaine 1 sont <a href="#sem1">plus bas</a>.</i></p>
+
+
+<p>Voici les fichiers <b>LearnCbot </b>de la semaine :<br>
+pour Arduino :  <a href="http://www.didel.com/coursera/LC4.pdf" target="_blank">LC4.pdf</a><br>
+pour Energia/MSP430 : <a href="http://pyr.ch/coursera/LC4-msp.pdf" target="_blank">LC4-msp.pdf</a><br></p>
+<p>Les programmes correspondant sont disponibles sous forme de fichier zip :<br>
+pour Arduino :  <a href="http://www.didel.com/coursera/LC4ino.zip" target="_blank">LC4ino.zip</a><br>
+pour Energia/MSP430 : <a href="http://pyr.ch/coursera/LC4msp.zip" target="_blank">LC4msp.zip</a><br></p>
+<br><p>Voici également des exercices de la session 2013, qui pourrons aussi vous aider à préparer les devoirs et l'évaluation :<br></p>
+<h4>Ex 4.1-1 Cadre lumineux d'une enseigne</h4>
+<p>Une enseigne publicitaire est entourée d'un cadre réalisé avec des segments lumineux, selon le croquis suivant :
+<br><br><img src="https://d396qusza40orc.cloudfront.net/microcontroleurs/images/CadreEnseigne.png" width="350"><br><br>On cherche à donner une impression de rotation, en allumant successivement les groupes de segments suivants : 
+<br> - S0, S1, S3, S4, S6, S7, etc (011011011011)
+<br> - S1, S2, S4, S5, S7, S8, etc (110110110110)
+<br> - S0, S2, S3, S5, S6, S8, etc (101101101101)
+<br>On dispose d'une procédure <font face="Courier New, Courier">AfficheCadre (unsigned int segments)</font>
+ qui affiche les segments S0 à S11 selon les bits 0 à 11 du paramètre "segments" et d'une procédure
+ <font face="Courier New, Courier">AttenteMs (int ms)</font>.</p>
+<p>Ecrivez la boucle principale du programme qui fait "tourner" le cadre dix fois dans un sens, puis dix fois dans l'autre sens.</p>
+<p></p>
+<p>Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le <a href="/microcontroleurs-004/wiki/view?page=corr-ex4-1-1">Corrigé</a> !</p>
+<hr style="width:800px; color:black; background-color:black; height:4px;">
+<h4>Ex 4.2-2 Détection de sortie par l'entrée d'un super-marché</h4>
+<p>Afin de lutter contre le vol à l'étallage, la direction d'un super-marché souhaite contrôler que les clients n'utilisent pas l'entrée pour sortir du magasin.
+Deux barrières lumineuses vont être installées au niveau de l'entrée, à la même hauteur, distantes l'une de l'autre de 5 cm. Lorsqu'un client entre, la première barrière est coupée, puis la seconde. Si un client passe dans l'autre sens, ce sera le contraire. Un microcontrôleur reçoit les signaux de ces deux capteurs.</p>
+<p>Ecrivez le programme pour commander le contact d'un avertisseur sonore durant 5 secondes lorsqu'un client sort du magasin par l'entrée.</p>
+<p></p>
+<p></p>
+<p>Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le <a href="/microcontroleurs-004/wiki/view?page=corr-ex4-2-2">Corrigé</a> !</p>
+<hr style="width:800px; color:black; background-color:black; height:4px;">
+<h4>Ex 4.3-1 Automate simple</h4>
+<table border="1"><tbody>
+<tr></tr>
+<tr>
+<td>On a construit une machine avec un moteur et un contact qui se ferme à chaque tour. En pressant sur un bouton on veut que la machine fasse un tour et s'arrête. Vous voulez voir une jolie application?
+www.bricobot.ch/kits/Miaou.pdf
+Pour tester le programme, on utilise Pous1 pour démarrer, Led1 pour dire que le moteur tourne et Pous2 comme fin de course.
+</td>
+<td>
+<img src="https://d396qusza40orc.cloudfront.net/microcontroleurs/images/Miaou1.png" width="300">
+</td>
+</tr>
+</tbody></table>
+<table border="1"><tbody>
+<tr></tr>
+<tr>
+<td>Le diagramme des temps montre les états possibles. Il faut tenir compte du fait que le signal Start peut durer plus longtemps que l'action, et le fin de course peut encore être activé après l'arrêt du moteur. Le programme est plus simple si on enlève ces conditions, mais ce n'est que de 2 instructions!  
+</td>
+<td>
+<img src="https://d396qusza40orc.cloudfront.net/microcontroleurs/images/Miaou2.png" width="450">
+</td>
+</tr>
+</tbody></table>
+<p></p>
+<p>Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le <a href="/microcontroleurs-004/wiki/view?page=corr-ex4-3-1">Corrigé</a> !</p>
+<hr style="width:800px; color:black; background-color:black; height:4px;">
+<h4>Ex 4.3-2 Commande d'un monte-charge</h4>
+<p>La cabine d'un monte charge entre deux étages est actionné par un moteur, dont la commande dispose des entrées Monte et Descend.
+    <br>Deux interrupteurs de fin de course FinHaut et FinBas détecte les positions des étages.
+    <br>Deux poussoirs AppelHaut et AppelBas permettent de faire monter et descendre la cabine.
+</p>
+<p>Le programme qui commande le monte charge est une machine d'état.
+    <br>Voici une proposition de marche à suivre pour faciliter le dessin du graphe d'état :
+    <br>- établissez la liste des entrées et des sorties
+    <br>- définissez des états pour le système
+    <br>- notez les valeurs de sortie pour chaque état
+    <br>- repérez les transitions entre les états
+    <br>- notez les conditions associées à ces transitions.
+</p>
+<p>Une fois le graphe d'état établi, écrivez le programme par étapes successives, en suivant les information du graphe d'état :
+    <br>- définissez les états (par un enum)
+    <br>- associez les valeurs des sorties
+    <br>- écrivez les transitions
+</p>Il reste à s'occuper de l'implémentation matérielle des entrées et des sorties.
+<p></p>
+<p>Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le <a href="/microcontroleurs-004/wiki/view?page=corr-ex4-3-2">Corrigé</a> !</p>
+<hr style="width:800px; color:black; background-color:black; height:4px;">
+<h4>Ex 4.4-1 Dé électonique</h4>
+<table border="1"><tbody><tr>
+<td>Les 7 leds d'un dé sont câblées comme ci-contre pour utiliser un nombre minimum de sorties du microcontrôleur. Ces sorties sont les pins 0 à 4 du PORTC Arduino (pins 14,15,16,17,18) ou pour MSP les pins 0 à 4 de P2. Créer la table correspondant
+                aux 6 états du dé et écrire le programme qui "lance le dé" toutes les secondes. Evidemment, on ne va pas définir les pins indépendamment. Dans le setup on dit que les bits 0 à 3 sont en sorties, et on copie les configurations de bits correspondant
+                aux faces du dé directement sur le port C.
+            </td>
+            <td>
+                <img src="https://d396qusza40orc.cloudfront.net/microcontroleurs/images/DeJdn.png" width="250">
+</td>
+        </tr></tbody></table>
+<p></p>
+<p>Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le <a href="/microcontroleurs-004/wiki/view?page=corr-ex4-4-1">Corrigé</a> !</p>
+<hr style="width:800px; color:black; background-color:black; height:4px;">
+<h3 id="sem3">Semaine 3</h3>
+<p><i>Les exercices libres de la semaine 2 sont <a href="#sem2">plus bas</a>.</i><br><i>Ceux de la semaine 1 sont <a href="#sem1">plus bas</a>.</i></p>
+
+<p>Vous trouvez ci-dessous des exercices libres qui ont été proposés pour notre premier MOOC en octobre 2013. Ils complètent notre suite d'exemples et exercices à tester avec le LearnCbot ou un câblage équivalent. Voici les fichiers de la semaine :<br>
+pour Arduino :  <a href="http://www.didel.com/coursera/LC3.pdf" target="_blank">LC3.pdf</a><br>
+pour Energia/MSP430 : <a href="http://pyr.ch/coursera/LC3-msp.pdf" target="_blank">LC3-msp.pdf</a><br><br>
+Ces documents doivent être lus attentivement pour se familiariser avec la richesse du C. <br>
+Les programmes sont disponibles sous forme de fichier zip :<br>
+pour Arduino :  <a href="http://www.didel.com/coursera/LC3ino.zip" target="_blank">LC3ino.zip</a><br>
+pour Energia/MSP430 : <a href="http://pyr.ch/coursera/LC3msp.zip" target="_blank">LC3msp.zip</a><br>
+Ils vous permettent de passer plus de temps sur leur lecture et vos essais de modification. Prenez plaisir à vos progrès !</p>
+<br><h4>Ex 3.1-1 Variables et arithmétique</h4>
+<p>Nous avons les variables suivantes :
+    <br>byte x=8; byte y=3; byte z=250;</p>
+<p>Rappels:
+    <br>- le type byte (ou unsigned char) est un nombre entier de 8 bits, capable de prendre des valeurs de 0 à 255.
+    <br>- l'opération / est la division entière
+    <br>- l'opération % est le reste de la division entière
+</p>
+<p><b>Question :</b> Calculez :
+    <br>1) x + y
+    <br>2) y + z
+    <br>3) x + z
+    <br>4) y - x
+    <br>5) x / y
+    <br>6) y / x
+    <br>7) z / y
+    <br>8) z % y</p>
+<p></p>
+<p>Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le <a href="/microcontroleurs-004/wiki/view?page=corr-ex3-1-1">Corrigé</a> !</p>
+<hr style="width:800px; color:black; background-color:black; height:4px;">
+<h4>Ex 3.1-2 Autre manière d'écrire la boucle for</h4>
+<p>Quand on écrit une boucle : for (i=0; i&lt;10; i++) {instructions} on passe trois paramètres au compilateur :
+    <br>- l'instruction d'initialisation (ici i=0;) : cette instruction qui va s'exécuter une et une seule fois au début
+    <br>- la condition d'exécution de la boucle (ici i&lt;10;) : un test, répété à chaque début de boucle, qui permet de savoir si elle doit s'exécuter (ou s'arrêter)
+    <br>- l'instruction "d'incrémentation" (ici i++) : ce terme est inexact. Il s'agit souvent d'une incrémentation, mais c'est simplement une instruction qui s'exécute à la fin de chaque itération de la boucle.
+</p>
+<p>Ecrivez cette même action sans le mot "for" !</p>
+<p></p>
+<p>Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le <a href="/microcontroleurs-004/wiki/view?page=corr-ex3-1-2">Corrigé</a> !</p>
+<hr style="width:800px; color:black; background-color:black; height:4px;">
+<h4>Ex 3.1-3 Utilisation de l'instruction break</h4>
+<p>L'instruction <font face="Courier New, Courier">break;</font> permet de sortir d'un { bloc d'instructions } avant sa fin. Il est souvent utilisé comme une sortie "en catastrophe". Par exemple, on peut lancer un clignotement dans une boucle while () et en
+    sortir avec un break; après le 3e clignotement :
+    <br><font face="Courier New, Courier">// extrait du programme Solution310.ino
+<br>byte i=0;
+<br>while (1) 
+<br>  Led1On; delay (500);
+<br>  Led1Off; delay (500);
+<br>  if (i &gt;= 3) { break; } 
+<br>  i++;
+<br>}
+<br>delay (1000); // on continue avec d'autres instructions ou on recommence dans la boucle principale.</font>
+</p>
+<p><b>Question :</b> Ecrire un programme qui attend une pression sur Pous1 et sort de l'attente en clignotant si on ne presse pas dans les 5 secondes. On doit donc presser régulièrement pour réinitialiser un compteur qui augmente avec une période de
+    50ms.
+</p>
+<p></p>
+<p>Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le <a href="/microcontroleurs-004/wiki/view?page=corr-ex3-1-3">Corrigé</a> !</p>
+<hr style="width:800px; color:black; background-color:black; height:4px;">
+<h4>Ex 3.2-1 Test de tous les ports d'un microcontrôleur</h4>
+<p>Ecrivez un programme qui teste toutes les sorties d'un microcontrôleur en les faisant clignoter : tous les bits pairs allumés, puis tous les bits impairs.
+    <br>Ecrivez-le pour un AVR ou un MSP430G.</p>
+<p>Rappels :
+    <br>- Le microcontrôleur ATmega328 de l'Arduino dispose des port B, C et D. Les bits pairs sont PB0, PB2, PB4, ..., PC0, PC2,... et les bits impairs PB1, PB3,..., PC1, PC3... Les registres de direction s'appellent DDR (DDRB, DDRC, etc) et les registres
+    de sortie s'appellent PORT (PORTB, PORTC, etc).
+    <br>- Le microcontrôleur MSP430G2553 du LaunchPad dispose des port P1 et P2. Les registres de direction s'appellent P1DIR (et P2DIR) et les registres de sortie s'appellent P1OUT (et P2OUT).
+</p>
+<p></p>
+<p>Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le <a href="/microcontroleurs-004/wiki/view?page=corr-ex3-2-1">Corrigé</a> !</p>
+<hr style="width:800px; color:black; background-color:black; height:4px;">
+<h4>Ex 3.2-2 Charlie-plexing</h4>
+<p>Comment faire lorsqu'on a 6 LED, qu'on doit pouvoir en allumer une parmi les 6 et qu'on ne dispose que de 3 pattes sur un microcontrôleur ?
+    <br>Il existe une solution astucieuse, connue sous le nom de Charlieplexing !</p>
+<p>Voici le schéma :</p>
+<img src="https://d396qusza40orc.cloudfront.net/microcontroleurs/images/charlieplexing-3.png" width="300"><br><p>Ecrivez les deux instructions qui allume la LED 5 sans en allumer d'autre.</p>
+<p></p>
+<p>Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le <a href="/microcontroleurs-004/wiki/view?page=corr-ex3-2-2">Corrigé</a> !</p>
+<hr style="width:800px; color:black; background-color:black; height:4px;">
+<h4>Ex 3.3-1 Champs de bits</h4>
+<p>Ecrivez d'une manière plus lisible l'instruction suivante : DDRC = 0b01000001;</p>
+<p></p>
+<p>Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le <a href="/microcontroleurs-004/wiki/view?page=corr-ex3-3-1">Corrigé</a> !</p>
+<hr style="width:800px; color:black; background-color:black; height:4px;">
+<h4>Ex 3.4-1 Combien de 1 ?</h4>
+<p>On doit compter le nombre de 1 dans un mot de 16 bits. L'algorithme consiste à tester si le bit en extrémité vaut 1 ou 0, puis à décaler.
+    <br>Indiquez le résultat par des clignotements. Tester des données en :
+    <br>- binaire : mot = 0b0000 1000 0100 1100; résultat 4
+    <br>- hexadécimal : mot = 0x 3C41; résultat 6
+    <br>- décimal : mot = 1025; résultat 2 // le compilateur converti en binaire, pas en BCD.</p>
+<p></p>
+<p>Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le <a href="/microcontroleurs-004/wiki/view?page=corr-ex3-4-1">Corrigé</a> !</p>
+<hr style="width:800px; color:black; background-color:black; height:4px;">
+<h4>Ex 3.5-1 Clignoter toujours plus</h4>
+<p>On vient de voir une boucle for pour clignoter un certain nombre de fois. Ecrivez une fonction qui permettra d'écrire dans le programme :
+    <br><font face="Courier New, Courier">ClignoterNfois (nombre de fois);</font>
+    <br>Utiliser cette fonction dans un programme qui clignote une fois, deux fois, etc et s'arrête à 5 fois.</p>
+<p></p>
+<p>Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le <a href="/microcontroleurs-004/wiki/view?page=corr-ex3-5-1">Corrigé</a> !</p>
+<hr style="width:800px; color:black; background-color:black; height:4px;">
+<h4>Ex 3.5-2 Clignoter davantage en accélérant</h4>
+<p>Cette fonction a un 2e paramètre qui est la vitesse. Testez avec un programme qui à la fois augmente le nombre de clignotement et la fréquence, avec une durée de salve constante. On voit donc le produit de la période par le nombre d'impulsions est constant.</p>
+<p>Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le <a href="/microcontroleurs-004/wiki/view?page=corr-ex3-5-2">Corrigé</a> !</p>
+<hr style="width:800px; color:black; background-color:black; height:4px;">
+<h4>Ex 3.5-3 Mesurer une durée</h4>
+<p>On veut une fonction qui mesure la durée pendant laquelle on presse sur un poussoir. La durées sera en unité de 50ms, mais on essayera des valeurs plus faibles jusqu'à être perturbé par les rebonds de contact. Pour tester, écrire le programme qui allume
+    la Led1 si on est très rapide, et la Led2 si on est lent.</p>
+<p></p>
+<p>Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le <a href="/microcontroleurs-004/wiki/view?page=corr-ex3-5-3">Corrigé</a> !</p>
+
+<hr style="width:800px; color:black; background-color:black; height:4px;">
+<p><i>Les exercices libres de la semaine 1 sont <a href="#sem1">plus bas</a>.</i><br></p>
+<h3 id="sem2">Semaine 2</h3>
+<br><p>Vous trouvez ci-dessous des exercices libres. Comme le passage des vidéos à ces exercices a été jugé trop brutal, décourageant plusieurs étudiants, nous avons été amenés à écrire une série de documents détaillant les notions essentielles et s'appuyant sur des exemples progressifs à vérifier avec du matériel, le LearnCbot (ou un câblage équivalent sur Breadboard, décrit dans la dernière vidéo). La semaine dernière, nous vous avions déjà proposé :<br>
+pour Arduino/diduino : <a href="http://didel.com/coursera/LC1.pdf" target="_blank">LC1.pdf</a><br>
+pour Energia MSP430 : <a href="http://pyr.ch/coursera/LC1-msp.pdf" target="_blank">LC1-msp.pdf</a></p>
+<p>Assurez-vous d'avoir compris le premier document ! Vous êtes encouragés cette semaine à travailler avec le second document :<br>
+pour Arduino/diduino : <a href="http://didel.com/coursera/LC2.pdf" target="_blank">LC2.pdf</a><br>
+pour Energia MSP430 : <a href="http://pyr.ch/coursera/LC2-msp.pdf" target="_blank">LC2-msp.pdf</a></p>
+<p></p>
+
+<hr style="width:800px; color:black; background-color:black; height:4px;">
+<h4>Ex 2.2-1 Microprocesseur et microcontrôleur</h4>
+<p><b>Question :</b> Quelle est la différence entre un microcontrôleur et un microprocesseur ?</p>
+<p></p>
+<p>Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le <a href="/microcontroleurs-004/wiki/view?page=corr-ex2-2-1">Corrigé</a> !</p>
+<hr style="width:800px; color:black; background-color:black; height:4px;">
+<h4>Ex 2.3-1 Microcontrôleurs 8-16-32 bits</h4>
+<p>Dans une application qui nécessite une bonne précision de calcul, on doit effectuer plusieurs fois par seconde quelques calculs arithmétiques avec des nombre de 32 bits.</p>
+<p><b>Question :</b> Est-ce qu'on est obligé alors de choisir un microcontrôleur 32 bits ?</p>
+<p></p>
+<p>Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le <a href="/microcontroleurs-004/wiki/view?page=corr-ex2-3-1">Corrigé</a> !</p>
+<hr style="width:800px; color:black; background-color:black; height:4px;">
+<h4>Ex 2.3-2 Fréquence et puissance de calcul</h4>
+<p><b>Question :</b> Si la fréquence d'un microcontrôleur est supérieure à celle d'une autre microcontrôleur, peut-on dire alors que sa puissance de calcul est supérieure ?</p>
+<p></p>
+<p>Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le <a href="/microcontroleurs-004/wiki/view?page=corr-ex2-3-2">Corrigé</a> !</p>
+<hr style="width:800px; color:black; background-color:black; height:4px;">
+<h4>Ex 2.4-1 Programmation en C/Arduino : clignoter pendant que l'on presse</h4>
+<p>Un poussoir actif a zéro est câblé sur la pin 4. Une Led sur la pin 5. Si on presse (statique), la Led doit clignoter à 2 Hz (période 500 ms).</p>
+<p></p>
+<p>Cherchez par vous-même à écrire le programme. Ensuite, vous pourrez voir le <a href="/microcontroleurs-004/wiki/view?page=corr-ex2-4-1">Corrigé</a> !</p>
+<hr style="width:800px; color:black; background-color:black; height:4px;">
+<h4>Ex 2.4-2 Programmation en C/Arduino : allumer 2 secondes quand on presse</h4>
+<p>Si on presse (dynamique), le programme doit allumer la Led pendant 2 secondes. Tester en pressant plus ou moins vite.</p>
+<p></p>
+<p>Cherchez par vous-même à écrire le programme. Ensuite, vous pourrez voir le <a href="/microcontroleurs-004/wiki/view?page=corr-ex2-4-2">Corrigé</a> !</p>
+<hr style="width:800px; color:black; background-color:black; height:4px;">
+<h4>Ex 2.4-3 Programmation en C/Arduino : Un poussoir pour 2 leds</h4>
+<p>On a un poussoir et deux leds. Le poussoir a une action quand on presse. Si on presse, la Led1 change d'état. Si on presse et seulement si la led1 es allumée, la Led 2 change d'état.</p>
+<p>Ecrire le programme et dire ce que l'on a programmé.</p>
+<p></p>
+<p>Cherchez par vous-même à écrire le programme. Ensuite, vous pourrez voir le <a href="/microcontroleurs-004/wiki/view?page=corr-ex2-4-3">Corrigé</a> !</p>
+<hr style="width:800px; color:black; background-color:black; height:4px;">
+<h4>Ex 2.4-4 Programmation en C/Arduino : Deux poussoir pour une leds</h4>
+<p>Le poussoir Pous1 doit allumer la Led. Le poussoir Pous2 doit l'éteindre. On va reconnaître la bascule RS.</p>
+<p></p>
+<p>Cherchez par vous-même à écrire le programme. Ensuite, vous pourrez voir le <a href="/microcontroleurs-004/wiki/view?page=corr-ex2-4-4">Corrigé</a> !</p>
+<hr style="width:800px; color:black; background-color:black; height:4px;">
+<h4>Ex 2.5-1 Programmation d'un compteur up/down</h4>
+<p>On a une variable <font face="Courier New, Courier">byte compteur;</font> dont on va modifier la valeur avec deux poussoirs qui agissent statiquement. On ne sait pas encore comment afficher cette valeur, mais pour avoir une idée, on allume la led pour les
+    valeurs impaires. Un clignotement de la led indique que le compteur augmente ou diminue (rajouter des leds si vous voulez).
+    <br>Quand on pèse sur Pous1 et on maintien pressé (action statique), le compteur augmente chaque 0.2 seconde, mais se bloque à 7, led allumée puisque c'est impair.
+    <br>Quand on pèse sur Pous1 et maintien pressé, le compteur décompte et se bloque à zéro, led éteinte.</p>
+<p></p>
+<p>Cherchez par vous-même à écrire le programme. Ensuite, vous pourrez voir le <a href="/microcontroleurs-004/wiki/view?page=corr-ex2-5-1">Corrigé</a> !</p>
+<hr style="width:800px; color:black; background-color:black; height:4px;">
+<h4>Ex 2.5-2 Estimation de la durée de la fonction Arduino Map ()</h4>
+<p>La fonction Arduino map() doit faire des multiplications et division. Quel est son temps de calcul ?
+    <br>On met cette fonction dans une boucle exécutée 10'000 fois (max 30000 en 16 bits signés). On mesure la période entre deux basculements de la led. Si la fonction dure 100 microsecondes, la période est de 1 secondes. Ecrire le programme et dire quelle
+    est la durée de la fonction map().</p>
+<p>Cherchez par vous-même à écrire le programme. Ensuite, vous pourrez voir le <a href="/microcontroleurs-004/wiki/view?page=corr-ex2-5-2">Corrigé</a> !</p>
+<hr style="width:800px; color:black; background-color:black; height:4px;">
+<h3 id="sem1">Semaine 1</h3>
+
+<p></p>
+Nous vous proposons cette semaine quelques exercices sur l'électronique. L'introduction au langage C se fera la semaine prochaine. Vous pouvez déjà faire quelques pas en programmation en suivant le premier volet de nos exercices :<br>
+Pour Arduino :  <a href="http://www.didel.com/coursera/LC1.pdf" target="_blank">LC1.pdf</a><br>
+Pour Energia/MSP430 : <a href="http://pyr.ch/coursera/LC1-msp.pdf" target="_blank">LC1-msp.pdf</a><br><p></p>
+<p>Le devoir de programmation de la semaine vous demande de montrer que vous avez un environnement Arduino ou Energia opérationnel. Toutes les indications se trouvent dans la page "Devoirs de programmation", en cliquant sur "View instructions".
+</p>
+<p></p>
+<hr style="width:800px; color:black; background-color:black; height:4px;">
+<p>Voici donc quelques exercices sur l'électronique. Nous sommes conscients qu'ils seront trop difficile pour ceux qui n'ont aucune connaissance préalable en électronique et qu'ils seront trop simples pour ceux qui sont déjà électroniciens. Nous espérons qu'ils seront malgré tout utiles à certains. Mais la maîtrise de ces exercices n'est pas nécessaire pour la suite du MOOC !</p>
+<hr style="width:800px; color:black; background-color:black; height:4px;">
+<a href="http:///www.pyr.ch/Coursera/EnW1FreeEx.pdf" target="_blank">English translation</a>
+<h4>Ex 1.2-1 : Détecteur de gel</h4>
+<p></p>
+
+<p>Le montage suivant, alimenté en 5 V, permet de réaliser un détecteur de gel :</p>
+<img src="https://d396qusza40orc.cloudfront.net/microcontroleurs/images/transistor-ctn.png" width="120"><p>Il utilise une thermistance. Ce composant a une résistance variable en fonction de la température. Un transistor est utilisé pour amplifier le signal de la thermistance. Il est utilisé en "tout ou rien" : tant que la résistance est trop élevée pour que le transitor conduise, la LED est éteinte. Mais dès que la thermistance atteint une résistance suffisamment faible pour que la tension de seuil du transistor soit atteinte, le transistor va conduire et la LED s'allumer.</p>
+<p>On considère que le transistor a un gain important et qu'on peut donc négliger le courant de base dans les calculs. Le composant noté CTN est une thermistance dont le coefficient de température est négatif. Sa résistance (donnée en kOhm) varie avec le température selon la courbe suivante :</p>
+<img src="https://d396qusza40orc.cloudfront.net/microcontroleurs/images/thermistance.gif" width="450"><p><b>Question :</b> Quel valeur doit-on donner à la résistance R pour que le détecteur avertisse du risque de gel vers 1 ºC ?</p>
+<p></p>
+<p>Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le <a href="/microcontroleurs-004/wiki/view?page=corr-ex1-2-1">Corrigé</a> !</p>
+<hr style="width:800px; color:black; background-color:black; height:4px;">
+<p></p>
+<h4>Ex 1.3-1 : Logique à transistors</h4>
+<p></p>
+<p></p>
+<p><b>Question :</b> Quelle est la fonction logique réalisée par ce montage ?</p>
+<img src="https://d396qusza40orc.cloudfront.net/microcontroleurs/images/D3q1.gif" width="150"><p></p>
+<p>Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le <a href="/microcontroleurs-004/wiki/view?page=corr-ex1-3-1">Corrigé</a> !</p>
+<hr style="width:800px; color:black; background-color:black; height:4px;">
+<p></p>
+<h4>Ex 1.4-1 : Schéma du OU-exclusif</h4>
+<p></p>
+<p>Voici la table de vérité de la fonction OU-exclusif :</p>
+<br><table border="1"><tbody>
+<tr>
+<th> A </th>
+            <th> B </th>
+            <th> S  </th>
+        </tr>
+<tr>
+<td> 0</td>
+            <td> 0</td>
+            <td> <b>0 </b>
+            </td>
+        </tr>
+<tr>
+<td> 0</td>
+            <td> 1</td>
+            <td> <b>1 </b>
+            </td>
+        </tr>
+<tr>
+<td> 1</td>
+            <td> 0</td>
+            <td> <b>1 </b>
+            </td>
+        </tr>
+<tr>
+<td> 1</td>
+            <td> 1</td>
+            <td> <b>0 </b>
+            </td>
+        </tr>
+</tbody></table>
+<p></p>
+<p><b>Question :</b> Dessinez le schéma logique correspondant.</p>
+<p>Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le <a href="/microcontroleurs-004/wiki/view?page=corr-ex1-4-1">Corrigé</a> !</p>
+<hr style="width:800px; color:black; background-color:black; height:4px;">
+<p></p>
+<h4>Ex 1.4-2 Diagramme temporel</h4>
+<p><b>Question :</b> Donnez la table de vérité du système combinatoire décrit par ce diagramme temporel.</p>
+<img src="https://d396qusza40orc.cloudfront.net/microcontroleurs/images/diagramme-temp-ex.png" width="300"><p></p>
+<p>Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le <a href="/microcontroleurs-004/wiki/view?page=corr-ex1-4-2">Corrigé</a> !</p>
+<hr style="width:800px; color:black; background-color:black; height:4px;">
+<p></p>
+<h4>Ex 1.5-1 Machine d'état</h4>
+<p><b>Question :</b> Etudiez la réalisation d'un compteur-décompteur par 5. Vous pouvez successivement :</p>
+<ul>
+<li>dessiner le schéma-bloc du système, avec ses entrées et ses sorties
+    </li>
+    <li>dessiner le graphe d'état
+    </li>
+    <li>réfléchir au nombre de bascules nécessaires
+    </li>
+    <li>dessiner et remplir la table de vérité du système combinatoire
+    </li>
+    <li>écrire les équation du système combinatoire.
+    </li>
+</ul>
+<p></p>
+<p>Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le <a href="/microcontroleurs-004/wiki/view?page=corr-ex1-5-1">Corrigé</a> !</p>
+<hr style="width:800px; color:black; background-color:black; height:4px;">
+<p></p>
+<h4>Ex 1.6-1 Conversion décimal-binaire</h4>
+<p><b>Question :</b> Convertissez en binaire les nombres décimaux suivant : 5, 12, 63, 257, 1280</p>
+<p></p>
+<p>Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le <a href="/microcontroleurs-004/wiki/view?page=corr-ex1-6-1">Corrigé</a> !</p>
+<hr style="width:800px; color:black; background-color:black; height:4px;">
+<p></p>
+<h4>Ex 1.6-2 Conversion binaire-Hexadécimal</h4>
+<p><b>Question :</b> Convertissez en hexadécimal les nombres binaires suivant : 0b00110111, 0b01011111, 0b1110010011011001, 0b101111001</p>
+<p></p>
+<p>Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le <a href="/microcontroleurs-004/wiki/view?page=corr-ex1-6-2">Corrigé</a> !</p>
+<hr style="width:800px; color:black; background-color:black; height:4px;">
+<p></p>
+<h4>Ex 1.6-3 Conversion BCD-décimal</h4>
+<p><b>Question :</b> Convertissez en décimal les nombres BCD suivant : 0010001101011001 et 1110010011011001</p>
+<p>Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le <a href="/microcontroleurs-004/wiki/view?page=corr-ex1-6-3">Corrigé</a> !</p>
+<p></p>
+
+<hr style="width:800px; color:black; background-color:black; height:4px;">
+<hr>
+<div>
+    <div style="float:left">
+    	    	    </div>
+    <div style="float:right;text-align:right;font-size:10px;">
+    	Created Sat 12 Oct 2013  5:16 AM PDT<br>
+    	Last Modified Sat  6 Dec 2014  5:28 AM PST    </div>
+</div>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  config: ["MMLorHTML.js"],
+  
+  styleSheets: [],
+  styles: {},
+
+  jax: ["input/TeX"],
+  
+  extensions: ["tex2jax.js"],
+
+  preJax: null,
+  postJax: null,
+
+  preRemoveClass: "MathJax_Preview",
+
+  showProcessingMessages: true,
+
+  messageStyle: "none",
+  
+  displayAlign: "center",
+  displayIndent: "0em",
+  
+  delayStartupUntil: "none",
+
+  skipStartupTypeset: false,
+  
+  elements: [],
+  
+  tex2jax: {
+	    inlineMath: [
+	                 ['$$','$$'],      // uncomment this for standard TeX math delimiters
+	                 ['\\(','\\)']
+	                 ],
+
+	                 displayMath: [
+	                 ['\\[','\\]']
+	                 ],
+
+    skipTags: ["script","noscript","style","textarea","pre","code"],
+    ignoreClass: "tex2jax_ignore",
+    processClass: "tex2jax_process",
+    processEscapes: false,
+    processEnvironments: true,
+    preview: "TeX"
+    
+  },
+  
+  mml2jax: {
+    preview: "alttext"
+    
+  },
+  
+  jsMath2jax: {
+    preview: "TeX"
+    
+  },
+
+  TeX: {
+    TagSide: "right",
+    TagIndent: ".8em",
+    MultLineWidth: "85%",
+    Macros: {},
+
+    extensions: ["AMSmath.js", "AMSsymbols.js"]
+    
+  },
+
+  //============================================================================
+  //
+  //  These parameters control the MathML inupt jax.
+  //
+  MathML: {
+    //
+    //  This specifies whether to use TeX spacing or MathML spacing when the
+    //  HTML-CSS output jax is used.
+    //
+    useMathMLspacing: false
+  },
+  
+  //============================================================================
+  //
+  //  These parameters control the HTML-CSS output jax.
+  //
+  "HTML-CSS": {
+    
+    scale: 100,
+    
+    availableFonts: ["STIX","TeX"],
+    
+    preferredFont: "TeX",
+    
+    webFont: "TeX",
+    
+    imageFont: "TeX",
+    
+    undefinedFamily: "STIXGeneral,'Arial Unicode MS',serif",
+      
+    showMathMenu: true,
+
+    styles: {},
+    
+    tooltip: {
+      delayPost: 600,          // milliseconds delay before tooltip is posted after mouseover
+      delayClear: 600,         // milliseconds delay before tooltip is cleared after mouseout
+      offsetX: 10, offsetY: 5  // pixels to offset tooltip from mouse position
+    }
+  },
+  
+  //============================================================================
+  //
+  //  These parameters control the NativeMML output jax.
+  //
+  NativeMML: {
+
+    scale: 100,
+
+    showMathMenu: true,
+    showMathMenuMSIE: true,
+
+    styles: {}
+  },
+  
+  MathMenu: {
+    delay: 400,
+    
+    helpURL: "http://www.mathjax.org/help/user/",
+
+    showRenderer: true,
+    showFontMenu: false,
+    showContext:  false,
+
+    windowSettings: {
+      status: "no", toolbar: "no", locationbar: "no", menubar: "no",
+      directories: "no", personalbar: "no", resizable: "yes", scrollbars: "yes",
+      width: 100, height: 50
+    },
+    
+    styles: {}
+    
+  },
+
+  MMLorHTML: {
+    prefer: {
+      MSIE:    "MML",
+      Firefox: "HTML",
+      Opera:   "HTML",
+      other:   "HTML"
+    }
+  }
+});
+</script>
+<script type="text/javascript">
+(function () {
+
+  function loadMathJax() {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://duqnjvq4jwr55.cloudfront.net/2.1/MathJax.js";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  }
+
+  window.loadOrRefreshMathJax = function(domId) {
+    if (window.MathJax) {
+      if (domId) {
+        MathJax.Hub.Queue(["Typeset", MathJax.Hub, domId]);
+      } else {
+        MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+      }
+    } else {
+      loadMathJax();
+    }
+  }
+})();
+</script></div><!-- - track IE8 and less browser for eventing purposes--><!--[if lte IE 8]><script>window._204 = window._204 || [];
+window._gaq = window._gaq || [];
+window._gaq.push(
+    ['_setAccount', 'UA-28377374-1'],
+    ['_setDomainName', window.location.hostname],
+    ['_setAllowLinker', true],
+    ['_trackPageview', window.location.pathname]);
+window._204.push(
+  ['client', 'home'],
+  {key:"pageview", value:window.location.pathname});</script><script src="https://dw0ugk4msqulk.cloudfront.net/d965f10784288c9d7835dc85de17d9a13509877e/js/lib/204.js"></script><script src="https://ssl.google-analytics.com/ga.js"></script><![endif]--><div id="fb-root"></div><div id="origami" data-js="origami"><div style="position:absolute;top:0px;left:0px;width:100%;height:100%;background:#f5f5f5;padding-top:5%;"><div id="coursera-loading-nojs" style="text-align:center; margin-bottom:10px;display:none;"><div>Please use a <a href="https://courserahelp.zendesk.com/hc/articles/201522945-Recommended-Software-and-Devices">modern browser </a> with JavaScript enabled to use Coursera.</div><div id="get-browser-zh" style="display:none;">请下载现代的浏览器（<a href="http://windows.microsoft.com/zh-cn/internet-explorer/download-ie">IE11</a>或<a href="https://www.google.com/intl/zh-CN/chrome/browser/">Google Chrome</a>）来使用Coursera。</div></div><div><span id="coursera-loading-js" style="display: none; padding-left:45%; font-size: 14px; line-height: 1.428571429; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif">loading &nbsp;&nbsp;<img src="https://dw0ugk4msqulk.cloudfront.net/images/icons/loading.gif"></span></div><noscript><div style="text-align:center; margin-bottom:10px;">Please use a <a href="https://courserahelp.zendesk.com/hc/articles/201522945-Recommended-Software-and-Devices">modern browser </a> with JavaScript enabled to use Coursera.</div></noscript></div></div><!--[if gte IE 9]><script>document.getElementById("coursera-loading-js").style.display = 'block';</script><![endif]-->
+<!--[if lte IE 8]><script>document.getElementById("coursera-loading-nojs").style.display = 'block';</script><![endif]-->
+<!--[if !IE]> --><script>document.getElementById("coursera-loading-js").style.display = 'block';</script><!-- <![endif]--><script>if (/zh/i.test(window.localStorage ? localStorage.getItem('locale') : '') || '{{ locale }}') {
+  document.getElementById('get-browser-zh').style.display = 'block';
+}</script><!--[if !IE]> --><script>document.getElementById('coursera-loading-js').style.display = 'block';</script><!-- <![endif]-->
+    <script src='https://dw0ugk4msqulk.cloudfront.net/d965f10784288c9d7835dc85de17d9a13509877e/js/vendor/jquery.v1-7.js' ></script>
+      <script src='https://dw0ugk4msqulk.cloudfront.net/d965f10784288c9d7835dc85de17d9a13509877e/spark/core/js/loadOrRefreshMathJax.js' ></script>
+      <script src='https://dw0ugk4msqulk.cloudfront.net/d965f10784288c9d7835dc85de17d9a13509877e/spark/app/textbook/js/textbook_wiki.js' ></script>
+  <script src="https://dw0ugk4msqulk.cloudfront.net/d965f10784288c9d7835dc85de17d9a13509877e/js/vendor/require.v2-1-1.js"></script><script data-baseurl="https://dw0ugk4msqulk.cloudfront.net/d965f10784288c9d7835dc85de17d9a13509877e/" data-version="d965f10784288c9d7835dc85de17d9a13509877e" data-timestamp='1418008591216' data-debug='0' data-locale="en_US" id="_require">if(document.getElementById('coursera-loading-js').style.display == 'block') {
+  (function(el) {
+     require.config({
+       //enforceDefine: true,
+       waitSeconds: 75,
+       baseUrl: el.getAttribute('data-baseurl'),
+       urlArgs: el.getAttribute('data-debug') == '1' ? 'v=' + el.getAttribute('data-timestamp') : '',
+       shim: {
+          'underscore': {
+             exports: '_'
+          },
+          'backbone': {
+             deps: ['underscore', 'jquery'],
+             exports: 'Backbone',
+             init: function(_, $) {
+               Backbone.$ = $;
+               return Backbone;
+             }
+          },
+          'pages/hg/thirdparty/js/backbone.marionette': {
+            deps: ['backbone']
+          },
+          'pages/hg/thirdparty/js/webshims/polyfiller': {
+            deps: ['jquery']
+          },
+          'pages/hg/thirdparty/js/webshims/extras/mousepress': {
+            deps: ['jquery', 'pages/hg/thirdparty/js/webshims/polyfiller']
+          },
+          'pages/hg/thirdparty/js/jquery.throttle': {
+            deps: ['jquery']
+          },
+          'js/lib/jquery.linkify': {
+            deps: ['jquery']
+          },
+          'pages/hg/thirdparty/js/js/bootstrap/alert': {
+            deps: ['jquery', 'pages/hg/thirdparty/js/bootstrap/transition']
+          },
+          'spark/core/js/jquery_ui': {
+            deps: ['jquery']
+          },
+          'spark/core/js/jquery.history': {
+            deps: ['jquery']
+          },
+          'js/lib/bootstrap.tooltip': {
+            deps: ['jquery']
+          },
+          'pages/hg/thirdparty/js/bootstrap/transition': {
+            deps: ['jquery']
+          },
+          'pages/hg/thirdparty/js/bootstrap/tab': {
+            deps: ['jquery']
+          },
+          'bundles/videojs/lib/video.4.3.0': {
+            exports: 'vjs'
+          }
+       },
+       paths: {
+          'q': 'js/vendor/q.v1-0-1',
+          'react-with-addons': 'js/vendor/react-with-addons.v0-12',
+          'jquery':                         'pages/spark/jquery',
+          'underscore':                     'js/vendor/underscore.v1-5-2',
+          'backbone':                       'js/vendor/backbone.v1-1-0',
+          'backbone.relational':            'js/lib/backbone.relational.0.8.6',
+          'i18n':                           'js/lib/i18n._t',
+          'css':                            'js/vendor/require.css.v0-1-2',
+          'memoize':                        'js/lib/require.memoize.v0-0-1',
+          'pages/spark/models/user.json':   'empty:',
+          'pages/spark/models/course.json': 'empty:',
+          'pages/spark/models/navbar.json': 'empty:'
+       },
+       callback: function() {
+                    require(['pages/spark/routes']);
+                },
+       config: {
+         i18n: {
+           locale: (window.localStorage ? localStorage.getItem('locale') : '') || el.getAttribute('data-locale')
+         }
+       }
+     });
+  })(document.getElementById('_require'));
+}
+</script><script>define('pages/spark/models/user.json', [], function(){
+      return JSON.parse("{\"id\":766685,\"email_address\":\"nicolas.jeanmonod@gmail.com\",\"full_name\":\"Nicolas Jeanmonod\",\"locale\":\"en_US\",\"timezone\":\"America\\\/Los_Angeles\",\"access_group_id\":\"4\",\"registration_time\":\"1414142672\",\"last_access_time\":\"1417966211\",\"last_access_ip\":\"188.63.94.86\",\"signature_track_register_time\":\"0\",\"email_announcement\":\"1\",\"email_forum\":\"1\",\"in_signature_track\":\"0\",\"wishes_proctored_exam\":\"0\",\"first_name\":\"Nicolas\",\"permissions\":[\"default\",\"allow_site_access\"],\"group\":\"Student\",\"anonymous\":false,\"forum_title\":\"Student\",\"signature_track_state\":1,\"verified_quizzes\":[],\"submitted_quizzes\":[\"101\",\"103\",\"119\",\"145\",\"157\",\"159\",\"161\"],\"scheduled_proctored_exam\":null,\"last_chance_modal\":null,\"flexjoin_last_chance_modal\":null}");
+  });
+define('pages/spark/models/course.json', [], function(){
+      return JSON.parse("{\"id\":973188,\"isPrivate\":false,\"type\":\"public\",\"name\":\"Comprendre les Microcontr\\u00f4leurs\",\"instructor\":\"Jean-Daniel Nicoud, Pierre-Yves Rochat\",\"sessionName\":\"microcontroleurs-004\",\"externalBaseURL\":\"https:\\\/\\\/www.coursera.org\\\/\",\"shortname\":\"microcontroleurs\",\"host\":\"https:\\\/\\\/www.coursera.org\\\/\",\"assetUnversionedLink\":\"https:\\\/\\\/dw0ugk4msqulk.cloudfront.net\\\/\",\"cheggID\":\"\",\"hasLTI\":true,\"badgevilleDomain\":\"\",\"linkable\":false,\"universityShortname\":\"epfl\",\"signatureTrackStatus\":{\"signature_track_enabled\":0},\"courseURLs\":{\"log_in_link\":\"https:\\\/\\\/accounts.coursera.org\\\/signin?post_redirect=https%3A%2F%2Faccounts.coursera.org%2Fsignin%3Fuser_action%3Dclass%26course_id%3D973188%26post_redirect%3Dhttps%253A%252F%252Fclass.coursera.org%252Fmicrocontroleurs-004%252Fauth%252Fauth_redirector%253Ftype%253Dlogin%2526subtype%253Dnormal%2526visiting%253D\",\"sign_up_link\":\"https:\\\/\\\/accounts.coursera.org\\\/signup?enroll_cid=973188&enroll_sn=microcontroleurs&enroll_n=Comprendre les Microcontr\\u00f4leurs\",\"view_course_info_link\":\"https:\\\/\\\/www.coursera.org\\\/course\\\/microcontroleurs\",\"sign_up_link_cant_enroll\":\"https:\\\/\\\/accounts.coursera.org\\\/signup?post_redirect=https%3A%2F%2Fwww.coursera.org%2Fcourse%2Fmicrocontroleurs\"},\"courseBase\":\"https:\\\/\\\/class.coursera.org\\\/microcontroleurs-004\\\/\",\"search\":true,\"hideWiki\":true,\"aceStartRegistrationDate\":\"Wed 31 Dec 1969  4:00 PM PST\",\"aceEndRegistrationDate\":\"Wed 31 Dec 1969  4:00 PM PST\",\"aceExamStartDate\":\"Wed 31 Dec 1969  4:00 PM PST\",\"aceExamEndDate\":\"Wed 31 Dec 1969  4:00 PM PST\",\"aceExamRules\":\"\",\"aceExamDuration\":\"\",\"aceBeforeExam\":false,\"aceAfterExam\":true,\"aceHours\":null,\"aceCreditType\":\"\",\"acePrice\":null,\"aceExamID\":null,\"aceEligible\":false,\"canRegisterForACE\":false,\"specialization\":null,\"supportForums\":true,\"textbooks\":\"\",\"inVideoQuizV2\":false,\"in_flexjoin\":0,\"honorCodeExtraText\":\"\",\"honorCodeCustomTitle\":\"\",\"honorCodeCustomButton\":\"\",\"studentAccessDisabled\":0,\"disableQQs\":true}");
+  });
+  define('pages/spark/models/navbar.json', [], function(){
+      return JSON.parse("{\"items\":[{\"name\":\"Cours\",\"icon\":\"\",\"link_type\":\"heading\",\"link_data\":\"\"},{\"name\":\"Annonces\",\"icon\":\"home\",\"link_type\":\"circuit\",\"link_data\":\"class:index\"},{\"name\":\"Videos\",\"icon\":\"lecture\",\"link_type\":\"circuit\",\"link_data\":\"lecture:index\"},{\"name\":\"Compl\\u00e9ments au cours\",\"icon\":\"\",\"link_type\":\"wiki\",\"link_data\":\"Complements\"},{\"name\":\"Pratique\",\"icon\":\"\",\"link_type\":\"heading\",\"link_data\":\"\"},{\"name\":\"Exercices libres\",\"icon\":\"quiz\",\"link_type\":\"wiki\",\"link_data\":\"ExercicesLibres\"},{\"name\":\"Evaluations\",\"icon\":\"\",\"link_type\":\"circuit\",\"link_data\":\"quiz:index\"},{\"name\":\"Devoir de programmation\",\"icon\":\"\",\"link_type\":\"circuit\",\"link_data\":\"assignment:index\"},{\"name\":\"A propos du cours\",\"icon\":\"\",\"link_type\":\"heading\",\"link_data\":\"\"},{\"name\":\"Syllabus\",\"icon\":\"wiki\",\"link_type\":\"wiki\",\"link_data\":\"Syllabus\"},{\"name\":\"Communaut\\u00e9\",\"icon\":\"\",\"link_type\":\"heading\",\"link_data\":\"\"},{\"name\":\"Forum de discussion\",\"icon\":\"forum\",\"link_type\":\"circuit\",\"link_data\":\"forum:index\"},{\"name\":\"Faisons connaissance\",\"icon\":\"\",\"link_type\":\"circuit\",\"link_data\":\"quiz:attempt?quiz_id=103\"}]}");
+  });
+</script><script>var coursera_enable_new_help_center = false;
+</script></body></html>

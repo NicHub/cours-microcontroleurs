@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Inline OL</title>
+    <style type="text/css">
+        ol
+        {
+            /* List will start at 25 + 1 = 26 */
+            /* Remove the 25 if you want to start at 1 */
+            counter-reset: LIST-ITEMS 25;
+        }
+
+        li
+        {
+            display: inline;
+            padding-right: 0.5em;
+        }
+
+        li:before
+        {
+            content: counter( LIST-ITEMS ) ".";
+            counter-increment: LIST-ITEMS;
+            padding-right: 0.25em;
+            font-style: italic;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<ol>
+    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</li>
+    <li>tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</li>
+    <li>quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</li>
+    <li>consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse</li>
+    <li>cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non</li>
+    <li>proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
+</ol>
+
+</body>
+</html>

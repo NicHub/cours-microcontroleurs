@@ -1,7 +1,9 @@
 @charset "utf-8";
 
-
+/*
 @import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic,700italic|Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic|Ubuntu+Condensed&subset=latin,latin-ext);
+*/
+@import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic,700italic|Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic|Ubuntu+Condensed&subset=greek-ext);
 
 body
 {
@@ -29,7 +31,8 @@ body
 
 	string-set: strDidel   "didel.com",
 				strMOOC    "EPFL — MOOC µCONTRÔLEURS"
-	            strPage_nb "– " counter( page ) " –";
+	            strPage_nb "– " counter( page ) " –"
+	            strSEPARATOR " •";
 
 }
 
@@ -115,7 +118,10 @@ h1+h2
 	border-top: none;
 	padding: 0;
 }
-
+h2 em:after
+{
+	content: string( strSEPARATOR );
+}
 code, pre
 {
 	font-family: "Ubuntu Mono";
@@ -188,11 +194,48 @@ img
 ol, ul
 {
 	margin: 0;
+	padding: 0;
 }
-li
+ol
 {
-	list-style-position:  inside;
+	counter-reset: LIST-ITEMS 0;
+	list-style-type: none;
 }
+ul
+{
+	list-style-type: none;
+}
+/*ul */li
+{
+	margin: 0 1em 0;
+	padding: 0;
+	text-indent: 0;
+}
+/*ul */li *
+{
+	margin: 0 ;
+}
+
+ul li:before
+{
+	content: "–";
+	margin: 0 0 0 -1em;
+	padding: 0;
+	display: inline-block;
+	width: 1em;
+}
+ol li:before
+{
+	content: counter( LIST-ITEMS ) ".";
+	counter-increment: LIST-ITEMS;
+	margin: 0 0 0 -1em;
+	padding: 0;
+	display: inline-block;
+	width: 1em;
+}
+
+
+
 blockquote
 {
 	margin: 1em;
@@ -225,4 +268,10 @@ figure img[ alt="compteur-5-schema"    ]{ max-height: 5cm; }
 figure img[ alt="compteur-5-table"     ]{ max-height: 5cm; }
 figure img[ alt="GrapheMonteCharge"    ]{ max-height: 5cm; }
 figure img[ alt="change-foot-schema"   ]{ max-height: 9cm; }
+
+figure img[ alt="LEGSERVO"             ]{ max-height: 5cm; }
+figure img[ alt="SUIVMOO"              ]{ max-height: 5cm; }
+figure img[ alt="Ex731"                ]{ max-height: 5cm; }
+figure img[ alt="courbe-ldr"           ]{ max-height: 8cm; }
+
 

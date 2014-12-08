@@ -1,0 +1,73 @@
+<h3 id="ex-sem-7">Semaine 7</h3>
+
+<p>Voici les fichiers <em>LearnCbot</em> de la semaine :</p>
+
+<ul>
+<li>pour <em>Arduino</em> : <a href="http://www.didel.com/coursera/LC7.pdf">LC7.pdf</a></li>
+<li>pour <em>Energia/MSP430</em> : <a href="http://pyr.ch/coursera/LC7-msp.pdf">LC7-msp.pdf</a></li>
+</ul>
+
+<p>Les programmes correspondants sont disponibles sous forme de fichier zip :</p>
+
+<ul>
+<li>pour <em>Arduino</em> : <a href="http://www.didel.com/coursera/LC7ino.zip">LC7ino.zip</a></li>
+<li>pour <em>Energia/MSP430</em> : <a href="http://pyr.ch/coursera/LC7msp.zip">LC7msp.zip</a></li>
+</ul>
+
+<h2 id="ex7.2-1servos"><em>Ex 7.2&#8211;1</em> Servos</h2>
+
+<p>Pour un robot à patte, on teste le mouvement des deux servos. La jambe doit d&#8217;abord faire un angle de 60° en 1 s. Puis la cuisse et la jambe se déplacent de 60° en 1 s pour être alignés. Les servos couvrent un angle de 120° pour des impulsions entre 1 et 2 ms distantes de 20 ms. Les servos sont documentés 120° (pour 1 à 2 ms), et 60° en 0.1 s.</p>
+
+<p>Comment ralentir le mouvement ? Rappelez-vous que l&#8217;on envoie la consigne de position toutes les 20 ms. Les servos tournent dans le sens horaire si l&#8217;impulsion est plus longue. La position initiale correspond à 1 ms.</p>
+
+<figure>
+<img src="https://d396qusza40orc.cloudfront.net/microcontroleurs/images/LEGSERVO.GIF" alt="" />
+</figure>
+
+<p>Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le <a href="/microcontroleurs-004/wiki/view?page=corr-ex7-2-1">Corrigé</a> !</p>
+
+<h2 id="ex7.3-1douvientlalumière">Ex 7.3&#8211;1 D&#8217;ou vient la lumière ?</h2>
+
+<p>Deux photorésistances (LDR) sont câblées en diviseur de tension. La tension du point milieu envoyé sur A0 dépend de la différence d&#8217;éclairage sur les deux LDR, quelque soit l&#8217;intensité lumineuse. On éclaire avec une lampe de poche, et on veut que les leds Led1 et Led2 indiquent d&#8217;où vient la lumière.</p>
+
+<p>Réfléchissez à la variation de tension en A0 avant de programmer. Utilisez le terminal pour observer les valeurs lues.</p>
+
+<figure>
+<img src="https://d396qusza40orc.cloudfront.net/microcontroleurs/images/SUIVMOO.GIF" alt="" />
+</figure>
+
+<figure>
+<img src="https://d396qusza40orc.cloudfront.net/microcontroleurs/images/Ex731.jpg" alt="" />
+</figure>
+
+<p>Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le <a href="/microcontroleurs-004/wiki/view?page=corr-ex7-3-1">Corrigé</a> !</p>
+
+<h2 id="ex7.4-1filtragedemesures"><em>Ex 7.4&#8211;1</em> Filtrage de mesures</h2>
+
+<p>Les microcontrôleurs sont beaucoup utilisés dans des systèmes de mesure et d&#8217;acquisition de données. Très souvent, un traitement des mesures doit être effectué. Le &#8220;traitement numérique du signal&#8221; (Digital Signal Processing) est un sujet très vaste, qui fait appel à des techniques mathématiques adaptées. Un excellent MOOC est proposé par l&#8217;EPFL à ce sujet.</p>
+
+<p>Beaucoup plus simplement, nous allons ici réaliser un filtre de type &#8220;hysteresis&#8221;. Une LDR (photo-résistance) mesure la luminosité ambiante. La technique de mesure de la résistance par mesure du temps de décharge d&#8217;un condensateur peut être utilisée. On souhaite réaliser un &#8220;interrupteur crépusculaire&#8221; : une lampe doit être allumée la nuit et éteinte le jour. Voici un exemple de mesure obtenue à l&#8217;aube :</p>
+
+<figure>
+<img src="https://d396qusza40orc.cloudfront.net/microcontroleurs/images/courbe-ldr.png" alt="" />
+</figure>
+
+<p>Avec le programme suivant, on applique simplement un seuil (indiqué en pointillé) :</p>
+
+<pre><code>#define Seuil 70
+int mesure;
+while (1) {
+  mesure = MesureLum();
+  if (mesure &lt; Seuil) {
+    AllumeLampe;
+  } else {
+    EteintLampe;
+  }
+}
+</code></pre>
+
+<p>On voit que la lampe risque de ne pas s&#8217;éteindre (ou s&#8217;allumer) d&#8217;un seul coup (courbe bleue). On cherche à obtenir plutôt la courbe verte : 5 valeurs successives doivent dépasser le &#8220;seuil haut&#8221; pour que la mesure soir vue comme &#8220;haute&#8221;. Le même mécanisme sera appliqué avec un &#8220;seuil bas&#8221;.</p>
+
+<p>Modifiez le programme en conséquence !</p>
+
+<p>Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le <a href="/microcontroleurs-004/wiki/view?page=corr-ex7-4-1">Corrigé</a> !</p>
