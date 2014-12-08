@@ -1420,14 +1420,16 @@ L’environnement *Arduino* est tolérant et semble permettre de déclarer une f
 
 Solution352.ino
 
-	// Fonctions ClignoterNfoisPer (nombre de fois, periode);
+	// Fonctions
+	// ClignoterNfoisPer (nombre de fois, periode);
 	void ClignoterNfoisPer (byte nn, int pp) {
 	  for (int i=0; i<nn; i++) {
 	    Led1On; delay (pp/2);
 	    Led1Off; delay (pp/2);
 	  }
 	}
-	// Le programme clignote toujours plus vite pendant la même durée
+	// Le programme clignote toujours plus vite
+	// pendant la même durée
 	byte count ;
 	int periode;
 	void loop () {
@@ -1461,7 +1463,8 @@ Solution353.ino
 	byte duree;
 	void loop () {
 	  duree = MesureDureePous1On ();
-	  // on est bloqué dans cette ligne tant que l’on n’a pas pressé!
+	  // on est bloqué dans cette ligne
+	  // tant que l’on n’a pas pressé!
 	  if (duree < MinDuree) Led1On;
 	  if (duree > MaxDuree) Led2On;
 	  delay (2000);
@@ -1482,21 +1485,35 @@ Solution353.ino
 
 Les motifs successifs à envoyer ont été placés dans un tableau. Un index parcourt le tableau dans un sens ou dans l’autre, selon la variable `sens`. Les changements de direction se font donc en repartant de la position courante, pour un effet visuel optimal.
 
-	#define MaxCycle 10 // nombre de mouvements dans le cycle
-	#define Periode 200 // attente ente chaque changement
+	// nombre de mouvements dans le cycle
+	#define MaxCycle 10
+	// attente ente chaque changement
+	#define Periode 200
 
-	#define LgTable 3 // nombre de motifs dans la table
-	unsigned int tableMotifs[] = {0b011011011011, 0b110110110110, 0b101101101101};
-	unsigned char idx=0; // index dans la table
-	unsigned char sens=1; // sens de balayage de la table
-	unsigned char cycle; // compteur des répétitions
+	// nombre de motifs dans la table
+	#define LgTable 3
+	unsigned int tableMotifs[] =
+	  {0b011011011011, 0b110110110110,
+	  0b101101101101};
+	// index dans la table
+	unsigned char idx=0;
+	// sens de balayage de la table
+	unsigned char sens=1;
+	// compteur des répétitions
+	unsigned char cycle;
 
 	void loop() {
-	  for (cycle=0; cycle<(MaxCycle*LgTable); cycle++) {
+	 for(cycle=0;cycle<(MaxCycle*LgTable);cycle++)
+	  {
 	    if (sens) {
-	      if (idx == (LgTable-1)) { idx=0;} else { idx++;}
-	    } else {
-	      if (idx == 0) { idx=LgTable-1; } else { idx--;}
+	      if (idx == (LgTable-1))
+	      { idx=0;}
+	      else { idx++;}
+	    }
+	    else {
+	      if (idx == 0)
+	      { idx=LgTable-1; }
+	      else { idx--;}
 	    }
 	    AfficheCadre (tableMotifs[idx]);
 	    AttenteMs (Periode);
@@ -1520,8 +1537,10 @@ On peut utiliser la technique pour détecter un flanc montant (barrière lumineu
 	void loop() {
 	  etatBarriere1 = Barriere1;
 	  etatBarriere2 = Barriere2;
-	  if (etatBarriere2 && !ancienEtatBarriere2) { // flanc montant sur la seconde barrière
-	    if (!etatBarriere1) { // détection d’une sortie
+	  if (etatBarriere2 && !ancienEtatBarriere2)
+	  { // flanc montant sur la seconde barrière
+	    if (!etatBarriere1)
+	    { // détection d’une sortie
 	      AlarmeOn; delay (5000); AlarmeOff;
 	    }
 	  }
@@ -1549,10 +1568,12 @@ On peut utiliser la technique pour détecter un flanc montant (barrière lumineu
 	void loop () {
 	  while (!StartOn) {} // on attend le start
 	  MoteurOn;
-	  while (FinCourseOn) {} // si le fin de course touche encore
+	  // si le fin de course touche encore
+	  while (FinCourseOn) {}
 	  while (!FinCourseOn) {} // ca tourne
 	  MoteurOff;
-	  while (StartOn) {} // si le start est toujours actif
+	  // si le start est toujours actif
+	  while (StartOn) {}
 	}
 
 
@@ -1678,9 +1699,12 @@ On peut écrire ce programme de plusieurs façons différentes. L’important es
 
 	//Solution512.ino Messages Morses - Test A..H
 	#include "DefC2p2l.h"
-	// Format Bits 7 6 5 Letter length 4 3 2 1 0 dot/dash msb first
-	// Table Ascii a b c ..h codes ascii 61 62 .. 67
-	byte TaMorse [] = {0x42,0x81,0x85,0x61,0x20,0x84,0x63,0x80 } ;
+	// Format Bits 7 6 5 Letter length
+	// 4 3 2 1 0 dot/dash msb first
+	// Table Ascii a b c ..h
+	// codes ascii 61 62 .. 67
+	byte TaMorse [] =
+	{0x42,0x81,0x85,0x61,0x20,0x84,0x63,0x80 } ;
 	#define DurDot 200 //200 ms 6mots/min
 	int dot= DurDot;
 
@@ -1711,14 +1735,14 @@ On peut écrire ce programme de plusieurs façons différentes. L’important es
 	byte indexTaMorse;
 	byte codeTaMorse;
 	void loop () {
-	  if (Serial.available() > 0) {
-	    codeRecu = Serial.read();
-	  Serial.print (codeRecu,HEX); Serial.print (" ");
-	    indexTaMorse = codeRecu - 'a' ;
-	  Serial.print (indexTaMorse); Serial.print (" ");
-	    codeTaMorse = TaMorse [indexTaMorse] ;
-	  Serial.println (codeTaMorse,HEX);
-	    JoueMorse (codeTaMorse);
+	if (Serial.available() > 0) {
+	  codeRecu = Serial.read();
+	Serial.print(codeRecu,HEX);Serial.print (" ");
+	  indexTaMorse = codeRecu - 'a' ;
+	Serial.print(indexTaMorse);Serial.print (" ");
+	  codeTaMorse = TaMorse [indexTaMorse] ;
+	Serial.println (codeTaMorse,HEX);
+	  JoueMorse (codeTaMorse);
 	}
 
 Vous remarquez que les instructions d’aide au dépannage sont toujours dans le programme. Il faut mettre le teminal en mode “pas de fin de ligne” pour éviter le décodage du caractère fin de ligne.
@@ -1801,19 +1825,20 @@ SolutionMap : ........
 
 Pour le `PrintHex`, 2 fonctions sont préférables.
 
-	char ConvNibble (byte nn) { // converti 4 bits hexa en Ascii
+	char ConvNibble (byte nn)
+	{ // converti 4 bits hexa en Ascii
 	  char cc;
 	  if (nn<10) cc = nn + '0';
 	  else cc = nn-10 + 'A';
 	  return cc;
 	}
 	void PrintHex (byte hh) {
-	  char cc;
-	  cc = ConvNibble (hh >> 4) ; // ne modifie pas hh
-	  Serial.print (cc);
-	  cc = ConvNibble (hh & 0x0F) ;
-	  Serial.print (cc);
-	  Serial.print (" "); // cela éviter un séparateur
+	 char cc;
+	 cc = ConvNibble(hh >> 4);//ne modifie pas hh
+	 Serial.print (cc);
+	 cc = ConvNibble (hh & 0x0F) ;
+	 Serial.print (cc);
+	 Serial.print (" ");//cela évite un séparateur
 	}
 
 On peut avoir besoin d’un `PrintHexInt`, `PrintHexLong` et on comprend pourquoi supprimer les _0_ non significatifs permet d’avoir une fonction d’impression qui accepte tous les types.
@@ -1840,19 +1865,22 @@ La routine comporte 3 boucles itératives `for`. Deux variables `x` et `y` sont 
 
 	void Zoro () {
 	  int x; int y;
-	  for (x=0; x<MaxX; x++) { // gauche-droite en haut
+	  for (x=0; x<MaxX; x++)
+	  {//gauche-droite en haut
 	    SetPoint (x, 0);
 	    Affiche (5);
 	  }
 	  Affiche (20); // petite attente
 	  y=0;
-	  for (x=MaxX-1; x>=0; x--) { // diagonale droite-gauche
+	  for (x=MaxX-1; x>=0; x--)
+	  { // diagonale droite-gauche
 	    SetPoint (x, y);
 	    y++;
 	    Affiche (5);
 	  }
 	  Affiche (20);
-	  for (x=0; x<MaxX; x++) { // gauche-droite en bas
+	  for (x=0; x<MaxX; x++)
+	  { // gauche-droite en bas
 	    SetPoint (x, MaxY-1);
 	    Affiche (5);
 	  }
@@ -1911,21 +1939,21 @@ Mais seule l’expérimentation avec les LEDs choisies donnera les bonnes valeur
 	#define Mosi 11
 
 	void setup() {
-		Setup2p2l ();
-		pinMode (Ld,OUTPUT);
-		pinMode (Ck,OUTPUT);
-		pinMode (Mosi,OUTPUT);
+	  Setup2p2l ();
+	  pinMode (Ld,OUTPUT);
+	  pinMode (Ck,OUTPUT);
+	  pinMode (Mosi,OUTPUT);
 	}
 
 	int data=0x1234;
 	void loop () {
-		for (long i=0; i<10000;i++) {
-			digitalWrite(Ld, 0);
-			shiftOut (Mosi,Ck,LSBFIRST,lowByte (data));
-			shiftOut (Mosi,Ck,LSBFIRST,highByte (data));
-			digitalWrite(Ld, 1);
-		}
-		Led1Toggle;
+	  for (long i=0; i<10000;i++) {
+	   digitalWrite(Ld, 0);
+	   shiftOut (Mosi,Ck,LSBFIRST,lowByte(data));
+	   shiftOut (Mosi,Ck,LSBFIRST,highByte(data));
+	   digitalWrite(Ld, 1);
+	  }
+	  Led1Toggle;
 	}
 <p></p>
 
@@ -1938,23 +1966,23 @@ Mais seule l’expérimentation avec les LEDs choisies donnera les bonnes valeur
 	#include "SPI.h"
 
 	void setup() {
-		Setup2p2l ();
-		pinMode (Ld,OUTPUT);
-		pinMode (Ck,OUTPUT);
-		pinMode (Mosi,OUTPUT);
-		SPI.begin();
-		SPI.setBitOrder(LSBFIRST);
+	  Setup2p2l ();
+	  pinMode (Ld,OUTPUT);
+	  pinMode (Ck,OUTPUT);
+	  pinMode (Mosi,OUTPUT);
+	  SPI.begin();
+	  SPI.setBitOrder(LSBFIRST);
 	}
 
 	int data=0x1234;
 	void loop () {
-		for (long i=0; i<100000;i++) {
-			digitalWrite(Ld, 0);
-			SPI.transfer(lowByte (data));
-			SPI.transfer(highByte (data));
-			digitalWrite(Ld, 1);
-		}
-		Led1Toggle;
+	  for (long i=0; i<100000;i++) {
+	    digitalWrite(Ld, 0);
+	    SPI.transfer(lowByte (data));
+	    SPI.transfer(highByte (data));
+	    digitalWrite(Ld, 1);
+	  }
+	  Led1Toggle;
 	}
 <p></p>
 
@@ -1965,25 +1993,25 @@ Mais seule l’expérimentation avec les LEDs choisies donnera les bonnes valeur
 	#define bMosi 3 // portB pin11
 
 	void setup() {
-		Setup2p2l ();
-		DDRB |= 1<}
+	  Setup2p2l ();
+	  DDRB |= 1<}
 
 	int data=0x1234;
 	void loop () {
-		data=0x1234;
-		for (long i=0; i<100000;i++) {
-			bitClear (PORTB,bLd);
-			for (int i=0;i<16;i++) {
-				if (data & 0x01) bitSet (PORTB,bMosi);
-				else bitClear (PORTB,bMosi) ;
-				bitSet (PORTB,bCk);
-				data >>= 1; // décale et détruit data
-				bitClear (PORTB,bCk); // durée 0.25 us
-				data >>= 1; // détruit data
-				bitClear (PORTB,bLd);
-			} // end shif
-		} // end repeat
-		Led1Toggle;
+	  data=0x1234;
+	  for (long i=0; i<100000;i++) {
+	    bitClear (PORTB,bLd);
+	    for (int i=0;i<16;i++) {
+	      if (data & 0x01) bitSet (PORTB,bMosi);
+	      else bitClear (PORTB,bMosi) ;
+	      bitSet (PORTB,bCk);
+	      data >>= 1; // décale et détruit data
+	      bitClear (PORTB,bCk); // durée 0.25 us
+	      data >>= 1; // détruit data
+	      bitClear (PORTB,bLd);
+	    } // end shif
+	  } // end repeat
+	  Led1Toggle;
 	} // end loop
 
 
@@ -2023,7 +2051,7 @@ L’augmentation d’angle se donne en microsecondes.
     #define TempsDepl 1000 //  (1s)
     #define NbreDePas TempsDepl/20
 
-    int augmAngle = Angle60/(NbreDePas);  // 500/50
+    int augmAngle = Angle60/(NbreDePas); //500/50
     int angleFemur;  // 1000 à 2000 us
     int angleTibia;
 
@@ -2037,9 +2065,10 @@ L’augmentation d’angle se donne en microsecondes.
        delayMicroseconds (aa);
        digitalWrite (Tibia,0);
     }
-    // les deux impulsions se suivent dans chaque cycle de 20ms
-    // il faut ajouter un délai de 20000-angleFemur-angleTibia
-    // une fonction FinTrame20ms serait un bonne pratique.
+    // les deux impulsions se suivent dans chaque
+    // cycle de 20ms il faut ajouter un délai de
+    // 20000-angleFemur-angleTibia une fonction
+    // FinTrame20ms serait un bonne pratique.
 
     void setup()  {
       Setup2p2l ();
@@ -2054,16 +2083,20 @@ L’augmentation d’angle se donne en microsecondes.
         angleTibia = PosInitiale;
         PulseServoTibia (angleTibia);
         delay (15);   // probl en dessus de 17000
-        delayMicroseconds (5000-angleFemur-angleTibia);
-    //delayMicroseconds (20000-angleFemur-angleTibia); //--> 4 ms!!
+        delayMicroseconds \
+          (5000-angleFemur-angleTibia);
+    //delayMicroseconds \
+    //(20000-angleFemur-angleTibia); //--> 4 ms!!
       }
       for (int i=0; i<NbreDePas; i++) {
-          angleFemur = PosInitiale+Angle60-(i*augmAngle);
+          angleFemur = \
+          	PosInitiale+Angle60-(i*augmAngle);
           PulseServoFemur (angleFemur);
-          angleTibia = PosInitiale + (i*augmAngle);
+          angleTibia = PosInitiale+(i*augmAngle);
           PulseServoTibia (angleTibia);
           delay (15);
-          delayMicroseconds (5000-angleFemur-angleTibia);
+          delayMicroseconds \
+            (5000-angleFemur-angleTibia);
       }
     //  while (1) {} // ou retour en arrière
     }
@@ -2109,22 +2142,26 @@ Le programme a été corrigé en écrivant :
     int intensiteLedG ;
 
     void loop () {
-      difference = (analogRead (A0))/4 ; // Résultat 0-255
+      // Résultat 0-255
+      difference = (analogRead (A0))/4;
 
-        Serial.print (difference);
-        Serial.print ("  ");
-        intensiteLedD = (difference-Centre)*4 ;
-        if (intensiteLedD > 255) intensiteLedD=255;
-        if (intensiteLedD < 0) intensiteLedD=0;
-        intensiteLedG = (Centre-difference)*4 ;
-        if (intensiteLedG > 255) intensiteLedG=255;
-        if (intensiteLedG < 0) intensiteLedG=0;
-     //   if (difference < Centre - (LargeZoneCentre/2)) {
-     //   if (difference > (Centre + (LargeZoneCentre/2))) {  // plus a droite
-         Serial.print (" D ");Serial.print (intensiteLedD);
-         Serial.print (" G ");Serial.println (intensiteLedG);
-         analogWrite (LedDroite, intensiteLedD) ;
-         analogWrite (LedGauche, intensiteLedG) ; ///
+      Serial.print (difference);
+      Serial.print ("  ");
+      intensiteLedD = (difference-Centre)*4 ;
+      if (intensiteLedD > 255) intensiteLedD=255;
+      if (intensiteLedD < 0) intensiteLedD=0;
+      intensiteLedG = (Centre-difference)*4 ;
+      if (intensiteLedG > 255) intensiteLedG=255;
+      if (intensiteLedG < 0) intensiteLedG=0;
+    //if(difference<Centre-(LargeZoneCentre/2)) {
+    //if(difference>(Centre+(LargeZoneCentre/2)))
+    //{  // plus a droite
+      Serial.print (" D ");
+      Serial.print (intensiteLedD);
+      Serial.print (" G ");
+      Serial.println (intensiteLedG);
+      analogWrite (LedDroite, intensiteLedD) ;
+      analogWrite (LedGauche, intensiteLedG) ;
     }
 
 Pouvez-vous ajouter une zone morte au centre ?
@@ -2137,13 +2174,20 @@ Vous voyez comment utiliser les deux poussoirs pour choisir entre un affichage a
 
 ## *Ex 7.4-1* Filtrage de mesures
 
-    #define SeuilHaut 90 // limite des valeurs considérées comme "hautes"
-    #define SeuilBas 50 // limite des valeurs considérées comme "basses"
-    #define NombreMesuresSeuil 5 // nombre de mesures "hautes" ou "basses" nécessaires pour agir sur la lampe
+    //limite des valeurs considérées "hautes"
+    #define SeuilHaut 90
+    //limite des valeurs considérées "basses"
+    #define SeuilBas 50
+    // nombre de mesures "hautes" ou "basses"
+    // nécessaires pour agir sur la lampe
+    #define NombreMesuresSeuil 5
 
-    int mesure; // variable pour la mesure de luminosité
-    int cptHaut = 0; // compteur des dépassements du seuil "haut"
-    int cptBas = 0; // compteur des dépassements du seuil "bas"
+    // variable pour la mesure de luminosité
+    int mesure;
+    // compteur des dépassements du seuil "haut"
+    int cptHaut = 0;
+    // compteur des dépassements du seuil "bas"
+    int cptBas = 0;
 
     while (1) { // boucle infnie
       mesure = MesureLum();
@@ -2151,7 +2195,9 @@ Vous voyez comment utiliser les deux poussoirs pour choisir entre un affichage a
         cptHaut++;
         if (cptHaut > NombreMesuresSeuil) {
           EteintLampe;
-          cptHaut = NombreMesuresSeuil; // évite que le compmteur augmente à l'infini
+          // évite que le compteur
+          // augmente à l'infini
+          cptHaut = NombreMesuresSeuil;
         }
       } else if (mesure < SeuilBas) {
         cptBas++;
