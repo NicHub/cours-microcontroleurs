@@ -313,7 +313,7 @@ Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](ht
 
 ## *Ex 3.1-3* Utilisation de l’instruction `break`
 
-L’instruction `break;` permet de sortir d’un `{ bloc d’instructions }` avant sa fin. Il est souvent utilisé comme une sortie “en catastrophe”. Par exemple, on peut lancer un clignotement dans une boucle `while()` et en sortir avec un break; après le 3e clignotement :
+L’instruction `break;` permet de sortir d’un `{ bloc d’instructions }` avant sa fin. Il est souvent utilisé comme une sortie “en catastrophe”. Par exemple, on peut lancer un clignotement dans une boucle `while()` et en sortir avec un `break;` après le 3e clignotement :
 
 	// extrait du programme Solution310.ino
 	byte i=0;
@@ -357,7 +357,7 @@ Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le [Corrigé](ht
 
 Comment faire lorsqu’on a 6 LEDs, qu’on doit pouvoir en allumer une parmi les 6 et qu’on ne dispose que de 3 pattes sur un microcontrôleur ?
 
-Il existe une solution astucieuse, connue sous le nom de _Charlieplexing_ !
+Il existe une solution astucieuse, connue sous le nom de _Charlieplexing !_
 
 Voici le schéma :
 
@@ -1231,7 +1231,7 @@ Il faut se souvenir du cercle des nombres Modulos !
 
 ## *Corr 3.1-3* Utilisation de l’instruction `break`
 
-Notre solution est de remettre le compteur à _0_ quand on presse et tester une limite de comptage pour sortir du `while(1).
+Notre solution est de remettre le compteur à _0_ quand on presse et tester une limite de comptage pour sortir du `while(1)`.
 
 	// Solution313.ino
 	byte cnt=0;
@@ -1601,7 +1601,7 @@ Dans le programme, les états sont identifiés par un `enum` et mémorisés dans
 	enum {Repos, Montee, Descente};
 	unsigned char Etat;
 
-La boucle principale comporte une structure switch avec un `case pour chaque état. Les sorties sont assignées selon chaque état. Les transitions modifient l’état courant selon la condition associée :
+La boucle principale comporte une structure switch avec un `case` pour chaque état. Les sorties sont assignées selon chaque état. Les transitions modifient l’état courant selon la condition associée :
 
 	void loop () {
 	  switch (Etat) {

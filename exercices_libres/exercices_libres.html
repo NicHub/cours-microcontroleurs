@@ -288,7 +288,7 @@
 
 <h2 id="ex3.1-3utilisationdel’instructionbreak"><em>Ex 3.1&#8211;3</em> Utilisation de l’instruction <code>break</code></h2>
 
-<p>L’instruction <code>break;</code> permet de sortir d’un <code>{ bloc d’instructions }</code> avant sa fin. Il est souvent utilisé comme une sortie “en catastrophe”. Par exemple, on peut lancer un clignotement dans une boucle <code>while()</code> et en sortir avec un break; après le 3e clignotement :</p>
+<p>L’instruction <code>break;</code> permet de sortir d’un <code>{ bloc d’instructions }</code> avant sa fin. Il est souvent utilisé comme une sortie “en catastrophe”. Par exemple, on peut lancer un clignotement dans une boucle <code>while()</code> et en sortir avec un <code>break;</code> après le 3e clignotement :</p>
 
 <pre><code>// extrait du programme Solution310.ino
 byte i=0;
@@ -327,7 +327,7 @@ delay (1000); // on continue avec d’autres
 
 <p>Comment faire lorsqu’on a 6 LEDs, qu’on doit pouvoir en allumer une parmi les 6 et qu’on ne dispose que de 3 pattes sur un microcontrôleur ?</p>
 
-<p>Il existe une solution astucieuse, connue sous le nom de _Charlieplexing_ !</p>
+<p>Il existe une solution astucieuse, connue sous le nom de <em>Charlieplexing !</em></p>
 
 <p>Voici le schéma :</p>
 
@@ -1097,7 +1097,7 @@ while (i&lt;10) {
 
 <h2 id="corr3.1-3utilisationdel’instructionbreak"><em>Corr 3.1&#8211;3</em> Utilisation de l’instruction <code>break</code></h2>
 
-<p>Notre solution est de remettre le compteur à <em>0</em> quand on presse et tester une limite de comptage pour sortir du `while(1).</p>
+<p>Notre solution est de remettre le compteur à <em>0</em> quand on presse et tester une limite de comptage pour sortir du <code>while(1)</code>.</p>
 
 <pre><code>// Solution313.ino
 byte cnt=0;
@@ -1438,7 +1438,7 @@ void loop () {
 unsigned char Etat;
 </code></pre>
 
-<p>La boucle principale comporte une structure switch avec un `case pour chaque état. Les sorties sont assignées selon chaque état. Les transitions modifient l’état courant selon la condition associée :</p>
+<p>La boucle principale comporte une structure switch avec un <code>case</code> pour chaque état. Les sorties sont assignées selon chaque état. Les transitions modifient l’état courant selon la condition associée :</p>
 
 <pre><code>void loop () {
   switch (Etat) {
