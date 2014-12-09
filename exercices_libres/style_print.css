@@ -57,6 +57,7 @@ body
 		padding: 0;
 	}
 	/* Watermark */
+/*
 	@bottom-left
 	{
 		float: left;
@@ -66,7 +67,6 @@ body
 		font-size: 60pt;
 		font-weight: 900;
 	}
-/*
 */
 }
 @page:blank
