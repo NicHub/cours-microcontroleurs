@@ -317,7 +317,7 @@ delay (1000); // on continue avec d’autres
 <p>Rappels :</p>
 
 <ul>
-<li>Le microcontrôleur <em>ATmega328</em> de l’<em>Arduino</em> dispose des ports <code>B</code>, <code>C</code> et <code>D</code>. Les bits pairs sont <code>PB0</code>, <code>PB2</code>, <code>PB4</code>, &#8230;, <code>PC0</code>, <code>PC2</code>,&#8230; et les bits impairs <code>PB1</code>, <code>PB3</code>,&#8230;, <code>PC1</code>, <code>PC3</code>&#8230; Les registres de direction s’appellent <code>DDR</code> (<code>DDRB</code>, <code>DDRC</code>, etc.) et les registres de sortie s’appellent <code>PORT</code> (<code>PORTB</code>, <code>PORTC</code>, etc.)</li>
+<li>Le microcontrôleur <em>ATmega328</em> de l’<em>Arduino</em> dispose des ports <code>B</code>, <code>C</code> et <code>D</code>. Les bits pairs sont <code>PB0</code>, <code>PB2</code>, <code>PB4</code>, ..., <code>PC0</code>, <code>PC2</code>,... et les bits impairs <code>PB1</code>, <code>PB3</code>,..., <code>PC1</code>, <code>PC3</code>... Les registres de direction s’appellent <code>DDR</code> (<code>DDRB</code>, <code>DDRC</code>, etc.) et les registres de sortie s’appellent <code>PORT</code> (<code>PORTB</code>, <code>PORTC</code>, etc.)</li>
 <li>Le microcontrôleur <em>MSP430G2553</em> du <em>LaunchPad</em> dispose des ports <code>P1</code> et <code>P2</code>. Les registres de direction s’appellent <code>P1DIR</code> (et <code>P2DIR</code>) et les registres de sortie s’appellent <code>P1OUT</code> (et <code>P2OUT</code>).</li>
 </ul>
 
@@ -571,7 +571,7 @@ TaMorse [] = {0x42,0x81,0x85,0x61,0x20,0x84,0x63,0x80};
 <figcaption>pouss4</figcaption>
 </figure>
 
-<p>Évidemment, pour lire les poussoirs, faut tester les tensions&#8230;</p>
+<p>Évidemment, pour lire les poussoirs, faut tester les tensions...</p>
 
 <p>Cherchez par vous-même la réponse. Ensuite, vous pourrez voir le <a href="https://class.coursera.org/microcontroleurs-004/wiki/view?page=corr-ex5-4-1">Corrigé</a> !</p>
 
@@ -819,11 +819,11 @@ while (1) {
 
 <p>C’est bien compliqué ! Il faudrait encore simplifier, en appliquant les propriétés de l’algèbre de Boole aux équations ou en utilisant les tables de Karnaugh.</p>
 
-<p>Ce sera peut-être plus simple de programmer un microcontrôleur&#8230;</p>
+<p>Ce sera peut-être plus simple de programmer un microcontrôleur...</p>
 
 <h2 id="corr1.6-1conversiondécimal-binaire"><em>Corr 1.6&#8211;1</em> Conversion décimal-binaire</h2>
 
-<p>On se souvient des puissances de <em>2 : 1 2 4 8 16 32 64 128 256 512 1024 2048 4096&#8230;</em></p>
+<p>On se souvient des puissances de <em>2 : 1 2 4 8 16 32 64 128 256 512 1024 2048 4096...</em></p>
 
 <p>On peut par exemple soustraire successivement les puissances de <em>2</em> qu’il est possible de soustraire au nombre.</p>
 
@@ -871,13 +871,13 @@ while (1) {
 
 <h2 id="corr2.2-1microprocesseuretmicrocontrôleur"><em>Corr 2.2&#8211;1</em> Microprocesseur et microcontrôleur</h2>
 
-<p>Mes étudiants me posent souvent la question&#8230;</p>
+<p>Mes étudiants me posent souvent la question...</p>
 
 <p>Un microcontrôleur contient un microprocesseur ! Mais il contient aussi de la mémoire (ROM, RAM) et des circuits d’entrée-sortie, pour être un à lui seul un système informatique autonome.</p>
 
 <h2 id="corr2.3-1microcontrôleurs8-16-32 bits"><em>Corr 2.3&#8211;1</em> Microcontrôleurs 8&#8211;16&#8211;32 bits</h2>
 
-<p>Même un processeur 8 bits est capable d’effectuer des calculs sur des nombres de 32 bits. Il faut alors décomposer les opérations en opérations sur des nombres de 8 bits, un peu comme nous avons appris à l’école à effectuer des additions, des soustractions, des multiplications et des divisons ! Mais rassurez-vous : c’est le compilateur qui va faire ce travail, pas vous&#8230;</p>
+<p>Même un processeur 8 bits est capable d’effectuer des calculs sur des nombres de 32 bits. Il faut alors décomposer les opérations en opérations sur des nombres de 8 bits, un peu comme nous avons appris à l’école à effectuer des additions, des soustractions, des multiplications et des divisons ! Mais rassurez-vous : c’est le compilateur qui va faire ce travail, pas vous...</p>
 
 <p>Il faudra peut-être des dizaines ou même des centaines d’opérations élémentaires sur 8 bits pour effectuer un calcul. Mais ce n’est pas grave : rappelez-vous que même le petit processeur contenu dans un microcontrôleur &#8220;entrée de gamme&#8221; est généralement capable d’exécuter des millions d’instructions par seconde !</p>
 
@@ -1477,7 +1477,7 @@ unsigned char Etat;
 #define FinBas !(P1IN &amp; (1&lt;&lt;7))
 </code></pre>
 
-<p>&#8230; et la version <em>AVR</em> (<em>Arduino</em>) :</p>
+<p>... et la version <em>AVR</em> (<em>Arduino</em>) :</p>
 
 <pre><code>#define FinHaut !(PINB &amp; (1&lt;&lt;0))
 #define FinBas !(PINB &amp; (1&lt;&lt;1))
@@ -1625,9 +1625,9 @@ void loop () {
 
 <p>C’est intéressant de comparer la taille des codes et les temps d’exécution.</p>
 
-<p>Solution avec if : &#8230;&#8230;..</p>
+<p>Solution avec if : ........</p>
 
-<p>SolutionMap : &#8230;&#8230;..</p>
+<p>SolutionMap : ........</p>
 
 <h2 id="corr5.5-1affichagedenombres"><em>Corr 5.5&#8211;1</em> Affichage de nombres</h2>
 
@@ -1716,7 +1716,7 @@ void Zoro () {
 
 <p>Le système a 4 entrées (les poussoirs pour choisir les numéros) et 28 sorties (6 fois 7 segments). Attention, ne confondez pas de nombre de 28 avec les 28 LEDs sur chaque segment: on voit sur le dessin qu’un segment est composé de trois rangées de 9, 10 et 9 LEDs.</p>
 
-<p>On trouve des microcontrôleurs avec un nombre suffisant de pattes pour ce projet. En boîtiers DIL 40 pattes, <em>Atmel</em> en propose (par exemple l’<em>ATmega32</em> ou ses successeurs). <em>Microchip</em> propose aussi des <em>PIC</em> avec ce type de boîtiers (comme le <em>16F877</em>). Mais ces processeurs sont “relativement” coûteux. Ils disposent aussi de “trop” de mémoire pour un si petit projet. Vous me direz que “qui peut le plus peut le moins”, c’est vrai&#8230;</p>
+<p>On trouve des microcontrôleurs avec un nombre suffisant de pattes pour ce projet. En boîtiers DIL 40 pattes, <em>Atmel</em> en propose (par exemple l’<em>ATmega32</em> ou ses successeurs). <em>Microchip</em> propose aussi des <em>PIC</em> avec ce type de boîtiers (comme le <em>16F877</em>). Mais ces processeurs sont “relativement” coûteux. Ils disposent aussi de “trop” de mémoire pour un si petit projet. Vous me direz que “qui peut le plus peut le moins”, c’est vrai...</p>
 
 <p>La solution utilisant des registres série-parallèle est intéressante pour ce projet. En ajoutant 4 circuits <em>74HC595</em>, il n’y a besoin plus que de 4 entrées et 3 sorties. Avec l’astuce des 4 poussoirs sur une entrée analogique, les “fans” des microcontrôleurs à 8 pattes pourraient s’en sortir, par exemple avec un <em>ATtiny13</em>. Dans la série des <em>MSP430G</em>, le <em>2231</em> à 14 pattes conviendrait très bien.</p>
 
