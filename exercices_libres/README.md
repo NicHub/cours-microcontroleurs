@@ -10,3 +10,6 @@ Le fichier de sortie est [exercices_libres.pdf](https://github.com/NicHub/cours-
 
 La génération du PDF est faite avec [md2pdf.sh](https://github.com/NicHub/cours-microcontroleurs/blob/master/exercices_libres/md2pdf.sh). Le fichier markdown est transformé en HTML avec [multimarkdown](http://fletcherpenney.net/multimarkdown/download/), puis le fichier HTML est transformé en PDF avec [PrinceXML](http://www.princexml.com).
 
+## Note
+
+La longueur max des lignes des programmes doit être de 46 caractères pour être visibles !
