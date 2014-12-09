@@ -2123,7 +2123,7 @@ Le programme a été corrigé en écrivant :
 
 
 
-## *Ex 7.3-1* D’ou vient la lumière ?
+## *Corr 7.3-1* D’où vient la lumière ?
 
     //Solution731.ino  D'ou vient la lumière
     #define LedDroite 5
@@ -2172,7 +2172,7 @@ Vous voyez comment utiliser les deux poussoirs pour choisir entre un affichage a
 
 
 
-## *Ex 7.4-1* Filtrage de mesures
+## *Corr 7.4-1* Filtrage de mesures
 
     //limite des valeurs considérées "hautes"
     #define SeuilHaut 90
